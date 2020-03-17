@@ -27,42 +27,19 @@
                     </div>
                     <div class="col-md-6">
                         <!-- skill item -->
+                        @foreach($form->about->getEstimations() as $type => $estimation)
                         <div class="skill-item">
                             <div class="skill-info clearfix">
-                                <h4 class="float-left mb-3 mt-0">Development</h4>
-                                <span class="float-right">85%</span>
+                                <h4 class="float-left mb-3 mt-0">{{ $estimation['label'] }}</h4>
+                                <span class="float-right">{{ $estimation['average'] }}%</span>
                             </div>
                             <div class="progress">
-                                <div class="progress-bar data-background" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85" data-color="#FFD15C">
+                                <div class="progress-bar data-background" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ $estimation['average'] }}" data-color="#FF4C60">
                                 </div>
                             </div>
                             <div class="spacer" data-height="20"></div>
                         </div>
-
-                        <!-- skill item -->
-                        <div class="skill-item">
-                            <div class="skill-info clearfix">
-                                <h4 class="float-left mb-3 mt-0">UI/UX design</h4>
-                                <span class="float-right">95%</span>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar data-background" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="95" data-color="#FF4C60">
-                                </div>
-                            </div>
-                            <div class="spacer" data-height="20"></div>
-                        </div>
-
-                        <!-- skill item -->
-                        <div class="skill-item">
-                            <div class="skill-info clearfix">
-                                <h4 class="float-left mb-3 mt-0">Photography</h4>
-                                <span class="float-right">70%</span>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar data-background" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70" data-color="#6C6CE5">
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

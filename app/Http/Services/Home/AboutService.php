@@ -16,6 +16,9 @@ class AboutService
     /** @var array **/
     private $counters;
 
+    /** @var array **/
+    private $estimations;
+
     public function __construct()
     {
         $this->setUp();
@@ -41,6 +44,20 @@ class AboutService
             ],
             'cured' => [
                 'count' => 386,
+                'label' => 'Curados',
+            ],
+        ]);
+        $this->setEstimations([
+            'confirmed' => [
+                'average' => 56,
+                'label' => 'Confirmados',
+            ],
+            'deaths' => [
+                'average' => 31,
+                'label' => 'Mortos',
+            ],
+            'cured' => [
+                'average' => 70,
                 'label' => 'Curados',
             ],
         ]);
@@ -84,5 +101,15 @@ class AboutService
     public function setCounters(array $counters)
     {
         $this->counters = $counters;
+    }
+
+    public function getEstimations()
+    {
+        return $this->estimations;
+    }
+
+    public function setEstimations(array $estimations)
+    {
+        $this->estimations = $estimations;
     }
 }
