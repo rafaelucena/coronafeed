@@ -79,11 +79,11 @@
             <!-- fact item -->
             <div class="fact-item">
                 @if($type === 'suspected')
-                <span class="icon icon-magnifier"></span>
+                <span class="icon icon-size-fullscreen"></span>
                 @elseif($type === 'confirmed')
-                <span class="icon icon-people"></span>
+                <span class="icon icon-size-actual"></span>
                 @elseif($type === 'deaths')
-                <span class="icon icon-ghost"></span>
+                <span class="icon icon-user-unfollow"></span>
                 @elseif($type === 'cured')
                 <span class="icon icon-heart"></span>
                 @endif
