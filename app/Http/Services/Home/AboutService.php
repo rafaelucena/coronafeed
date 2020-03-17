@@ -26,6 +26,24 @@ class AboutService
         $this->setTitle('Rio de Janeiro');
         $this->setDescription('Uma das primeiras cidades brasileiras a ter o vírus detectado');
         $this->setButton('Assine nossas notícias!');
+        $this->setCounters([
+            'suspected' => [
+                'count' => 3562,
+                'label' => 'Suspeitos',
+            ],
+            'confirmed' => [
+                'count' => 1243,
+                'label' => 'Confirmados',
+            ],
+            'deaths' => [
+                'count' => 57,
+                'label' => 'Mortos',
+            ],
+            'cured' => [
+                'count' => 386,
+                'label' => 'Curados',
+            ],
+        ]);
     }
 
     public function getTitle()
@@ -56,5 +74,15 @@ class AboutService
     public function setButton(string $button)
     {
         $this->button = $button;
+    }
+
+    public function getCounters()
+    {
+        return $this->counters;
+    }
+
+    public function setCounters(array $counters)
+    {
+        $this->counters = $counters;
     }
 }

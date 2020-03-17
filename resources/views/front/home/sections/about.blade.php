@@ -74,54 +74,27 @@
     <div class="spacer" data-height="70"></div>
     
     <div class="row">
-        
+        @foreach($form->about->getCounters() as $type => $counter)
         <div class="col-md-3 col-sm-6">
             <!-- fact item -->
             <div class="fact-item">
-                <span class="icon icon-fire"></span>
-                <div class="details">
-                    <h3 class="mb-0 mt-0 number"><em class="count">198</em></h3>
-                    <p class="mb-0">Projects completed</p>
-                </div>
-            </div>
-            <div class="spacer d-md-none d-lg-none" data-height="30"></div>
-        </div>
-
-        <div class="col-md-3 col-sm-6">
-            <!-- fact item -->
-            <div class="fact-item">
-                <span class="icon icon-cup"></span>
-                <div class="details">
-                    <h3 class="mb-0 mt-0 number"><em class="count">5670</em></h3>
-                    <p class="mb-0">Cup of coffee</p>
-                </div>
-            </div>
-            <div class="spacer d-md-none d-lg-none" data-height="30"></div>
-        </div>
-
-        <div class="col-md-3 col-sm-6">
-            <!-- fact item -->
-            <div class="fact-item">
+                @if($type === 'suspected')
+                <span class="icon icon-magnifier"></span>
+                @elseif($type === 'confirmed')
                 <span class="icon icon-people"></span>
+                @elseif($type === 'deaths')
+                <span class="icon icon-ghost"></span>
+                @elseif($type === 'cured')
+                <span class="icon icon-heart"></span>
+                @endif
                 <div class="details">
-                    <h3 class="mb-0 mt-0 number"><em class="count">427</em></h3>
-                    <p class="mb-0">Satisfied clients</p>
+                    <h3 class="mb-0 mt-0 number"><em class="count">{{ $counter['count'] }}</em></h3>
+                    <p class="mb-0">{{ $counter['label'] }}</p>
                 </div>
             </div>
             <div class="spacer d-md-none d-lg-none" data-height="30"></div>
         </div>
-
-        <div class="col-md-3 col-sm-6">
-            <!-- fact item -->
-            <div class="fact-item">
-                <span class="icon icon-badge"></span>
-                <div class="details">
-                    <h3 class="mb-0 mt-0 number"><em class="count">35</em></h3>
-                    <p class="mb-0">Nominees winner</p>
-                </div>
-            </div>
-        </div>
-
+        @endforeach
     </div>
 
 </div>
