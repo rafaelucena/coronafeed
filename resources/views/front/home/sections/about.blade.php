@@ -1,6 +1,6 @@
 <div class="container">		
     <!-- section title -->
-    <h2 class="section-title wow fadeInUp">About Me</h2>
+    <h2 class="section-title wow fadeInUp">{{ $form->about->getTitle() }}</h2>
 
     <div class="spacer" data-height="60"></div>
     
@@ -19,9 +19,9 @@
                 <div class="row">
                     <div class="col-md-6">
                         <!-- about text -->
-                        <p>I am Bolby Doe, web developer from London, United Kingdom. I have rich experience in web site design and building and customization, also I am good at WordPress.</p>
+                        <p>{{ $form->about->getDescription() }}</p>
                         <div class="mt-3">
-                            <a href="#" class="btn btn-default">Download CV</a>
+                            <a href="#" class="btn btn-default">{{ $form->about->getButtonLabel() }}</a>
                         </div>
                         <div class="spacer d-md-none d-lg-none" data-height="30"></div>
                     </div>
