@@ -47,7 +47,7 @@ html {
 }
 
 body {
-  color: #D4D400;
+  color: #900000;
   background-color: #F9F9FF;
   font-family: "Rubik", sans-serif;
   font-size: 16px;
@@ -82,7 +82,7 @@ img {
 /*                      TYPOGRAPHY                              
 /*=================================================================*/
 h1, h2, h3, h4, h5, h6 {
-  color: #6AD400;
+  color: #800000;
   font-family: "Rubik", sans-serif;
   font-weight: 700;
   margin: 20px 0;
@@ -305,7 +305,7 @@ pre {
   }
 }
 #preloader {
-  background: rgb(7, 0, 0);
+  background: rgb(212, 212, 212);
   height: 100%;
   position: fixed;
   width: 100%;
@@ -827,7 +827,7 @@ section.home .intro h1 {
   font-size: 36px;
 }
 section.home .intro span {
-  color: #FFF;
+  color: #900000;
   font-size: 16px;
 }
 section.home .social-icons li a {
@@ -840,7 +840,7 @@ section.home.light .intro h1 {
   color: #d5D5D5;
 }
 section.home.light .intro span {
-  color: #6AD400;
+  color: #800000;
 }
 section.home.light .social-icons li a {
   color: #d5D5D5;
@@ -937,7 +937,11 @@ section.home.light .social-icons li a:hover {
 }
 .parallax .p15 {
   top: 20%;
-  right: 35%;
+  right: 40%;
+}
+.parallax .p16 {
+  top: 10%;
+  left: 10%;
 }
 /*oh*/
 
@@ -1047,7 +1051,7 @@ section.home.light .social-icons li a:hover {
   transition: all 0.3s ease-in-out;
 }
 .portfolio-item .mask {
-  background: #6C6CE5;
+  background: #ffd5d5;
   position: absolute;
   left: 0;
   top: 0;
@@ -1073,7 +1077,7 @@ section.home.light .social-icons li a:hover {
   margin-bottom: 25px;
 }
 .portfolio-filter li {
-  color: #D4D400;
+  color: #900000;
   cursor: pointer;
   font-family: "Rubik", sans-serif;
   font-size: 16px;
@@ -1122,7 +1126,7 @@ select.portfolio-filter-mobile {
 }
 .fact-item .icon {
   font-size: 36px;
-  color: #DEDEEA;
+  color: #900000;
   float: left;
 }
 .fact-item .number {
@@ -1378,7 +1382,7 @@ select.portfolio-filter-mobile {
   z-index: 1;
 }
 .scroll-down.light span {
-  color: #6AD400;
+  color: #800000;
 }
 .scroll-down.light .mouse {
   border-color: #d5D5D5;
@@ -1680,7 +1684,7 @@ body.dark footer.footer {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.6;
-  color: #6AD400;
+  color: #800000;
   background-color: #FFF;
   background-image: none;
   border: 0;
@@ -1758,7 +1762,7 @@ body.dark footer.footer {
   z-index: 3;
   color: #fff;
   cursor: default;
-  background-color: #6AD400;
+  background-color: #800000;
   border-color: transparent;
 }
 
@@ -1785,7 +1789,7 @@ body.dark footer.footer {
 .pagination > li > a:focus, .pagination > li > a:hover, .pagination > li > span:focus, .pagination > li > span:hover {
   z-index: 2;
   color: #FFF;
-  background-color: #6AD400;
+  background-color: #800000;
   border-color: transparent;
 }
 
@@ -1837,7 +1841,7 @@ body.dark footer.footer {
 }
 
 .timeline .content .time {
-  color: #8B88B1;
+  color: #d40000;
   font-size: 14px;
 }
 
@@ -2119,7 +2123,7 @@ body.dark footer.footer {
   height: 40px;
   line-height: 40px;
   text-align: center;
-  background: #6AD400;
+  background: #800000;
   border-radius: 0;
   top: calc(50% - 40px);
   z-index: 1;
@@ -2130,21 +2134,21 @@ body.dark footer.footer {
 }
 
 .slick-next:hover, .slick-next:focus, .slick-prev:hover, .slick-prev:focus {
-  background: #6AD400;
+  background: #800000;
 }
 
 .slick-prev {
   left: 0;
 }
 .slick-prev:hover {
-  background: #6AD400;
+  background: #800000;
 }
 
 .slick-next {
   right: 0;
 }
 .slick-next:hover {
-  background: #6AD400;
+  background: #800000;
 }
 
 .slick-next:before, .slick-next:after {
