@@ -21,7 +21,7 @@
                         <!-- about text -->
                         <p>{{ $form->about->getDescription() }}</p>
                         <div class="mt-3">
-                            <a href="#" class="btn btn-default">{{ $form->about->getButtonLabel() }}</a>
+                            <a href="#" class="btn btn-default">{{ $form->about->getButton() }}</a>
                         </div>
                         <div class="spacer d-md-none d-lg-none" data-height="30"></div>
                     </div>
