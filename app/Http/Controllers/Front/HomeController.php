@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Http\Services\HomeService;
 
 class HomeController extends Controller
 {
@@ -18,6 +19,7 @@ class HomeController extends Controller
 
     public function index()
     {
-        return view('front.home.index', ['data' => []]);
+        $form = new HomeService();
+        return view('front.home.index', ['form' => $form]);
     }
 }
