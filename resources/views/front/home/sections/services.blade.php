@@ -8,7 +8,7 @@
 
         <div class="col-md-4">
             <!-- service box -->
-            <div class="service-box rounded data-background padding-30 text-center text-light shadow-blue" data-color="#6C6CE5">
+            <div class="service-box rounded data-background padding-30 text-center text-light shadow-blue" data-color="#aaaaaa">
                 <img src="https://via.placeholder.com/80x80" alt="UI/UX design" />
                 <h3 class="mb-3 mt-0">UI/UX design</h3>
                 <p class="mb-0">Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget.</p>
@@ -18,7 +18,7 @@
 
         <div class="col-md-4">
             <!-- service box -->
-            <div class="service-box rounded data-background padding-30 text-center shadow-yellow" data-color="#F9D74C">
+            <div class="service-box rounded data-background padding-30 text-center shadow-blue" data-color="#aaaaaa">
                 <img src="https://via.placeholder.com/80x80" alt="UI/UX design" />
                 <h3 class="mb-3 mt-0">Web Development</h3>
                 <p class="mb-0">Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget.</p>
@@ -28,7 +28,7 @@
 
         <div class="col-md-4">
             <!-- service box -->
-            <div class="service-box rounded data-background padding-30 text-center text-light shadow-pink" data-color="#F97B8B">
+            <div class="service-box rounded data-background padding-30 text-center text-light shadow-blue" data-color="#aaaaaa">
                 <img src="https://via.placeholder.com/80x80" alt="UI/UX design" />
                 <h3 class="mb-3 mt-0">Photography</h3>
                 <p class="mb-0">Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget.</p>

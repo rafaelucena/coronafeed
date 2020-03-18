@@ -7,8 +7,8 @@
     </div>
     <!-- logo image -->
     <div class="site-logo">
-        <a href="index.html">
-            <img src="{{ asset('front/images/logo.svg') }}" alt="Bolby" />
+        <a href="index-corona.html">
+            <img src="{{ asset('front/images/logo_.png') }}" alt="COVID-19" />
         </a>
     </div>
 </div>
