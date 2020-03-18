@@ -1,8 +1,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Bolby - Portfolio/CV/Resume HTML Template</title>
-<meta name="description" content="Bolby - Portfolio/CV/Resume HTML Template">
+<title>COVID-19</title>
+<meta name="description" content="CORONAVIRUS 2019 newsfeed">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link rel="shortcut icon" type="image/x-icon" href="https://via.placeholder.com/32x32">
+<link rel="icon" href="{{ asset('front/images/favicon_.ico') }}" type="image/x-icon">
 
 <!-- STYLESHEETS -->
 <link rel="stylesheet" type="text/css" media="all" href="{{ asset('front/css/bootstrap.min.css') }}">
