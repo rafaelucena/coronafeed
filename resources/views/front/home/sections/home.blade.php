@@ -16,11 +16,6 @@
             <li class="list-inline-item"><a href="#"><i class="fab fa-dribbble"></i></a></li>
             <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
         </ul>
-
-        <!-- buttons -->
-        <div class="mt-4">
-            <a href="#contact" class="btn btn-default">Hire me</a>
-        </div>
     </div>
     
     <!-- scroll down mouse wheel -->

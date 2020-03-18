@@ -28,12 +28,12 @@
 
 	<!-- section prices -->
 	<section id="prices">
-        @include('front.home.sections.prices')
+        <!-- include('front.home.sections.prices') -->
 	</section>
 
 	<!-- section testimonials -->
 	<section id="testimonials">
-        @include('front.home.sections.testimonials')
+        <!-- include('front.home.sections.testimonials') -->
 	</section>
 
 	<!-- section blog -->

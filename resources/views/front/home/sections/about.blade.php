@@ -56,13 +56,13 @@
             <!-- fact item -->
             <div class="fact-item">
                 @if($type === 'suspected')
-                <span class="icon icon-size-fullscreen"></span>
+                <span class="icon fas fa-search fa-2x"></span>
                 @elseif($type === 'confirmed')
-                <span class="icon icon-size-actual"></span>
+                <span class="icon fas fa-search-plus"></span>
                 @elseif($type === 'deaths')
-                <span class="icon icon-user-unfollow"></span>
+                <span class="icon fas fa-cross"></span>
                 @elseif($type === 'cured')
-                <span class="icon icon-heart"></span>
+                <span class="icon fas fa-heart"></span>
                 @endif
                 <div class="details">
                     <h3 class="mb-0 mt-0 number"><em class="count">{{ $counter['count'] }}</em></h3>
