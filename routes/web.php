@@ -12,3 +12,9 @@
 */
 
 Route::get('/', 'Front\HomeController@index');
+
+Route::get('admin', 'Back\DashboardController@index');
+
+Route::get('admin/countries', 'Back\CountriesController@index');
+
+Route::get('admin/countries/add', 'Back\CountriesController@add');
