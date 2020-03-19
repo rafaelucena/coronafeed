@@ -8,39 +8,68 @@
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Quick Example</h3>
+                <h3 class="card-title">Country</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
               <form role="form">
                 <div class="card-body">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Country key</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="brazil">
+                  <div class="row">
+                    <div class="form-group col-sm-6">
+                      <label for="country-slug">Slug</label>
+                      <input type="text" class="form-control" id="country-slug" placeholder="country-name">
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label for="country-name">Name</label>
+                      <input type="text" class="form-control" id="country-name" placeholder="Country Name">
+                    </div>
                   </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Country label</label>
-                    <input type="input" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputFile">File input</label>
-                    <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile">
-                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <div class="form-group">
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="country-is-quarantined">
+                          <label class="form-check-label" for="country-is-quarantined">Quarantined</label>
+                        </div>
                       </div>
-                      <div class="input-group-append">
-                        <span class="input-group-text" id="">Upload</span>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="form-group">
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="country-is-contained">
+                          <label class="form-check-label" for="country-is-contained">Contained</label>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Quarantined</label>
+                  <div class="row">
+                    <div class="input-group mb-3 col-sm-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">Suspected</span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="1234" id="country-count-suspected">
+                    </div>
+                    <div class="input-group mb-3 col-sm-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">Confirmed</span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="234" id="country-count-confirmed">
+                    </div>
+                    <div class="input-group mb-3 col-sm-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">Deaths</span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="34" id="country-count-deaths">
+                    </div>
+                    <div class="input-group mb-3 col-sm-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">Cured</span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="432" id="country-count-cured">
+                    </div>
                   </div>
                 </div>
                 <!-- /.card-body -->
-
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
