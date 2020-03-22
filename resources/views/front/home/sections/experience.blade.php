@@ -1,6 +1,6 @@
 <div class="container">			
     <!-- section title -->
-    <h2 class="section-title wow fadeInUp">Experience</h2>
+    <h2 class="section-title wow fadeInUp">History</h2>
 
     <div class="spacer" data-height="60"></div>
     

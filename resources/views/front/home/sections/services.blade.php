@@ -1,11 +1,11 @@
 <div class="container">			
     <!-- section title -->
-    <h2 class="section-title wow fadeInUp">Services</h2>
+    <h2 class="section-title wow fadeInUp">Analytics</h2>
 
     <div class="spacer" data-height="60"></div>
     
     <div class="row">
-
+    
         <div class="col-md-4">
             <!-- service box -->
             <div class="service-box rounded data-background padding-30 text-center text-light shadow-blue" data-color="#aaaaaa">

@@ -2461,3 +2461,46 @@ body {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+#svg-map path {
+  fill: rgb(150,150,150)
+}
+
+#svg-map text {
+  fill: #fff;
+  font: 12px Arial-BoldMT, sans-serif;
+  cursor: pointer
+}
+
+#svg-map a {
+  text-decoration: none
+}
+
+#svg-map a:hover {
+  cursor: pointer;
+  text-decoration: none
+}
+
+#svg-map a:hover path {
+  fill: #800000 !important
+}
+
+#svg-map .circle {
+  fill: rgb(100,100,100)
+}
+
+#svg-map a:hover .circle {
+  fill: #800000 !important;
+  cursor: pointer
+}
+
+#map-div {
+  display: inline-block; 
+  margin: 0 auto;
+  
+}
+
+#map-container {
+  width: 100%; 
+  text-align: center;
+}

@@ -9,7 +9,7 @@
         <div class="col-md-3">
             <div class="text-center text-md-left">
                 <!-- avatar image -->
-                <img src="https://via.placeholder.com/150x150" alt="Bolby" />
+                <img src="https://via.placeholder.com/150x150" alt="Covid-19" />
             </div>
             <div class="spacer d-md-none d-lg-none" data-height="30"></div>
         </div>

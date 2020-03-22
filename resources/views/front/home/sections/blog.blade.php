@@ -1,7 +1,7 @@
 <div class="container">
 			
     <!-- section title -->
-    <h2 class="section-title wow fadeInUp">Latest Posts</h2>
+    <h2 class="section-title wow fadeInUp">Useful links</h2>
 
     <div class="spacer" data-height="60"></div>
     
