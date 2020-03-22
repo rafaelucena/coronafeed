@@ -4,12 +4,10 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/rafaelucena/laravel-doctrine.orm"
-        }
-    ],
+    "repositories": [{
+        "type": "vcs",
+        "url": "https://github.com/rafaelucena/laravel-doctrine.orm"
+    }],
     "require": {
         "php": ">=7.1.3",
         "cviebrock/eloquent-sluggable": "4.5",
@@ -55,8 +53,7 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": [
-            ]
+            "dont-discover": []
         }
     },
     "scripts": {
