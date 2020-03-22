@@ -1,7 +1,7 @@
 <div class="container">
 			
     <!-- section title -->
-    <h2 class="section-title wow fadeInUp">Get In Touch</h2>
+    <h2 class="section-title wow fadeInUp">Contact us</h2>
 
     <div class="spacer" data-height="60"></div>
     

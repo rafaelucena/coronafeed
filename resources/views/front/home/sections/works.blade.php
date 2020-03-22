@@ -1,26 +1,26 @@
 <div class="container">			
     <!-- section title -->
-    <h2 class="section-title wow fadeInUp">Recent works</h2>
+    <h2 class="section-title wow fadeInUp">Information</h2>
 
     <div class="spacer" data-height="60"></div>
 
     <!-- portfolio filter (desktop) -->
     <ul class="portfolio-filter list-inline wow fadeInUp">
-        <li class="current list-inline-item" data-filter="*">Everything</li>
-        <li class="list-inline-item" data-filter=".creative">Creative</li>
-        <li class="list-inline-item" data-filter=".art">Art</li>
-        <li class="list-inline-item" data-filter=".design">Design</li>
-        <li class="list-inline-item" data-filter=".branding">Branding</li>
+        <li class="current list-inline-item" data-filter="*">Symptoms</li>
+        <li class="list-inline-item" data-filter=".creative">What to do if you are sick</li>
+        <li class="list-inline-item" data-filter=".art">How to protect yourself</li>
+        <li class="list-inline-item" data-filter=".design">Facts & Myths</li>
+        <li class="list-inline-item" data-filter=".branding">Research</li>
     </ul>
     
     <!-- portfolio filter (mobile) -->
     <div class="pf-filter-wrapper">
         <select class="portfolio-filter-mobile">
-            <option value="*">Everything</option>
-            <option value=".creative">Creative</option>
-            <option value=".art">Art</option>
-            <option value=".design">Design</option>
-            <option value=".branding">Branding</option>
+            <option value="*">Symptoms</option>
+            <option value=".creative">What to do if you are sick</option>
+            <option value=".art">How to protect yourself</option>
+            <option value=".design">Facts & Myths</option>
+            <option value=".branding">Research</option>
         </select>
     </div>
     

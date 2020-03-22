@@ -6,6 +6,11 @@
         @include('front.home.sections.home')
 	</section>
 
+	<!-- section map -->
+	<section id="map">
+        @include('front.home.sections.map')
+	</section>
+
 	<!-- section about -->
 	<section id="about">
 		@include('front.home.sections.about')
@@ -28,12 +33,12 @@
 
 	<!-- section prices -->
 	<section id="prices">
-        @include('front.home.sections.prices')
+        <!-- include('front.home.sections.prices') -->
 	</section>
 
 	<!-- section testimonials -->
 	<section id="testimonials">
-        @include('front.home.sections.testimonials')
+        <!-- include('front.home.sections.testimonials') -->
 	</section>
 
 	<!-- section blog -->

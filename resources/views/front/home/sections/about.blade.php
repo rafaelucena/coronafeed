@@ -9,7 +9,7 @@
         <div class="col-md-3">
             <div class="text-center text-md-left">
                 <!-- avatar image -->
-                <img src="https://via.placeholder.com/150x150" alt="Bolby" />
+                <img src="https://via.placeholder.com/150x150" alt="Covid-19" />
             </div>
             <div class="spacer d-md-none d-lg-none" data-height="30"></div>
         </div>
@@ -56,13 +56,13 @@
             <!-- fact item -->
             <div class="fact-item">
                 @if($type === 'suspected')
-                <span class="icon icon-size-fullscreen"></span>
+                <span class="icon fas fa-search fa-2x"></span>
                 @elseif($type === 'confirmed')
-                <span class="icon icon-size-actual"></span>
+                <span class="icon fas fa-search-plus"></span>
                 @elseif($type === 'deaths')
-                <span class="icon icon-user-unfollow"></span>
+                <span class="icon fas fa-cross"></span>
                 @elseif($type === 'cured')
-                <span class="icon icon-heart"></span>
+                <span class="icon fas fa-heart"></span>
                 @endif
                 <div class="details">
                     <h3 class="mb-0 mt-0 number"><em class="count">{{ $counter['count'] }}</em></h3>
