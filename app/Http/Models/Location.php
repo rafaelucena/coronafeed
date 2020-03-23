@@ -23,11 +23,6 @@ class Location implements UrlRoutable
     private $id;
 
     /**
-     * @ORM\Column(type="integer", nullable=false)
-     */
-    private $locationTypeId;
-
-    /**
      * @ORM\Column(type="string", length=255, nullable=false, unique=true)
      */
     private $slug;
@@ -46,6 +41,12 @@ class Location implements UrlRoutable
      * @ORM\Column(type="boolean", options={"default":"0"})
      */
     private $isContained;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="LocationType", inversedBy="locations")
+     * @ORM\JoinColumn(name="location_type_id", referencedColumnName="id")
+     */
+    private $locationType;
 
     /**
      * @ORM\OneToOne(targetEntity="LocationNumbers", mappedBy="location")
@@ -74,5 +75,13 @@ class Location implements UrlRoutable
     public function getLocationNumbers(): LocationNumbers
     {
         return $this->locationNumbers;
+    }
+
+    /**
+     * @return LocationType
+     */
+    public function getLocationType(): LocationType
+    {
+        return $this->locationType;
     }
 }
