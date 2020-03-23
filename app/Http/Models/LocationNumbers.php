@@ -19,27 +19,27 @@ class LocationNumbers
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer", nullable=false)
      */
-    public $id;
+    private $id;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */    
-    public $suspected;
+    private $suspected;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */    
-    public $confirmed;
+    private $confirmed;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */    
-    public $deaths;
+    private $deaths;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */    
-    public $cured;
+    private $cured;
 
     /**
      * @ORM\OneToOne(targetEntity="Location", inversedBy="locationNumbers")
@@ -47,22 +47,34 @@ class LocationNumbers
      */
     private $location;
 
-    public function getSuspected()
+    /**
+     * @return int
+     */
+    public function getSuspected(): int
     {
         return $this->suspected;
     }
 
-    public function getConfirmed()
+    /**
+     * @return int
+     */
+    public function getConfirmed(): int
     {
         return $this->confirmed;
     }
 
-    public function getDeaths()
+    /**
+     * @return int
+     */
+    public function getDeaths(): int
     {
         return $this->deaths;
     }
 
-    public function getCured()
+    /**
+     * @return int
+     */
+    public function getCured(): int
     {
         return $this->cured;
     }
