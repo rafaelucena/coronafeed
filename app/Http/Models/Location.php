@@ -48,11 +48,26 @@ class Location implements UrlRoutable
     public $isContained;
 
     /**
+     * @ORM\OneToOne(targetEntity="LocationNumbers", mappedBy="location")
+     */
+    private $locationNumbers;
+
+    /**
      *
      * @return string
      */
     public static function getRouteKeyName(): string
     {
         return 'slug';
+    }
+
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    public function getLocationNumbers()
+    {
+        return $this->locationNumbers;
     }
 }
