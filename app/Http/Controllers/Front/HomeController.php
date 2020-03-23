@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Http\Models\Location;
 use App\Http\Services\HomeService;
+use Doctrine\ORM\EntityManager;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -18,6 +21,12 @@ class HomeController extends Controller
     }
 
     public function index()
+    {
+        $form = new HomeService();
+        return view('front.home.index', ['form' => $form]);
+    }
+
+    public function location(Location $location)
     {
         $form = new HomeService();
         return view('front.home.index', ['form' => $form]);
