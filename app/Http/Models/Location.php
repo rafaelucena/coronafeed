@@ -54,6 +54,17 @@ class Location implements UrlRoutable
     private $locationNumbers;
 
     /**
+     * @ORM\OneToMany(targetEntity="Location", mappedBy="parent")
+     * @ORM\JoinColumn(name="parent_id", referencedColumnName="id")
+     */
+    private $children;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Location", inversedBy="children")
+     */
+    private $parent;
+
+    /**
      * @return string
      */
     public static function getRouteKeyName(): string
@@ -83,5 +94,21 @@ class Location implements UrlRoutable
     public function getLocationType(): LocationType
     {
         return $this->locationType;
+    }
+
+    /**
+     * @return Location
+     */
+    public function getParent(): Location
+    {
+        return $this->parent;
+    }
+
+    /**
+     * @return Location
+     */
+    public function getChildren()
+    {
+        return $this->children;
     }
 }
