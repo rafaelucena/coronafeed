@@ -21,11 +21,17 @@
         @include('front.home.sections.services')
 	</section>
 
+	<!-- section graph -->
+	<section id="graph">
+        @include('front.home.sections.graph')
+	</section>
+
 	<!-- section experience -->
 	<section id="experience">
         @include('front.home.sections.experience')
 	</section>
 
+	
 	<!-- section works -->
 	<section id="works">
         @include('front.home.sections.works')
