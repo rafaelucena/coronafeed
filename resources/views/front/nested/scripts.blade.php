@@ -14,3 +14,9 @@
 <script type="text/javascript" src="{{ asset('front/js/parallax.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('front/js/jquery.magnific-popup.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('front/js/custom.js') }}"></script>
+
+<!-- graph-->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<!-- world map-->
+<script type="text/javascript" src="{{ asset('components/world-map/js/world-map.js') }}"></script>
