@@ -1,112 +1,32 @@
-$(document).ready(function () {
+// Load the Visualization API and the corechart package.
+google.charts.load('current', {'packages':['corechart']});
 
-	// Graph Data ##############################################
-	var graphData = [{
-			// Visits
-			data: [ [6, 1300], [7, 1600], [8, 1900], [9, 2100], [10, 2500], [11, 2200], [12, 2000], [13, 1950], [14, 1900], [15, 2000] ],
-			color: '#71c73e'
-		}, {
-			// Returning Visits
-			data: [ [6, 500], [7, 600], [8, 550], [9, 600], [10, 800], [11, 900], [12, 800], [13, 850], [14, 830], [15, 1000] ],
-			color: '#77b7c5',
-			points: { radius: 4, fillColor: '#77b7c5' }
-		}
-	];
+// Set a callback to run when the Google Visualization API is loaded.
+google.charts.setOnLoadCallback(drawChart);
 
-	// Lines Graph #############################################
-	$.plot($('#graph-lines'), graphData, {
-		series: {
-			points: {
-				show: true,
-				radius: 5
-			},
-			lines: {
-				show: true
-			},
-			shadowSize: 0
-		},
-		grid: {
-			color: '#646464',
-			borderColor: 'transparent',
-			borderWidth: 20,
-			hoverable: true
-		},
-		xaxis: {
-			tickColor: 'transparent',
-			tickDecimals: 2
-		},
-		yaxis: {
-			tickSize: 1000
-		}
-	});
+// Callback that creates and populates a data table,
+// instantiates the pie chart, passes in the data and
+// draws it.
+function drawChart() {
 
-	// Bars Graph ##############################################
-	$.plot($('#graph-bars'), graphData, {
-		series: {
-			bars: {
-				show: true,
-				barWidth: .9,
-				align: 'center'
-			},
-			shadowSize: 0
-		},
-		grid: {
-			color: '#646464',
-			borderColor: 'transparent',
-			borderWidth: 20,
-			hoverable: true
-		},
-		xaxis: {
-			tickColor: 'transparent',
-			tickDecimals: 2
-		},
-		yaxis: {
-			tickSize: 1000
-		}
-	});
+  // Create the data table.
+  var data = new google.visualization.DataTable();
+  data.addColumn('string', 'Cases');
+  data.addColumn('number', 'People');
+  data.addRows([
+	['Confirmed', 33333],
+	['Deaths', 1111],
+	
+	['Cured', 122]
+  ]);
 
-	// Graph Toggle ############################################
-	$('#graph-bars').hide();
+  // Set chart options
+  var options = {'title':'Active Cases',
+  				colors: ['#800000', '#aa0000', '#ff2a2a' , '#d40000' , '#ff4c60', '#d5d5d5'],
+				 'width':600,
+				 'height':300};
 
-	$('#lines').on('click', function (e) {
-		$('#bars').removeClass('active');
-		$('#graph-bars').fadeOut();
-		$(this).addClass('active');
-		$('#graph-lines').fadeIn();
-		e.preventDefault();
-	});
-
-	$('#bars').on('click', function (e) {
-		$('#lines').removeClass('active');
-		$('#graph-lines').fadeOut();
-		$(this).addClass('active');
-		$('#graph-bars').fadeIn().removeClass('hidden');
-		e.preventDefault();
-	});
-
-	// Tooltip #################################################
-	function showTooltip(x, y, contents) {
-		$('<div id="tooltip">' + contents + '</div>').css({
-			top: y - 16,
-			left: x + 20
-		}).appendTo('body').fadeIn();
-	}
-
-	var previousPoint = null;
-
-	$('#graph-lines, #graph-bars').bind('plothover', function (event, pos, item) {
-		if (item) {
-			if (previousPoint != item.dataIndex) {
-				previousPoint = item.dataIndex;
-				$('#tooltip').remove();
-				var x = item.datapoint[0],
-					y = item.datapoint[1];
-					showTooltip(item.pageX, item.pageY, y + ' visitors at ' + x + '.00h');
-			}
-		} else {
-			$('#tooltip').remove();
-			previousPoint = null;
-		}
-	});
-
-});
+  // Instantiate and draw our chart, passing in some options.
+  var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+  chart.draw(data, options);
+}

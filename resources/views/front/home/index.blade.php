@@ -6,7 +6,12 @@
         @include('front.home.sections.home')
 	</section>
 
-	<!-- section map -->
+	<!-- section world map -->
+	<section id="map-world">
+        @include('front.home.sections.map-world')
+	</section>
+
+	<!-- section brazil map -->
 	<section id="map">
         @include('front.home.sections.map')
 	</section>

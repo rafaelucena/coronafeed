@@ -18,5 +18,6 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<!--graph-->
+<!--graph
 <link rel="stylesheet" type="text/css" media="all" href="{{ asset('components/graphs/css/graph.css') }}">
+-->
