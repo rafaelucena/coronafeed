@@ -93,12 +93,7 @@ img {
 /*                      TYPOGRAPHY                              
 /*=================================================================*/
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   color: #800000;
   font-family: "Rubik", sans-serif;
   font-weight: 700;
@@ -180,8 +175,7 @@ pre {
   position: relative;
 }
 
-.infinity div,
-.infinity span {
+.infinity div, .infinity span {
   position: absolute;
 }
 
@@ -207,8 +201,7 @@ pre {
   animation: move 6.9s linear infinite;
 }
 
-.infinity div span:before,
-.infinity div span:after {
+.infinity div span:before, .infinity div span:after {
   content: "";
   position: absolute;
   display: block;
@@ -265,8 +258,7 @@ pre {
   offset-path: path("M64.3636364,29.4064278 C77.8909091,43.5203348 84.4363636,56 98.5454545,56 C112.654545,56 124,44.4117395 124,30.0006975 C124,15.5896556 112.654545,3.85282763 98.5454545,4.00139508 C84.4363636,4.14996252 79.2,14.6982509 66.4,29.4064278 C53.4545455,42.4803627 43.5636364,56 29.4545455,56 C15.3454545,56 4,44.4117395 4,30.0006975 C4,15.5896556 15.3454545,4.00139508 29.4545455,4.00139508 C43.5636364,4.00139508 53.1636364,17.8181672 64.3636364,29.4064278 Z");
 }
 
-.infinityChrome div:before,
-.infinityChrome div:after {
+.infinityChrome div:before, .infinityChrome div:after {
   content: "";
   position: absolute;
   display: block;
@@ -316,15 +308,13 @@ pre {
     transform: rotate(360deg);
     margin-left: 0;
   }
-  50.0001%,
-  100% {
+  50.0001%, 100% {
     margin-left: -60px;
   }
 }
 
 @keyframes move {
-  0%,
-  50% {
+  0%, 50% {
     left: -8px;
   }
   25% {
@@ -333,8 +323,7 @@ pre {
   75% {
     background: #6C6CE5;
   }
-  50.0001%,
-  100% {
+  50.0001%, 100% {
     left: auto;
     right: -8px;
   }
@@ -750,8 +739,7 @@ header.mobile-header-1.light .menu-icon span {
   background: #d5D5D5;
 }
 
-header.mobile-header-1.light .menu-icon span:before,
-header.mobile-header-1.light .menu-icon span:after {
+header.mobile-header-1.light .menu-icon span:before, header.mobile-header-1.light .menu-icon span:after {
   background: #d5D5D5;
 }
 
@@ -1253,8 +1241,7 @@ section.home.light .social-icons li a:hover {
   opacity: 0.9;
 }
 
-.portfolio-item:hover .details h4,
-.portfolio-item:hover .details span {
+.portfolio-item:hover .details h4, .portfolio-item:hover .details span {
   opacity: 1;
   transform: translateY(0);
 }
@@ -1778,12 +1765,7 @@ body.dark .bg-dark {
   background: #302f4e !important;
 }
 
-body.dark h1,
-body.dark h2,
-body.dark h3,
-body.dark h4,
-body.dark h5,
-body.dark h6 {
+body.dark h1, body.dark h2, body.dark h3, body.dark h4, body.dark h5, body.dark h6 {
   color: #FFF;
 }
 
@@ -1791,8 +1773,7 @@ body.dark .triangle-top:before {
   border-bottom-color: #302f4e;
 }
 
-body.dark .timeline.exp .timeline-container::after,
-body.dark .timeline.edu .timeline-container::after {
+body.dark .timeline.exp .timeline-container::after, body.dark .timeline.edu .timeline-container::after {
   background: #302f4e;
 }
 
@@ -1904,8 +1885,7 @@ body.dark footer.footer {
   width: 100%;
 }
 
-.btn-group-lg>.btn,
-.btn-lg {
+.btn-group-lg>.btn, .btn-lg {
   padding: 28px 30px;
   font-size: 18px;
   font-weight: 100;
@@ -1924,8 +1904,7 @@ body.dark footer.footer {
   line-height: 0;
 }
 
-.btn.disabled,
-.btn:disabled {
+.btn.disabled, .btn:disabled {
   opacity: 1;
   cursor: not-allowed;
 }
@@ -2044,8 +2023,7 @@ body.dark footer.footer {
   border-radius: 20px;
 }
 
-.alert-dismissable .close,
-.alert-dismissible .close {
+.alert-dismissable .close, .alert-dismissible .close {
   position: relative;
   top: 0;
   right: 0;
@@ -2062,23 +2040,16 @@ body.dark footer.footer {
   border-radius: 4px;
 }
 
-.pagination>li:first-child>a,
-.pagination>li:first-child>span {
+.pagination>li:first-child>a, .pagination>li:first-child>span {
   margin-left: 0;
   border-radius: 50%;
 }
 
-.pagination>li:last-child>a,
-.pagination>li:last-child>span {
+.pagination>li:last-child>a, .pagination>li:last-child>span {
   border-radius: 50%;
 }
 
-.pagination>.active>a,
-.pagination>.active>a:focus,
-.pagination>.active>a:hover,
-.pagination>.active>span,
-.pagination>.active>span:focus,
-.pagination>.active>span:hover {
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
   z-index: 3;
   color: #fff;
   cursor: default;
@@ -2086,8 +2057,7 @@ body.dark footer.footer {
   border-color: transparent;
 }
 
-.pagination>li>a,
-.pagination>li>span {
+.pagination>li>a, .pagination>li>span {
   position: relative;
   float: left;
   font-weight: 400;
@@ -2107,10 +2077,7 @@ body.dark footer.footer {
   transition: all 0.3s ease-in-out;
 }
 
-.pagination>li>a:focus,
-.pagination>li>a:hover,
-.pagination>li>span:focus,
-.pagination>li>span:hover {
+.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover {
   z-index: 2;
   color: #FFF;
   background-color: #800000;
@@ -2262,10 +2229,7 @@ body.dark footer.footer {
   background: #FFF;
 }
 
-.shadow-dark,
-.desktop-header-3 .dropdown-menu,
-.form-control,
-.form-control:focus {
+.shadow-dark, .desktop-header-3 .dropdown-menu, .form-control, .form-control:focus {
   -webkit-box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
   -moz-box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
   box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
@@ -2328,12 +2292,7 @@ body.dark footer.footer {
   display: inline-block;
 }
 
-.text-light h1,
-.text-light h2,
-.text-light h3,
-.text-light h4,
-.text-light h5,
-.text-light h6 {
+.text-light h1, .text-light h2, .text-light h3, .text-light h4, .text-light h5, .text-light h6 {
   color: #FFF;
 }
 
@@ -2492,8 +2451,7 @@ body.dark footer.footer {
   outline: none;
 }
 
-.slick-next,
-.slick-prev {
+.slick-next, .slick-prev {
   width: 40px;
   height: 40px;
   line-height: 40px;
@@ -2508,10 +2466,7 @@ body.dark footer.footer {
   transform: translateX(0px);
 }
 
-.slick-next:hover,
-.slick-next:focus,
-.slick-prev:hover,
-.slick-prev:focus {
+.slick-next:hover, .slick-next:focus, .slick-prev:hover, .slick-prev:focus {
   background: #800000;
 }
 
@@ -2531,13 +2486,11 @@ body.dark footer.footer {
   background: #800000;
 }
 
-.slick-next:before,
-.slick-next:after {
+.slick-next:before, .slick-next:after {
   left: 20px;
 }
 
-.slick-prev:before,
-.slick-prev:after {
+.slick-prev:before, .slick-prev:after {
   left: 17px;
 }
 
@@ -2653,12 +2606,8 @@ body.dark footer.footer {
 /*                      RESPONSIVE SETTINGS
 /*=================================================================*/
 
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-only screen and (-o-min-device-pixel-ratio: 3/2),
-only screen and (min--moz-device-pixel-ratio: 1.5),
-only screen and (min-device-pixel-ratio: 1.5) {
-  html,
-  body {
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  html, body {
     width: 100%;
     overflow-x: hidden;
   }
@@ -2709,8 +2658,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
   .portfolio-filter {
     display: none;
   }
-  .portfolio-item,
-  .blog-item {
+  .portfolio-item, .blog-item {
     max-width: 360px;
     margin: auto;
   }
@@ -2843,19 +2791,8 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 
-/*================= 100px;
-    }
-}
-
-
-/*=================================================================*/
-
-
 /*                      MAP SETTINGS
 /*=================================================================*/
-
-
-/*# sourceMappingURL=style.css.map */
 
 #svg-map path {
   fill: rgb(150, 150, 150)
@@ -2898,16 +2835,6 @@ only screen and (min-device-pixel-ratio: 1.5) {
   width: 100%;
   text-align: center;
 }
-
-
-/*=================================================================*/
-
-
-/*                      GRAPH 1 SETTINGS
-/*=================================================================*/
-
-
-/*=================================================================*/
 
 
 /*                      WORLD MAP SETTINGS
