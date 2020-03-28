@@ -23,23 +23,28 @@ class LocationNumbers
 
     /**
      * @ORM\Column(type="integer", nullable=true)
-     */    
+     */
     private $suspected;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
-     */    
+     */
     private $confirmed;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
-     */    
+     */
     private $deaths;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
-     */    
+     */
     private $cured;
+
+    /**
+     * @ORM\Column(type="datetime", nullable=false, options={"default": "CURRENT_TIMESTAMP"})
+     */
+    public $updated;
 
     /**
      * @ORM\OneToOne(targetEntity="Location", inversedBy="locationNumbers")
@@ -77,5 +82,13 @@ class LocationNumbers
     public function getCured(): int
     {
         return $this->cured;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getUpdated(): \DateTime
+    {
+        return $this->updated;
     }
 }
