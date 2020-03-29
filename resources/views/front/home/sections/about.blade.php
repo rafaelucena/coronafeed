@@ -1,9 +1,9 @@
-<div class="container">		
+<div class="container">
     <!-- section title -->
     <h2 class="section-title wow fadeInUp">{{ $form->about->getTitle() }}</h2>
 
     <div class="spacer" data-height="60"></div>
-    
+
     <div class="row">
 
         <div class="col-md-3">
@@ -18,6 +18,7 @@
             <div class="rounded bg-white shadow-dark padding-30">
                 <div class="row">
                     <div class="col-md-6">
+                        <h2>{{ $form->about->getUpdated() }}</h2>
                         <!-- about text -->
                         <p>{{ $form->about->getDescription() }}</p>
                         <div class="mt-3">
@@ -49,7 +50,7 @@
     <!-- row end -->
 
     <div class="spacer" data-height="70"></div>
-    
+
     <div class="row">
         @foreach($form->about->getCounters() as $type => $counter)
         <div class="col-md-3 col-sm-6">

@@ -22,10 +22,14 @@ class AboutService
     /** @var array **/
     private $estimations;
 
+    /** @var string **/
+    private $updated;
+
     public function __construct(Location $location)
     {
         $this->setTitle($location->getName());
         $this->setCounters($location->getLocationNumbers());
+        $this->setUpdated($location->getLocationNumbers()->getUpdated());
         $this->setUp();
     }
 
@@ -106,6 +110,16 @@ class AboutService
             ],
         ];
         $this->counters = $counters;
+    }
+
+    public function setUpdated(\DateTime $updated)
+    {
+        $this->updated = $updated->format('Y-m-d H:i:s');
+    }
+
+    public function getUpdated()
+    {
+        return $this->updated;
     }
 
     public function getEstimations()
