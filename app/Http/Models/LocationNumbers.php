@@ -24,7 +24,7 @@ class LocationNumbers
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private $suspected;
+    private $newCases;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
@@ -55,9 +55,9 @@ class LocationNumbers
     /**
      * @return int
      */
-    public function getSuspected(): int
+    public function getNewCases(): int
     {
-        return $this->suspected;
+        return $this->newCases;
     }
 
     /**
