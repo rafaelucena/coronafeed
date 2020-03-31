@@ -121,9 +121,9 @@ class AboutService
         $stillContaminated = 100 - $cured - $deaths;
 
         $estimations = [
-            'infected' => [
+            'active-cases' => [
                 'average' => $stillContaminated,
-                'label' => 'Infectados',
+                'label' => 'Casos ativos',
             ],
             'deaths' => [
                 'average' => $deaths,
