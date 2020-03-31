@@ -6,7 +6,7 @@
 <!--    <li><a href="#services"><i class="fas fa-chart-bar"></i>Analytics</a></li>
     <li><a href="#experience"><i class="fas fa-history"></i>History</a></li>
     <li><a href="#works"><i class="fas fa-question-circle"></i>Information</a></li>
-    <li><a href="#blog"><i class="fas fa-link"></i>Links</a></li>-->
-    <li><a href="#contact"><i class="fas fa-feather-alt"></i>Contact us</a></li>
+    <li><a href="#blog"><i class="fas fa-link"></i>Links</a></li>
+    <li><a href="#contact"><i class="fas fa-feather-alt"></i>Contact us</a></li>-->
 </ul>
 

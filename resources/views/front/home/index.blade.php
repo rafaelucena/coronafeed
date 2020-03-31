@@ -21,10 +21,7 @@
 		@include('front.home.sections.about')
 	</section>
 
-	<!-- section contact -->
-	<section id="contact">
-        @include('front.home.sections.contact')
-	</section>
+	
 	
 	<div class="spacer" data-height="96"></div>
 @endsection
