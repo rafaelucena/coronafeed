@@ -90,11 +90,10 @@ class AboutService
 
     public function setCounters(LocationNumbers $locationNumbers)
     {
-        $test = "vish";
         $counters = [
-            'suspected' => [
-                'count' => $locationNumbers->getSuspected(),
-                'label' => 'Suspeitos',
+            'new-cases' => [
+                'count' => $locationNumbers->getNewCases(),
+                'label' => 'Novos casos',
             ],
             'confirmed' => [
                 'count' => $locationNumbers->getConfirmed(),
