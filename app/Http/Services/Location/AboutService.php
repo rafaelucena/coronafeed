@@ -29,6 +29,7 @@ class AboutService
     {
         $this->setTitle($location->getName());
         $this->setCounters($location->getLocationNumbers());
+        $this->setEstimations($location->getLocationNumbers());
         $this->setUpdated($location->getLocationNumbers()->getUpdated());
         $this->setUp();
     }
@@ -37,20 +38,6 @@ class AboutService
     {
         $this->setDescription('Uma das primeiras cidades brasileiras a ter o vírus detectado');
         $this->setButton('Assine nossas notícias!');
-        $this->setEstimations([
-            'confirmed' => [
-                'average' => 56,
-                'label' => 'Confirmados',
-            ],
-            'deaths' => [
-                'average' => 31,
-                'label' => 'Mortos',
-            ],
-            'cured' => [
-                'average' => 70,
-                'label' => 'Curados',
-            ],
-        ]);
     }
 
     public function getTitle()
@@ -126,8 +113,27 @@ class AboutService
         return $this->estimations;
     }
 
-    public function setEstimations(array $estimations)
+    public function setEstimations(LocationNumbers $locationNumbers)
     {
+        $total = $locationNumbers->getConfirmed();
+        $cured = round(($locationNumbers->getCured() / $total) * 100, 0);
+        $deaths = round(($locationNumbers->getDeaths() / $total) * 100, 0);
+        $stillContaminated = 100 - $cured - $deaths;
+
+        $estimations = [
+            'active-cases' => [
+                'average' => $stillContaminated,
+                'label' => 'Casos ativos',
+            ],
+            'deaths' => [
+                'average' => $deaths,
+                'label' => 'Mortos',
+            ],
+            'cured' => [
+                'average' => $cured,
+                'label' => 'Curados',
+            ],
+        ];
         $this->estimations = $estimations;
     }
 }
