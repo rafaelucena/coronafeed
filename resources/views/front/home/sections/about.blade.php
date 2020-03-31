@@ -56,7 +56,7 @@
         <div class="col-md-3 col-sm-6">
             <!-- fact item -->
             <div class="fact-item">
-                @if($type === 'suspected')
+                @if($type === 'new-cases')
                 <span class="icon fas fa-search fa-2x"></span>
                 @elseif($type === 'confirmed')
                 <span class="icon fas fa-search-plus"></span>
