@@ -12,7 +12,7 @@
         <ul class="social-icons light list-inline mb-0 mt-4">
             <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
             <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
             <li class="list-inline-item"><a href="#"><i class="fab fa-slack"></i></a></li>
  <!--           <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest-p"></i></a></li>-->
         </ul>
