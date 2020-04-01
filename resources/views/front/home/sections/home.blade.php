@@ -2,19 +2,19 @@
     <!-- intro -->
     <div class="intro">
         <!-- avatar image -->
-        <img src="{{ asset('front/images/SAH-withbackground.png') }}" alt="STAY AT HOME" class="mb-4" />
+        <img src="{{ asset('front/images/FEC2.png') }}" alt="Fica em Casa" class="mb-4" />
 
 				<!-- info -->
 				<h1 class="mb-2 mt-0">CORONAVIRUS 2019</h1>
-				<span>I'm <span class="text-rotating">in Asia, in Europe, in Africa, in Americas, in Australia, EVERYWHERE</span></span>
+				<span>Estou <span class="text-rotating">na Ásia, na América do Sul, na América do Norte, na Europa, na África, na Oceania, EM TODA PARTE</span></span>
 
         <!-- social icons -->
         <ul class="social-icons light list-inline mb-0 mt-4">
             <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
             <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li class="list-inline-item"><a href="#"><i class="fab fa-behance"></i></a></li>
-            <li class="list-inline-item"><a href="#"><i class="fab fa-dribbble"></i></a></li>
-            <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-slack"></i></a></li>
+ <!--           <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest-p"></i></a></li>-->
         </ul>
     </div>
     

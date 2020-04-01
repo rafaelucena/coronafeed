@@ -2860,20 +2860,3 @@ body.dark footer.footer {
 .update-time:hover {
   color: #800000;
 }
-/* badge
-.badge-about {
-  color: #FFF;
-  background: #ff4c60;
-  transform: rotate(-90deg);
-  position: absolute;
-  right:0px;
-  top: 63px;
-  padding: 7px 12px;
-  font-size: 14px;
-  font-weight: 400;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-*/
