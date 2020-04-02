@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+
+    RewriteCond %{REQUEST_URI} ^/?(back|components|css|front|js)(/.*)?$ [NC]
+    RewriteRule ^.*$ /public/%1%2 [L]
+    RewriteRule ^.*$ /public/$1 [NC,L,QSA]
+</IfModule>
