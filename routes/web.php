@@ -11,9 +11,12 @@
 |
 */
 
-Route::get('/', 'Front\HomeController@index');
+// Route::get('/', 'Front\HomeController@index');
+Route::get('/', function() {
+    return Redirect::to('/local/brasil', 302);
+});
 
-Route::get('/{location}', 'Front\HomeController@location');
+Route::get('/local/{location}', 'Front\HomeController@location');
 
 Route::get('admin', 'Back\DashboardController@index');
 
