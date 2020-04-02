@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en-US">
 	<head>
+		@if (env('APP_ENV') === 'production')
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-4S6FGBPHVH"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-4S6FGBPHVH');
+		</script>
+		@endif
 		@include('front.nested.head')
 	</head>
 
