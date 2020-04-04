@@ -12,7 +12,10 @@
 		@include('front.home.sections.about')
 	</section>
 
-	
-	
+	<!-- section charts -->
+	<section id="charts">
+		@include('front.home.sections.charts')
+	</section>
+
 	<div class="spacer" data-height="96"></div>
 @endsection
