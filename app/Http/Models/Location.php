@@ -30,7 +30,7 @@ class Location implements UrlRoutable
 
     /**
      * @ORM\Column(type="string", length=255, nullable=false)
-     */    
+     */
     private $name;
 
     /**
@@ -95,11 +95,14 @@ class Location implements UrlRoutable
     }
 
     /**
-     * @return PersistentCollection|LocationHistory[]
+     * @return ArrayCollection|LocationHistory[]
      */
-    public function getLocationHistory(): PersistentCollection
+    public function getLocationHistory(): ArrayCollection
     {
-        return $this->locationHistory;
+        $criteria = Criteria::create()
+            ->orderBy(['date' => 'ASC']);
+
+        return $this->locationHistory->matching($criteria);
     }
 
     /**
