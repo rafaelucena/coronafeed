@@ -27,6 +27,7 @@ class ChartsService
     {
         $locationHistoryArray = $location->getLocationHistory();
         $this->setDates($locationHistoryArray);
+        $this->setConfirmed($locationHistoryArray);
 
         // \Debugbar::info($this);
     }
@@ -47,6 +48,14 @@ class ChartsService
     public function getConfirmed()
     {
         return $this->confirmed;
+    }
+
+    public function setConfirmed(ArrayCollection $locationHistoryArray)
+    {
+        $this->confirmed = [];
+        foreach ($locationHistoryArray as $locationHistory) {
+            $this->confirmed[] = $locationHistory->getConfirmed();
+        }
     }
 
     public function getDeaths()
