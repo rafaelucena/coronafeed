@@ -16,8 +16,5 @@
 		@include('front.home.sections.charts')
 	</section>
 
-	<!-- section testimonials -->
-	<section id="testimonials">
-        @include('front.home.sections.testimonials')
-	</section>
+	
 @endsection

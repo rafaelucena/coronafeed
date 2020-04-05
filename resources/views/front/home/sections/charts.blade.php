@@ -1,7 +1,7 @@
 <div class="container">
 
     <!-- section title -->
-    <h2 class="section-title wow fadeInUp">Graficos</h2>
+    <h2 class="section-title wow fadeInUp">Gráficos</h2>
 
     <div class="spacer" data-height="60"></div>
 
@@ -103,11 +103,11 @@
     var myPieChart = new Chart(ctxP, {
         type: 'pie',
         data: {
-            labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+            labels: ["Confirmados", "Mortos", "Curados"],
             datasets: [{
-                data: [300, 50, 100, 40, 120],
-                backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
-                hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+                data: [9900, 448, 127],
+                backgroundColor: ["#FF4C60", "#800000", "#80ff80"],
+                hoverBackgroundColor: ["#ff8080", "#aa0000", "#aaffaa"]
             }]
         },
         options: {
@@ -123,10 +123,10 @@
     var myBarChart = new Chart(ctxB, {
         type: 'bar',
         data: {
-            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            labels: ["Acre", "Alagoas", "Amapá", "Green", "Purple", "Orange", "Red1", "Blue1", "Yellow1", "Green1", "Purple1", "Orange1"],
             datasets: [{
                 label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
+                data: [12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
