@@ -8,6 +8,14 @@ use Doctrine\ORM\EntityManager;
 
 class LocationController extends Controller
 {
+    /** @var EntityMAnager */
+    private $em;
+
+    public function __construct()
+    {
+        $this->em = app('em');
+    }
+
     /**
      * @param Location $location
      * @return array
@@ -16,6 +24,30 @@ class LocationController extends Controller
     {
         return [
             'name' => $location->getName(),
+        ];
+    }
+
+    /**
+     * @param Request $request
+     * @param Location $location
+     * @return array
+     */
+    public function update(Request $request, Location $location): array
+    {
+        $old = $location->getName();
+
+        $location->setName($request->input('name'));
+
+        $manager = app('em');
+
+        $manager->persist($location);
+        $manager->flush();
+
+        return [
+            'new' => [
+                'name' => $location->getName(),
+            ],
+            'old' => $old,
         ];
     }
 }
