@@ -30,6 +30,10 @@
     </div>
 
 </div>
+
+<div class="spacer" data-height="60"></div>
+
+
 <script>
     // var confirmed = {!! json_encode($form->about) !!};
     var chartData = {
