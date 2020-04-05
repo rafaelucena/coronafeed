@@ -61,11 +61,29 @@ class LocationNumbers
     }
 
     /**
+     * @param integer $newCases
+     * @return void
+     */
+    public function setNewCases(int $newCases): void
+    {
+        $this->newCases = $newCases;
+    }
+
+    /**
      * @return int
      */
     public function getConfirmed(): int
     {
         return $this->confirmed;
+    }
+
+    /**
+     * @param integer $confirmed
+     * @return void
+     */
+    public function setConfirmed(int $confirmed): void
+    {
+        $this->confirmed = $confirmed;
     }
 
     /**
@@ -77,11 +95,29 @@ class LocationNumbers
     }
 
     /**
+     * @param integer $deaths
+     * @return void
+     */
+    public function setDeaths(int $deaths): void
+    {
+        $this->deaths = $deaths;
+    }
+
+    /**
      * @return int
      */
     public function getCured(): int
     {
         return $this->cured;
+    }
+
+    /**
+     * @param integer $cured
+     * @return void
+     */
+    public function setCured(int $cured): void
+    {
+        $this->cured = $cured;
     }
 
     /**
