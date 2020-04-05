@@ -6,7 +6,6 @@
         @include('front.home.sections.home')
 	</section>
 
-
 	<!-- section about -->
 	<section id="about">
 		@include('front.home.sections.about')
@@ -17,5 +16,8 @@
 		@include('front.home.sections.charts')
 	</section>
 
-	<div class="spacer" data-height="96"></div>
+	<!-- section testimonials -->
+	<section id="testimonials">
+        @include('front.home.sections.testimonials')
+	</section>
 @endsection
