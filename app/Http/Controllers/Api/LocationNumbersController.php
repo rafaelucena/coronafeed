@@ -40,16 +40,40 @@ class LocationNumbersController extends Controller
 
     public function update(Request $request, Location $location)
     {
+        // private $newCases;
+        // private $confirmed;
+        // private $deaths;
+        // private $cured;
+        
         // return $request->all;
-        $location->setName($request->input('name'));
+        $numbers = $location->getLocationNumbers();
 
+        $oldData = [
+            'new_cases' => $numbers->getNewCases(),
+            'confirmed' => $numbers->getConfirmed(),
+            'deaths' => $numbers->getDeaths(),
+            'cured' => $numbers->getCured(),
+        ];
+        
+        $numbers->setNewCases($request->input('new_cases'));
+        $numbers->setConfirmed($request->input('confirmed'));
+        $numbers->setDeaths($request->input('deaths'));
+        $numbers->setCured($request->input('cured'));
+        
         $manager = app('em');
 
-        $manager->persist($location);
+        $manager->persist($numbers);
         $manager->flush();
 
         return [
             'name' => $location->getName(),
+            'new' => [
+                'new_cases' => $numbers->getNewCases(),
+                'confirmed' => $numbers->getConfirmed(),
+                'deaths' => $numbers->getDeaths(),
+                'cured' => $numbers->getCured(),
+            ],
+            'old' => $oldData,
         ];
         // $form = new LocationService($location);
         // return view('front.home.index', ['form' => $form]);

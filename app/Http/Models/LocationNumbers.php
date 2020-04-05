@@ -60,12 +60,22 @@ class LocationNumbers
         return $this->newCases;
     }
 
+    public function setNewCases($newCases)
+    {
+        $this->newCases = $newCases;
+    }
+
     /**
      * @return int
      */
     public function getConfirmed(): int
     {
         return $this->confirmed;
+    }
+
+    public function setConfirmed($confirmed)
+    {
+        $this->confirmed = $confirmed;
     }
 
     /**
@@ -76,12 +86,22 @@ class LocationNumbers
         return $this->deaths;
     }
 
+    public function setDeaths($deaths)
+    {
+        $this->deaths = $deaths;
+    }
+
     /**
      * @return int
      */
     public function getCured(): int
     {
         return $this->cured;
+    }
+
+    public function setCured($cured)
+    {
+        $this->cured = $cured;
     }
 
     /**
