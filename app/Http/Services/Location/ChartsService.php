@@ -29,6 +29,7 @@ class ChartsService
         $this->setDates($locationHistoryArray);
         $this->setConfirmed($locationHistoryArray);
         $this->setDeaths($locationHistoryArray);
+        $this->setCured($locationHistoryArray);
 
         // \Debugbar::info($this);
     }
@@ -75,6 +76,14 @@ class ChartsService
     public function getCured()
     {
         return $this->cured;
+    }
+
+    public function setCured(ArrayCollection $locationHistoryArray)
+    {
+        $this->cured = [];
+        foreach ($locationHistoryArray as $locationHistory) {
+            $this->cured[] = $locationHistory->getCured();
+        }
     }
 
     public function getDays()
