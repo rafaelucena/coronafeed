@@ -52,6 +52,15 @@ class LocationNumbers
     private $location;
 
     /**
+     * @param Location $location
+     * @return void
+     */
+    public function setLocation(Location $location): void
+    {
+        $this->location = $location;
+    }
+
+    /**
      * @return int
      */
     public function getNewCases(): int
@@ -125,6 +134,14 @@ class LocationNumbers
     public function getUpdated(): \DateTime
     {
         return $this->updated;
+    }
+
+    /**
+     * @ORM\PrePersist()
+     */
+    public function onPrePersist()
+    {
+        $this->updated = new \DateTime();
     }
 
     /**
