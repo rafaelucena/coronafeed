@@ -23,3 +23,5 @@ Route::get('/local/{location}', 'Api\LocationController@show');
 Route::put('/local/{location}', 'Api\LocationController@update');
 
 Route::get('/local/{location}/numbers', 'Api\LocationNumbersController@show');
+
+Route::put('/local/{location}/numbers', 'Api\LocationNumbersController@update');
