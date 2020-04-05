@@ -9,7 +9,7 @@
         <div class="col-md-3">
             <div class="text-center text-md-left">
                 <!-- avatar image -->
-                <img src="https://via.placeholder.com/150x150" alt="Covid-19" />
+                <img src="{{ asset('front/images/brazilglobered.png') }}" alt="Brasil on a Globe" />
             </div>
             <div class="spacer d-md-none d-lg-none" data-height="30"></div>
         </div>
@@ -17,16 +17,8 @@
         <div class="col-md-9 triangle-left-md triangle-top-sm">
             <div class="rounded bg-white shadow-dark padding-30">
                 <div class="row">
-                    <div class="col-md-6">
-                        <h2>{{ $form->about->getUpdated() }}</h2>
-                        <!-- about text -->
-                        <p>{{ $form->about->getDescription() }}</p>
-                        <div class="mt-3">
-                            <a href="#" class="btn btn-default">{{ $form->about->getButton() }}</a>
-                        </div>
-                        <div class="spacer d-md-none d-lg-none" data-height="30"></div>
-                    </div>
-                    <div class="col-md-6">
+                    
+                    <div class="col-md-12">
                         <!-- skill item -->
                         @foreach($form->about->getEstimations() as $type => $estimation)
                         <div class="skill-item">
@@ -41,7 +33,20 @@
                             <div class="spacer" data-height="20"></div>
                         </div>
                         @endforeach
+                        <p class="update-time">Atualizado :
+                            {{ $form->about->getUpdated() }}</p>
                     </div>
+                    
+                    
+                    
+
+                     <!--   <span class="badge-about">{{ $form->about->getUpdated() }}</span>
+                        
+                         about text 
+                        <p>{{ $form->about->getDescription() }}</p>
+                        -->
+                        
+                    
                 </div>
             </div>
         </div>
@@ -56,10 +61,10 @@
         <div class="col-md-3 col-sm-6">
             <!-- fact item -->
             <div class="fact-item">
-                @if($type === 'suspected')
-                <span class="icon fas fa-search fa-2x"></span>
+                @if($type === 'new-cases')
+                <span class="icon fas fa-angle-double-up fa-2x"></span>
                 @elseif($type === 'confirmed')
-                <span class="icon fas fa-search-plus"></span>
+                <span class="icon fas fa-check"></span>
                 @elseif($type === 'deaths')
                 <span class="icon fas fa-cross"></span>
                 @elseif($type === 'cured')

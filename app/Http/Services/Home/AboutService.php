@@ -19,6 +19,9 @@ class AboutService
     /** @var array **/
     private $estimations;
 
+    /** @var string **/
+    private $updated;
+
     public function __construct()
     {
         $this->setUp();
@@ -29,10 +32,11 @@ class AboutService
         $this->setTitle('Rio de Janeiro');
         $this->setDescription('Uma das primeiras cidades brasileiras a ter o vírus detectado');
         $this->setButton('Assine nossas notícias!');
+        $this->setUpdated(new \DateTime('-3 hours'));
         $this->setCounters([
-            'suspected' => [
+            'new-cases' => [
                 'count' => 3562,
-                'label' => 'Suspeitos',
+                'label' => 'Novos casos',
             ],
             'confirmed' => [
                 'count' => 1243,
@@ -48,9 +52,9 @@ class AboutService
             ],
         ]);
         $this->setEstimations([
-            'confirmed' => [
+            'active-cases' => [
                 'average' => 56,
-                'label' => 'Confirmados',
+                'label' => 'Casos ativos',
             ],
             'deaths' => [
                 'average' => 31,
@@ -111,5 +115,15 @@ class AboutService
     public function setEstimations(array $estimations)
     {
         $this->estimations = $estimations;
+    }
+
+    public function setUpdated(\DateTime $datetime)
+    {
+        $this->updated = $datetime->format('Y-m-d H:i:s');
+    }
+
+    public function getUpdated()
+    {
+        return $this->updated;
     }
 }
