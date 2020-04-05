@@ -57,7 +57,7 @@ class LocationNumbersController extends Controller
         $locationNumbers->setDeaths($request->input('deaths'));
         $locationNumbers->setCured($request->input('cured'));
 
-        $this->em->persist($location);
+        $this->em->persist($locationNumbers);
         $this->em->flush();
 
         return [

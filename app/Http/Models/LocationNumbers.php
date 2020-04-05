@@ -5,7 +5,6 @@ namespace App\Http\Models;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Criteria;
 use Doctrine\ORM\Mapping AS ORM;
-use Doctrine\ORM\Event\PreUpdateEventArgs;
 
 /**
  * @ORM\Entity()
@@ -126,5 +125,13 @@ class LocationNumbers
     public function getUpdated(): \DateTime
     {
         return $this->updated;
+    }
+
+    /**
+     * @ORM\PreUpdate()
+     */
+    public function onPreUpdate()
+    {
+        $this->updated = new \DateTime();
     }
 }
