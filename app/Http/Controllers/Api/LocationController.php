@@ -26,6 +26,7 @@ class LocationController extends Controller
     {
         return [
             'name' => $location->getName(),
+            'parent' => $location->getParent()->getName(),
         ];
     }
 
@@ -38,6 +39,7 @@ class LocationController extends Controller
     {
         $old = [
             'name' => $location->getName(),
+            'parent' => $location->getParent()->getName(),
         ];
 
         $location->setName($request->input('name'));
@@ -48,6 +50,7 @@ class LocationController extends Controller
         return [
             'new' => [
                 'name' => $location->getName(),
+                'parent' => $location->getParent()->getName(),
             ],
             'old' => $old,
         ];
