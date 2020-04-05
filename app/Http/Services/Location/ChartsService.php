@@ -20,9 +20,9 @@ class ChartsService
     /** @var array **/
     private $cured;
 
-    /** @var array */
-    private $days;
-
+    /**
+     * @param Location $location
+     */
     public function __construct(Location $location)
     {
         $locationHistoryArray = $location->getLocationHistory();
@@ -30,16 +30,21 @@ class ChartsService
         $this->setConfirmed($locationHistoryArray);
         $this->setDeaths($locationHistoryArray);
         $this->setCured($locationHistoryArray);
-
-        // \Debugbar::info($this);
     }
 
-    public function getDates()
+    /**
+     * @return array
+     */
+    public function getDates(): array
     {
         return $this->dates;
     }
 
-    public function setDates(ArrayCollection $locationHistoryArray)
+    /**
+     * @param ArrayCollection $locationHistoryArray
+     * @return void
+     */
+    public function setDates(ArrayCollection $locationHistoryArray): void
     {
         $this->dates = [];
         foreach ($locationHistoryArray as $locationHistory) {
@@ -47,12 +52,19 @@ class ChartsService
         }
     }
 
-    public function getConfirmed()
+    /**
+     * @return array
+     */
+    public function getConfirmed(): array
     {
         return $this->confirmed;
     }
 
-    public function setConfirmed(ArrayCollection $locationHistoryArray)
+    /**
+     * @param ArrayCollection $locationHistoryArray
+     * @return void
+     */
+    public function setConfirmed(ArrayCollection $locationHistoryArray): void
     {
         $this->confirmed = [];
         foreach ($locationHistoryArray as $locationHistory) {
@@ -60,12 +72,19 @@ class ChartsService
         }
     }
 
-    public function getDeaths()
+    /**
+     * @return array
+     */
+    public function getDeaths(): array
     {
         return $this->deaths;
     }
 
-    public function setDeaths(ArrayCollection $locationHistoryArray)
+    /**
+     * @param ArrayCollection $locationHistoryArray
+     * @return void
+     */
+    public function setDeaths(ArrayCollection $locationHistoryArray): void
     {
         $this->deaths = [];
         foreach ($locationHistoryArray as $locationHistory) {
@@ -73,21 +92,23 @@ class ChartsService
         }
     }
 
-    public function getCured()
+    /**
+     * @return array
+     */
+    public function getCured(): array
     {
         return $this->cured;
     }
 
-    public function setCured(ArrayCollection $locationHistoryArray)
+    /**
+     * @param ArrayCollection $locationHistoryArray
+     * @return void
+     */
+    public function setCured(ArrayCollection $locationHistoryArray): void
     {
         $this->cured = [];
         foreach ($locationHistoryArray as $locationHistory) {
             $this->cured[] = $locationHistory->getCured();
         }
-    }
-
-    public function getDays()
-    {
-        return $this->days;
     }
 }
