@@ -18,6 +18,8 @@ use Illuminate\Http\Request;
 //     return $request->user();
 // });
 
+Route::post('/local', 'Api\LocationController@store');
+
 Route::get('/local/{location}', 'Api\LocationController@show');
 
 Route::put('/local/{location}', 'Api\LocationController@update');
