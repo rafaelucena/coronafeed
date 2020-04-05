@@ -29,7 +29,7 @@ class Location implements UrlRoutable
 
     /**
      * @ORM\Column(type="string", length=255, nullable=false)
-     */    
+     */
     private $name;
 
     /**
@@ -78,6 +78,14 @@ class Location implements UrlRoutable
     public function getName(): string
     {
         return $this->name;
+    }
+
+    /**
+     * @return void
+     */
+    public function setName(string $name): void
+    {
+        $this->name = $name;
     }
 
     /**
