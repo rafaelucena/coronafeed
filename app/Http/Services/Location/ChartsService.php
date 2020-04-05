@@ -4,6 +4,7 @@ namespace App\Http\Services\Location;
 
 use App\Http\Models\Location;
 use App\Http\Models\LocationHistory;
+use Doctrine\Common\Collections\ArrayCollection;
 
 class ChartsService
 {
@@ -24,13 +25,23 @@ class ChartsService
 
     public function __construct(Location $location)
     {
-        $history = $location->getLocationHistory();
-        // \Debugbar::info($test);
+        $locationHistoryArray = $location->getLocationHistory();
+        $this->setDates($locationHistoryArray);
+
+        // \Debugbar::info($this);
     }
 
     public function getDates()
     {
         return $this->dates;
+    }
+
+    public function setDates(ArrayCollection $locationHistoryArray)
+    {
+        $this->dates = [];
+        foreach ($locationHistoryArray as $locationHistory) {
+            $this->dates[] = $locationHistory->getDate()->format('Y-m-d');
+        }
     }
 
     public function getConfirmed()
