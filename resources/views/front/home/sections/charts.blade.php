@@ -33,17 +33,21 @@
 <script>
     // var confirmed = {!! json_encode($form->about) !!};
     var chartData = {
+        dates: {
+            label: 'Datas',
+            list: {!! json_encode($form->charts->getDates()) !!}
+        },
         confirmed: {
             label: 'Confirmados',
-            list: [1, 8, 32, 128, 512, 2024, 10510],
+            list: {!! json_encode($form->charts->getConfirmed()) !!}
         },
         deaths: {
             label: 'Mortes',
-            list: [0, 0, 2, 5, 21, 114, 500],
+            list: {!! json_encode($form->charts->getDeaths()) !!}
         },
         cured: {
             label: 'Curados',
-            list: [0, 0, 3, 10, 40, 220, 1500],
+            list: {!! json_encode($form->charts->getCured()) !!}
         }
     };
 </script>
@@ -54,7 +58,7 @@
     var myLineChart = new Chart(ctxL, {
         type: 'line',
         data: {
-            labels: ["January", "February", "March", "April", "May", "June", "July"],
+            labels: chartData.dates.list,
             datasets: [{
                 label: chartData.confirmed.label,
                 data: chartData.confirmed.list,
