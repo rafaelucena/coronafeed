@@ -19,3 +19,5 @@ use Illuminate\Http\Request;
 // });
 
 Route::get('/local/{location}', 'Api\LocationController@show');
+
+Route::put('/local/{location}', 'Api\LocationController@update');
