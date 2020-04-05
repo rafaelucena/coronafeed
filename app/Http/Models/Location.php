@@ -6,6 +6,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Criteria;
 use Doctrine\ORM\Mapping AS ORM;
 use Doctrine\ORM\Event\PreUpdateEventArgs;
+use Doctrine\ORM\PersistentCollection;
 use LaravelDoctrine\ORM\Contracts\UrlRoutable;
 
 /**
@@ -54,6 +55,11 @@ class Location implements UrlRoutable
     private $locationNumbers;
 
     /**
+     * @ORM\OneToMany(targetEntity="LocationHistory", mappedBy="location")
+     */
+    private $locationHistory;
+
+    /**
      * @ORM\OneToMany(targetEntity="Location", mappedBy="parent")
      * @ORM\JoinColumn(name="parent_id", referencedColumnName="id")
      */
@@ -94,6 +100,17 @@ class Location implements UrlRoutable
     public function getLocationNumbers(): LocationNumbers
     {
         return $this->locationNumbers;
+    }
+
+    /**
+     * @return ArrayCollection|LocationHistory[]
+     */
+    public function getLocationHistory(): ArrayCollection
+    {
+        $criteria = Criteria::create()
+            ->orderBy(['date' => 'ASC']);
+
+        return $this->locationHistory->matching($criteria);
     }
 
     /**
