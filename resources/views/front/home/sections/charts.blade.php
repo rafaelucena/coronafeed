@@ -40,24 +40,32 @@
     var chartListConfirmed = {!! json_encode($form->charts->getLineChart()['confirmed']['list']) !!};
     var chartListDeaths = {!! json_encode($form->charts->getLineChart()['deaths']['list']) !!};
     var chartListCured = {!! json_encode($form->charts->getLineChart()['cured']['list']) !!};
+    var chartPieLabels = {!! json_encode(array_column($form->charts->getPieChart(), 'label')) !!};
+    var chartPieValues = {!! json_encode(array_column($form->charts->getPieChart(), 'value')) !!};
 </script>
 <script type="text/javascript">
     var chartData = {
-        dates: {
-            label: 'Datas',
-            list: chartListData
+        lineChart: {
+            dates: {
+                label: 'Datas',
+                list: chartListData
+            },
+            confirmed: {
+                label: 'Confirmados',
+                list: chartListConfirmed
+            },
+            deaths: {
+                label: 'Mortes',
+                list: chartListDeaths
+            },
+            cured: {
+                label: 'Curados',
+                list: chartListCured
+            }
         },
-        confirmed: {
-            label: 'Confirmados',
-            list: chartListConfirmed
-        },
-        deaths: {
-            label: 'Mortes',
-            list: chartListDeaths
-        },
-        cured: {
-            label: 'Curados',
-            list: chartListCured
+        pieChart: {
+            labels: chartPieLabels,
+            values: chartPieValues
         }
     };
 </script>
@@ -68,10 +76,10 @@
     var myLineChart = new Chart(ctxL, {
         type: 'line',
         data: {
-            labels: chartData.dates.list,
+            labels: chartData.lineChart.dates.list,
             datasets: [{
-                label: chartData.confirmed.label,
-                data: chartData.confirmed.list,
+                label: chartData.lineChart.confirmed.label,
+                data: chartData.lineChart.confirmed.list,
                 backgroundColor: [
                     'rgba(0, 0, 0, 0)', //transparent
                 ],
@@ -80,8 +88,8 @@
                 ],
                 borderWidth: 5
             }, {
-                label: chartData.deaths.label,
-                data: chartData.deaths.list,
+                label: chartData.lineChart.deaths.label,
+                data: chartData.lineChart.deaths.list,
                 backgroundColor: [
                     'rgba(0, 0, 0, 0)', //transparent
                 ],
@@ -90,8 +98,8 @@
                 ],
                 borderWidth: 5
             }, {
-                label: chartData.cured.label,
-                data: chartData.cured.list,
+                label: chartData.lineChart.cured.label,
+                data: chartData.lineChart.cured.list,
                 backgroundColor: [
                     'rgba(0, 0, 0, 0)', //transparent
                 ],
@@ -113,9 +121,9 @@
     var myPieChart = new Chart(ctxP, {
         type: 'pie',
         data: {
-            labels: ["Confirmados", "Mortos", "Curados"],
+            labels: chartData.pieChart.labels,
             datasets: [{
-                data: [9900, 448, 127],
+                data: chartData.pieChart.values,
                 backgroundColor: ["#FF4C60", "#800000", "#80ff80"],
                 hoverBackgroundColor: ["#ff8080", "#aa0000", "#aaffaa"]
             }]
