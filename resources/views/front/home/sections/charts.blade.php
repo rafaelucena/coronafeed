@@ -34,24 +34,30 @@
 <div class="spacer" data-height="60"></div>
 
 
-<script>
+<script type="text/javascript">
     // var confirmed = {!! json_encode($form->about) !!};
+    var chartListData = {!! json_encode($form->charts->getLineChart()['dates']['list']) !!};
+    var chartListConfirmed = {!! json_encode($form->charts->getLineChart()['confirmed']['list']) !!};
+    var chartListDeaths = {!! json_encode($form->charts->getLineChart()['deaths']['list']) !!};
+    var chartListCured = {!! json_encode($form->charts->getLineChart()['cured']['list']) !!};
+</script>
+<script type="text/javascript">
     var chartData = {
         dates: {
             label: 'Datas',
-            list: {!! json_encode($form->charts->getDates()) !!}
+            list: chartListData
         },
         confirmed: {
             label: 'Confirmados',
-            list: {!! json_encode($form->charts->getConfirmed()) !!}
+            list: chartListConfirmed
         },
         deaths: {
             label: 'Mortes',
-            list: {!! json_encode($form->charts->getDeaths()) !!}
+            list: chartListDeaths
         },
         cured: {
             label: 'Curados',
-            list: {!! json_encode($form->charts->getCured()) !!}
+            list: chartListCured
         }
     };
 </script>
