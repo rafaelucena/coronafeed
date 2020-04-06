@@ -7,6 +7,7 @@ use Doctrine\Common\Collections\Criteria;
 use Doctrine\ORM\Mapping AS ORM;
 use Doctrine\ORM\Event\PreUpdateEventArgs;
 use Doctrine\ORM\PersistentCollection;
+use Illuminate\Support\Str;
 use LaravelDoctrine\ORM\Contracts\UrlRoutable;
 
 /**
@@ -81,9 +82,35 @@ class Location implements UrlRoutable
     /**
      * @return string
      */
+    public function getSlug(): string
+    {
+        return $this->slug;
+    }
+
+    /**
+     * @param string $slug
+     * @return void
+     */
+    public function setSlug(string $slug): void
+    {
+        $this->slug = $slug;
+    }
+
+    /**
+     * @return string
+     */
     public function getName(): string
     {
         return $this->name;
+    }
+
+    /**
+     * @param string $name
+     * @return void
+     */
+    public function setName(string $name): void
+    {
+        $this->name = $name;
     }
 
     /**
@@ -114,6 +141,15 @@ class Location implements UrlRoutable
     }
 
     /**
+     * @param LocationType $locationType
+     * @return void
+     */
+    public function setLocationType(LocationType $locationType): void
+    {
+        $this->locationType = $locationType;
+    }
+
+    /**
      * @return Location
      */
     public function getParent(): Location
@@ -122,10 +158,29 @@ class Location implements UrlRoutable
     }
 
     /**
-     * @return Location
+     * @param Location $location
+     * @return void
      */
-    public function getChildren()
+    public function setParent(Location $location): void
+    {
+        $this->parent = $location;
+    }
+
+    /**
+     * @return PersistentCollection
+     */
+    public function getChildren(): PersistentCollection
     {
         return $this->children;
+    }
+
+    /**
+     * @ORM\PrePersist()
+     */
+    public function onPrePersist()
+    {
+        $this->slug = Str::slug($this->name);
+        $this->isQuarantined = (int) false;
+        $this->isContained = (int) false;
     }
 }

@@ -5,7 +5,6 @@ namespace App\Http\Models;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Criteria;
 use Doctrine\ORM\Mapping AS ORM;
-use Doctrine\ORM\Event\PreUpdateEventArgs;
 
 /**
  * @ORM\Entity()
@@ -53,11 +52,29 @@ class LocationNumbers
     private $location;
 
     /**
+     * @param Location $location
+     * @return void
+     */
+    public function setLocation(Location $location): void
+    {
+        $this->location = $location;
+    }
+
+    /**
      * @return int
      */
     public function getNewCases(): int
     {
         return $this->newCases;
+    }
+
+    /**
+     * @param integer $newCases
+     * @return void
+     */
+    public function setNewCases(int $newCases): void
+    {
+        $this->newCases = $newCases;
     }
 
     /**
@@ -69,11 +86,29 @@ class LocationNumbers
     }
 
     /**
+     * @param integer $confirmed
+     * @return void
+     */
+    public function setConfirmed(int $confirmed): void
+    {
+        $this->confirmed = $confirmed;
+    }
+
+    /**
      * @return int
      */
     public function getDeaths(): int
     {
         return $this->deaths;
+    }
+
+    /**
+     * @param integer $deaths
+     * @return void
+     */
+    public function setDeaths(int $deaths): void
+    {
+        $this->deaths = $deaths;
     }
 
     /**
@@ -85,10 +120,35 @@ class LocationNumbers
     }
 
     /**
+     * @param integer $cured
+     * @return void
+     */
+    public function setCured(int $cured): void
+    {
+        $this->cured = $cured;
+    }
+
+    /**
      * @return \DateTime
      */
     public function getUpdated(): \DateTime
     {
         return $this->updated;
+    }
+
+    /**
+     * @ORM\PrePersist()
+     */
+    public function onPrePersist()
+    {
+        $this->updated = new \DateTime();
+    }
+
+    /**
+     * @ORM\PreUpdate()
+     */
+    public function onPreUpdate()
+    {
+        $this->updated = new \DateTime();
     }
 }
