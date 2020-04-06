@@ -19,14 +19,14 @@
         </div>
 
         <!-- testimonial item -->
-        <div class="testimonial-item text-center mx-auto">
+        <!-- <div class="testimonial-item text-center mx-auto">
             <canvas id="barChart"></canvas>
-        </div>
+        </div> -->
 
         <!-- testimonial item -->
-        <div class="testimonial-item text-center mx-auto">
+        <!-- <div class="testimonial-item text-center mx-auto">
             <canvas id="horizontalBar"></canvas>
-        </div>
+        </div> -->
     </div>
 
 </div>
