@@ -122,12 +122,14 @@ class Location implements UrlRoutable
     }
 
     /**
-     * @return ArrayCollection|LocationHistory[]
+     * @param integer $limit
+     * @return Location[]|ArrayCollection
      */
-    public function getLocationHistory(): ArrayCollection
+    public function getLocationHistory(int $limit = 15): ArrayCollection
     {
         $criteria = Criteria::create()
-            ->orderBy(['date' => 'ASC']);
+            ->orderBy(['date' => 'DESC'])
+            ->setMaxResults($limit);
 
         return $this->locationHistory->matching($criteria);
     }
