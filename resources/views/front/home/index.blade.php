@@ -16,5 +16,5 @@
 		@include('front.home.sections.charts')
 	</section>
 
-	
+	<div class="spacer" data-height="96"></div>
 @endsection
