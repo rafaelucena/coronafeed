@@ -1,5 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,13 +16,13 @@
 
 // Route::get('/', 'Front\HomeController@index');
 Route::get('/', function() {
-    return Redirect::to('/local/brasil', 302);
+    return Redirect::to('/brasil', 302);
 });
 
-Route::get('/local/{location}', 'Front\HomeController@location');
+Route::get('/{location}', 'Front\HomeController@location');
 
-Route::get('admin', 'Back\DashboardController@index');
+// Route::get('admin', 'Back\DashboardController@index');
 
-Route::get('admin/countries', 'Back\CountriesController@index');
+// Route::get('admin/countries', 'Back\CountriesController@index');
 
-Route::get('admin/countries/add', 'Back\CountriesController@add');
+// Route::get('admin/countries/add', 'Back\CountriesController@add');
