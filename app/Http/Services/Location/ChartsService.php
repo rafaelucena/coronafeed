@@ -29,6 +29,22 @@ class ChartsService
         ],
     ];
 
+    /** @var array */
+    private $pieChart = [
+        'confirmed' => [
+            'label' => 'Confirmados',
+            'value' => 0,
+        ],
+        'deaths' => [
+            'label' => 'Mortes',
+            'value' => 0,
+        ],
+        'cured' => [
+            'label' => 'Curados',
+            'value' => 0,
+        ],
+    ];
+
     /**
      * @param Location $location
      */
@@ -38,6 +54,7 @@ class ChartsService
         $locationHistoryArray = $location->getLocationHistory();
 
         $this->setLineChart($locationHistoryArray);
+        $this->setPieChart($locationNumbers);
     }
 
     /**
@@ -60,5 +77,24 @@ class ChartsService
             $this->lineChart['deaths']['list'][] = $locationHistory->getDeaths();
             $this->lineChart['cured']['list'][] = $locationHistory->getCured();
         }
+    }
+
+    /**
+     * @return array
+     */
+    public function getPieChart(): array
+    {
+        return $this->pieChart;
+    }
+
+    /**
+     * @param LocationNumbers $locationNumbers
+     * @return void
+     */
+    public function setPieChart(LocationNumbers $locationNumbers): void
+    {
+        $this->pieChart['confirmed']['value'] = $locationNumbers->getConfirmed();
+        $this->pieChart['deaths']['value'] = $locationNumbers->getDeaths();
+        $this->pieChart['cured']['value'] = $locationNumbers->getCured();
     }
 }
