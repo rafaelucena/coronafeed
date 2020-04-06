@@ -4,111 +4,97 @@ namespace App\Http\Services\Location;
 
 use App\Http\Models\Location;
 use App\Http\Models\LocationHistory;
+use App\Http\Models\LocationNumbers;
 use Doctrine\Common\Collections\ArrayCollection;
 
 class ChartsService
 {
     /** @var array **/
-    private $dates;
+    private $lineChart = [
+        'dates' => [
+            'label' => 'Datas',
+            'list' => [],
+        ],
+        'confirmed' => [
+            'label' => 'Confirmados',
+            'list' => [],
+        ],
+        'deaths' => [
+            'label' => 'Mortes',
+            'list' => [],
+        ],
+        'cured' => [
+            'label' => 'Curados',
+            'list' => [],
+        ],
+    ];
 
-    /** @var array **/
-    private $confirmed;
-
-    /** @var array **/
-    private $deaths;
-
-    /** @var array **/
-    private $cured;
+    /** @var array */
+    private $pieChart = [
+        'confirmed' => [
+            'label' => 'Confirmados',
+            'value' => 0,
+        ],
+        'deaths' => [
+            'label' => 'Mortes',
+            'value' => 0,
+        ],
+        'cured' => [
+            'label' => 'Curados',
+            'value' => 0,
+        ],
+    ];
 
     /**
      * @param Location $location
      */
     public function __construct(Location $location)
     {
+        $locationNumbers = $location->getLocationNumbers();
         $locationHistoryArray = $location->getLocationHistory();
-        $this->setDates($locationHistoryArray);
-        $this->setConfirmed($locationHistoryArray);
-        $this->setDeaths($locationHistoryArray);
-        $this->setCured($locationHistoryArray);
+
+        $this->setLineChart($locationHistoryArray);
+        $this->setPieChart($locationNumbers);
     }
 
     /**
      * @return array
      */
-    public function getDates(): array
+    public function getLineChart(): array
     {
-        return $this->dates;
+        return $this->lineChart;
     }
 
     /**
      * @param ArrayCollection $locationHistoryArray
      * @return void
      */
-    public function setDates(ArrayCollection $locationHistoryArray): void
+    public function setLineChart(ArrayCollection $locationHistoryArray): void
     {
-        $this->dates = [];
         foreach ($locationHistoryArray as $locationHistory) {
-            $this->dates[] = $locationHistory->getDate()->format('Y-m-d');
+            $this->lineChart['dates']['list'][] = $locationHistory->getDate()->format('Y-m-d');
+            $this->lineChart['confirmed']['list'][] = $locationHistory->getConfirmed();
+            $this->lineChart['deaths']['list'][] = $locationHistory->getDeaths();
+            $this->lineChart['cured']['list'][] = $locationHistory->getCured();
         }
     }
 
     /**
      * @return array
      */
-    public function getConfirmed(): array
+    public function getPieChart(): array
     {
-        return $this->confirmed;
+        return $this->pieChart;
     }
 
     /**
-     * @param ArrayCollection $locationHistoryArray
+     * @param LocationNumbers $locationNumbers
      * @return void
      */
-    public function setConfirmed(ArrayCollection $locationHistoryArray): void
+    public function setPieChart(LocationNumbers $locationNumbers): void
     {
-        $this->confirmed = [];
-        foreach ($locationHistoryArray as $locationHistory) {
-            $this->confirmed[] = $locationHistory->getConfirmed();
-        }
-    }
-
-    /**
-     * @return array
-     */
-    public function getDeaths(): array
-    {
-        return $this->deaths;
-    }
-
-    /**
-     * @param ArrayCollection $locationHistoryArray
-     * @return void
-     */
-    public function setDeaths(ArrayCollection $locationHistoryArray): void
-    {
-        $this->deaths = [];
-        foreach ($locationHistoryArray as $locationHistory) {
-            $this->deaths[] = $locationHistory->getDeaths();
-        }
-    }
-
-    /**
-     * @return array
-     */
-    public function getCured(): array
-    {
-        return $this->cured;
-    }
-
-    /**
-     * @param ArrayCollection $locationHistoryArray
-     * @return void
-     */
-    public function setCured(ArrayCollection $locationHistoryArray): void
-    {
-        $this->cured = [];
-        foreach ($locationHistoryArray as $locationHistory) {
-            $this->cured[] = $locationHistory->getCured();
-        }
+        $this->pieChart['confirmed']['value'] = $locationNumbers->getConfirmed();
+        $this->pieChart['deaths']['value'] = $locationNumbers->getDeaths();
+        $this->pieChart['cured']['value'] = $locationNumbers->getCured();
     }
 }
