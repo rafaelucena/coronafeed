@@ -2693,6 +2693,9 @@ body.dark footer.footer {
   body.dark .triangle-top-sm:before {
     border-bottom-color: #302f4e;
   }
+  .testimonial-item {
+    padding: 0;
+  }
 }
 
 @media only screen and (min-width: 768px) {
