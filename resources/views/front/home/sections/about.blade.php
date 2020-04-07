@@ -6,18 +6,18 @@
 
     <div class="row">
 
-        <div class="col-md-3">
+        <!-- <div class="col-md-3">
             <div class="text-center text-md-left">
-                <!-- avatar image -->
                 <img src="{{ asset('front/images/brazilglobered.png') }}" alt="Brasil on a Globe" />
             </div>
             <div class="spacer d-md-none d-lg-none" data-height="30"></div>
         </div>
 
-        <div class="col-md-9 triangle-left-md triangle-top-sm">
+        <div class="col-md-9 triangle-left-md triangle-top-sm"> -->
+        <div class="col-md-12 triangle-left-md triangle-top-sm">
             <div class="rounded bg-white shadow-dark padding-30">
                 <div class="row">
-                    
+
                     <div class="col-md-12">
                         <!-- skill item -->
                         @foreach($form->about->getEstimations() as $type => $estimation)
@@ -33,20 +33,9 @@
                             <div class="spacer" data-height="20"></div>
                         </div>
                         @endforeach
-                        <p class="update-time">Atualizado :
+                        <p class="update-time">Atualizado:
                             {{ $form->about->getUpdated() }}</p>
                     </div>
-                    
-                    
-                    
-
-                     <!--   <span class="badge-about">{{ $form->about->getUpdated() }}</span>
-                        
-                         about text 
-                        <p>{{ $form->about->getDescription() }}</p>
-                        -->
-                        
-                    
                 </div>
             </div>
         </div>
