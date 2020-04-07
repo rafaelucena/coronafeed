@@ -1,6 +1,6 @@
 <!-- logo image -->
 <div class="site-logo">
-    <a href="index-corona.html">
+    <a href="/">
         <img src="{{ asset('front/images/logo_.png') }}" alt="COVID-19" />
     </a>
 </div>
