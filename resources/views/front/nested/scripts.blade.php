@@ -19,6 +19,7 @@
 <script>
 $(document).ready(function() {
     $('#location-search-bar').select2({
+        width: '160px',
         placeholder: "Buscar",
         theme: "material"
     });
