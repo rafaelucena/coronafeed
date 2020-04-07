@@ -11,6 +11,11 @@
 		@include('front.home.sections.about')
 	</section>
 
+	<!-- section world map -->
+	<section id="map-world">
+		@include('front.home.sections.map-world')
+	</section>
+
 	<!-- section charts -->
 	<section id="charts">
 		@include('front.home.sections.charts')

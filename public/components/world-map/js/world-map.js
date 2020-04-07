@@ -9,7 +9,7 @@ google.charts.setOnLoadCallback(drawRegionsMap);
 
 function drawRegionsMap() {
     var data = google.visualization.arrayToDataTable([
-    ['Country', 'Number Of Cases'],
+    ['Country', 'Números de casos'],
     ['Germany', 47278],
     ['United States', 85749],
     ['China', 81340],
@@ -31,7 +31,7 @@ function drawRegionsMap() {
         colors: ['#ffd5d5', '#800000'],
         backgroundColor: '#f9f9ff'
         
-    };
+    }; 
 
     var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
 
