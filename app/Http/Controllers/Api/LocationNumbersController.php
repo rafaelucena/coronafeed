@@ -32,7 +32,7 @@ class LocationNumbersController extends Controller
             'confirmed' => $locationNumbers->getConfirmed(),
             'deaths' => $locationNumbers->getDeaths(),
             'cured' => $locationNumbers->getCured(),
-            'updated' => $locationNumbers->getUpdated()->format('Y-m-d H:i:s'),
+            'updated' => $locationNumbers->getUpdated()->format('d/m/Y H:i:s'),
         ];
     }
 
@@ -51,7 +51,7 @@ class LocationNumbersController extends Controller
             'confirmed' => $locationNumbers->getConfirmed(),
             'deaths' => $locationNumbers->getDeaths(),
             'cured' => $locationNumbers->getCured(),
-            'updated' => $locationNumbers->getUpdated()->format('Y-m-d H:i:s'),
+            'updated' => $locationNumbers->getUpdated()->format('d/m/Y H:i:s'),
         ];
 
         $locationNumbers->setNewCases($request->input('new_cases'));
@@ -69,7 +69,7 @@ class LocationNumbersController extends Controller
                 'confirmed' => $locationNumbers->getConfirmed(),
                 'deaths' => $locationNumbers->getDeaths(),
                 'cured' => $locationNumbers->getCured(),
-                'updated' => $locationNumbers->getUpdated()->format('Y-m-d H:i:s'),
+                'updated' => $locationNumbers->getUpdated()->format('d/m/Y H:i:s'),
             ],
             'old' => $old,
         ];
@@ -99,7 +99,7 @@ class LocationNumbersController extends Controller
             'confirmed' => $locationNumbers->getConfirmed(),
             'deaths' => $locationNumbers->getDeaths(),
             'cured' => $locationNumbers->getCured(),
-            'updated' => $locationNumbers->getUpdated()->format('Y-m-d H:i:s'),
+            'updated' => $locationNumbers->getUpdated()->format('d/m/Y H:i:s'),
         ];
     }
 }
