@@ -10,14 +10,22 @@ class MenuService
     /** @var array **/
     private $list;
 
+    /** @var EntityManager */
     private $em;
 
+    /**
+     * @param Location $location
+     */
     public function __construct(Location $location)
     {
         $this->em = app('em');
         $this->setList($location);
     }
 
+    /**
+     * @param Location $location
+     * @return void
+     */
     public function setList(Location $location)
     {
         $locationsList = $this->em->getRepository(Location::class)->findBy(
