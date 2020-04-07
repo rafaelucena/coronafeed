@@ -40,6 +40,13 @@ class MenuService
                 'label' => $locationItem->getName(),
             ];
         }
-        \Debugbar::info($this->list);
+    }
+
+    /**
+     * @return array
+     */
+    public function getList(): array
+    {
+        return $this->list;
     }
 }
