@@ -3,12 +3,9 @@
         <i class="search-bar fas fa-search"></i>
         <select class="select2-simple js-states form-control" id="location-search-bar">
             <option value="">Buscar</option>
-            <option value="brasil">Brasil</option>
-            <option value="china">China</option>
-            <option value="italia">Italia</option>
-            <option value="alemanha">Alemanha</option>
-            <option value="america">America</option>
-            <option value="test">test</option>
+            @foreach($form->menu->getList() as $location)
+            <option value="{{ $location['id'] }}">{{ $location['label'] }}</option>
+            @endforeach
         </select>
     </li>
     <li class="active"><a href="#home"><i class="fas fa-asterisk"></i>Fica Em Casa</a></li>
