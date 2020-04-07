@@ -12,6 +12,7 @@
 <link rel="stylesheet" type="text/css" media="all" href="{{ asset('front/css/animate.css') }}">
 <link rel="stylesheet" type="text/css" media="all" href="{{ asset('front/css/magnific-popup.css') }}">
 <link rel="stylesheet" type="text/css" media="all" href="{{ asset('front/css/style.css') }}">
+<link rel="stylesheet" type="text/css" media="all" href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css"/>
 
 <!-- //@TODO - to determine if mbd css will be necessary -->
 <!-- <link rel="stylesheet" type="text/css" media="all" href="{{ asset('components/mdb/css/mdb.css') }}"> -->
