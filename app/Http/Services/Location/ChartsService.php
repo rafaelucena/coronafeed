@@ -72,7 +72,7 @@ class ChartsService
     public function setLineChart(ArrayCollection $locationHistoryArray): void
     {
         foreach (array_reverse($locationHistoryArray->toArray()) as $locationHistory) {
-            $this->lineChart['dates']['list'][] = $locationHistory->getDate()->format('Y-m-d');
+            $this->lineChart['dates']['list'][] = $locationHistory->getDate()->format('d/m/Y');
             $this->lineChart['confirmed']['list'][] = $locationHistory->getConfirmed();
             $this->lineChart['deaths']['list'][] = $locationHistory->getDeaths();
             $this->lineChart['cured']['list'][] = $locationHistory->getCured();
