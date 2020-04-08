@@ -31,8 +31,8 @@ class ChartsService
 
     /** @var array */
     private $pieChart = [
-        'confirmed' => [
-            'label' => 'Confirmados',
+        'active-cases' => [
+            'label' => 'Casos ativos',
             'value' => 0,
         ],
         'deaths' => [
@@ -93,7 +93,7 @@ class ChartsService
      */
     public function setPieChart(LocationNumbers $locationNumbers): void
     {
-        $this->pieChart['confirmed']['value'] = $locationNumbers->getConfirmed();
+        $this->pieChart['active-cases']['value'] = $locationNumbers->getConfirmed() - $locationNumbers->getDeaths() - $locationNumbers->getCured();
         $this->pieChart['deaths']['value'] = $locationNumbers->getDeaths();
         $this->pieChart['cured']['value'] = $locationNumbers->getCured();
     }

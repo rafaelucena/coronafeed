@@ -119,7 +119,7 @@ class AboutService
 
     public function setUpdated(\DateTime $datetime)
     {
-        $this->updated = $datetime->format('Y-m-d H:i:s');
+        $this->updated = $datetime->format('d/m/Y H:i:s');
     }
 
     public function getUpdated()
