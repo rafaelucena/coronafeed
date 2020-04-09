@@ -967,6 +967,10 @@ section.home .social-icons li a {
   color: rgb(100, 100, 100);
 }
 
+section.home .social-icons li a.link-inactive {
+  color: #A0A0A0;
+}
+
 section.home.light {
   background: #F9F9FF;
 }
