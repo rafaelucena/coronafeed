@@ -10,11 +10,11 @@
 
         <!-- social icons -->
         <ul class="social-icons light list-inline mb-0 mt-4">
-            <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
-            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-            <li class="list-inline-item"><a href="#"><i class="fab fa-slack"></i></a></li>
- <!--           <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest-p"></i></a></li>-->
+            <li class="list-inline-item"><a href="https://www.instagram.com/corona_feed" target="_blank" class="link-active"><i class="fab fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a href="https://twitter.com/corona_feed" target="_blank" class="link-active"><i class="fab fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.facebook.com/coronafeed" target="_blank" class="link-active"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="list-inline-item"><a href="#" class="link-inactive"><i class="fab fa-linkedin"></i></a></li>
+            <li class="list-inline-item"><a href="https://join.slack.com/t/coronafeed/shared_invite/zt-d4tzc53k-MYwqWKX~Z~1g7gerMNw2wA" class="link-active"><i class="fab fa-slack"></i></a></li>
         </ul>
     </div>
 

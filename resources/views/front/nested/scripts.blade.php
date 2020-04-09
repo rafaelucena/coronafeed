@@ -14,7 +14,21 @@
 <script type="text/javascript" src="{{ asset('front/js/parallax.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('front/js/jquery.magnific-popup.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('front/js/custom.js') }}"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
 
+<script>
+$(document).ready(function() {
+    $('#location-search-bar').select2({
+        width: '160px',
+        placeholder: "Buscar",
+        theme: "material"
+    });
+
+    $("#location-search-bar").on("select2:select", function(selected) {
+        window.location.href = '/' +  selected.params.data.id;
+    });
+});
+</script>
 <!-- graph-->
 <!-- @TODO - google charts won't be necessary anymore -->
 <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->

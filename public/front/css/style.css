@@ -412,7 +412,7 @@ header.desktop-header-1 .vertical-menu {
   list-style: none;
   padding: 0;
   margin-bottom: 130px;
-  margin-top: 130px;
+  margin-top: 0px;
 }
 
 header.desktop-header-1 .vertical-menu li.openmenu>a {
@@ -438,6 +438,15 @@ header.desktop-header-1 .vertical-menu li {
 
 header.desktop-header-1 .vertical-menu li a:hover {
   color: #800000;
+}
+
+header.desktop-header-1 .vertical-menu li.search-location {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+header.desktop-header-1 .vertical-menu li i.search-bar {
+  margin-right: 15px;
 }
 
 header.desktop-header-1 .vertical-menu li i {
@@ -930,10 +939,10 @@ section {
 }
 
 section.home {
-  background: #d5D5D5;
+  background: #D5D5D5;
   padding: 0;
-  height: 100vh;
-  min-height: 100vh;
+  height: 50vh;
+  min-height: 50vh;
 }
 
 section.home .intro {
@@ -956,6 +965,10 @@ section.home .intro span {
 
 section.home .social-icons li a {
   color: rgb(100, 100, 100);
+}
+
+section.home .social-icons li a.link-inactive {
+  color: #A0A0A0;
 }
 
 section.home.light {
@@ -1285,6 +1298,272 @@ select.portfolio-filter-mobile {
   margin-bottom: 30px;
   position: relative;
   width: 100%;
+}
+
+
+/**
+ * Multiple Select2
+ */
+
+#select2-location-search-bar-container {
+  padding-left: 0
+}
+
+.select2-container--material {
+  font-weight: bold;
+}
+
+.select2-container--material ::-webkit-input-placeholder {
+  color: inherit;
+}
+
+.select2-container--material ::-moz-placeholder {
+  color: inherit;
+}
+
+.select2-container--material :-ms-input-placeholder {
+  color: inherit;
+}
+
+.select2-container--material ::-ms-input-placeholder {
+  color: inherit;
+}
+
+.select2-container--material ::placeholder {
+  color: inherit;
+}
+
+.select2-container--material .select2-selection {
+  /* @extend input */
+  overflow: visible;
+  font: inherit;
+  touch-action: manipulation;
+  margin: 0;
+  line-height: inherit;
+  border-radius: 0;
+  box-sizing: inherit;
+  /* @extend .form-control */
+  display: block;
+  width: 100%;
+  color: #55595c;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 0.5rem 0 0.6rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: transparent;
+  background-image: none;
+  border-radius: 0;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+  /* @extend input[type=text] */
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+  outline: 0;
+  width: 100%;
+  font-size: 1rem;
+  box-shadow: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  min-height: 2.1rem;
+}
+
+.select2-container--material .select2-selection .select2-selection__rendered {
+  padding-left: 0;
+}
+
+.select2-container--material .select2-selection--single .select2-selection__rendered {
+  float: left;
+}
+
+.select2-container--material .select2-selection--single .select2-selection__arrow {
+  float: right;
+}
+
+.select2-container--material .select2-selection--multiple {
+  /**
+     * Multiple selected options
+     */
+  /**
+     * Multiple selected option clear button
+     */
+}
+
+.select2-container--material .select2-selection--multiple .select2-selection__rendered {
+  width: 100%;
+}
+
+.select2-container--material .select2-selection--multiple .select2-selection__rendered li {
+  list-style: none;
+}
+
+.select2-container--material .select2-selection--multiple .select2-selection__choice {
+  /* @extend .mdl-chip */
+  height: 32px;
+  line-height: 32px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 16px;
+  background-color: #dedede;
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.87);
+  margin: 2px 0;
+  font-size: 0;
+  white-space: nowrap;
+  /* @extend .mdl-chip__text */
+  font-size: 13px;
+  vertical-align: middle;
+  display: inline-block;
+  float: left;
+  margin-right: 8px;
+  margin-bottom: 4px;
+}
+
+.select2-container--material .select2-selection--multiple .select2-selection__choice__remove {
+  /* Hide default content */
+  font-size: 0;
+  opacity: 0.38;
+  cursor: pointer;
+  float: right;
+  margin-top: 4px;
+  margin-right: -6px;
+  margin-left: 6px;
+  -webkit-transition: opacity;
+  transition: opacity;
+}
+
+.select2-container--material .select2-selection--multiple .select2-selection__choice__remove::before {
+  content: "cancel";
+  /* @extend .material-icons */
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  color: #000;
+}
+
+.select2-container--material .select2-selection--multiple .select2-selection__choice__remove:hover {
+  opacity: 0.54;
+}
+
+.select2-container--material .select2-search--inline .select2-search__field {
+  width: 100%;
+  margin-top: 0;
+  /* Match input[type=text] */
+  height: 34px;
+  line-height: 1;
+}
+
+.select2-container--material .select2-dropdown {
+  border: 0;
+}
+
+.select2-search--dropdown {
+  background-color: #dedede;
+}
+
+.select2-container--material .select2-dropdown .select2-search__field {
+  min-height: 2.1rem;
+  margin-bottom: 16px;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: #dedede;
+}
+
+.select2-container--material .select2-dropdown .select2-search__field:focus {
+  border-bottom: 1px solid #900000;
+  box-shadow: 0 1px 0 0 #900000;
+}
+
+.select2-container--material .select2-results__options {
+  /* @extend .zf-shadow-depth* */
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  /* @extend .dropdown-content */
+  background-color: #dedede;
+  margin: 0;
+  min-width: 100px;
+  max-height: 450px;
+  overflow-y: auto;
+  z-index: 999;
+  will-change: width, height;
+  /* @extend .dropdown-content inline styles */
+}
+
+.select2-container--material .select2-results__option {
+  /* @extend .dropdown-content li */
+  cursor: pointer;
+  clear: both;
+  color: rgba(100, 100, 100, 0.87);
+  line-height: 1.5rem;
+  text-align: left;
+  text-transform: none;
+  /* @extend .dropdown-content li>a, .dropdown-content li>span */
+  font-size: 1.2rem;
+  display: block;
+  padding: 1rem;
+  /**
+     * Disabled options
+     */
+  /**
+     * Selected option
+     */
+  /**
+     * Active/hovered option
+     */
+}
+
+.select2-container--material .select2-results__option[aria-disabled="true"] {
+  /* @extend .select-dropdown li.disabled */
+  color: rgba(0, 0, 0, 0.3);
+  background-color: transparent !important;
+  cursor: context-menu;
+  /* @extend .disabled */
+  cursor: not-allowed;
+}
+
+.select2-container--material .select2-results__option[aria-selected="true"] {
+  /* @extend .dropdown-content li:active, .dropdow-content li:hover */
+  color: #900000;
+  background-color: #eee;
+}
+
+.select2-container--material .select2-results__option--highlighted[aria-selected] {
+  color: #900000;
+  background-color: #d5d5d5;
+}
+
+.select2-container--material.select2-container--focus .select2-selection {
+  /* @extend input[type=text]:focus */
+  border-bottom: 1px solid #900000;
+  box-shadow: 0 1px 0 0 #900000;
+}
+
+.select2-container--material.select2-container--disabled .select2-selection {
+  /* @extend .select-wrapper input.select-dropdown:disabled */
+  color: rgba(0, 0, 0, 0.3);
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.select2-container--material.select2-container--disabled.select2-container--focus .select2-selection {
+  box-shadow: none;
 }
 
 .pf-filter-wrapper {
@@ -2770,6 +3049,9 @@ body.dark footer.footer {
 }
 
 @media (min-width: 1200px) {
+  .scroll-down {
+    display: none;
+  }
   .container {
     max-width: 920px;
   }
@@ -2842,15 +3124,19 @@ body.dark footer.footer {
 
 /*                      WORLD MAP SETTINGS
 /*=================================================================*/
+
+
 /*
 #world-map-container {
   width: 100%;
   text-align: center;
 }*/
+
+
 /*----------------------------------------------------------------------*/
 
-/*---------------------ABOUT MODIFIED-----------------------------------*/
 
+/*---------------------ABOUT MODIFIED-----------------------------------*/
 
 .update-time {
   margin-bottom: 0px;
