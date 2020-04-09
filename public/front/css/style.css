@@ -939,10 +939,10 @@ section {
 }
 
 section.home {
-  background: #d5D5D5;
+  background: #D5D5D5;
   padding: 0;
-  height: 100vh;
-  min-height: 100vh;
+  height: 50vh;
+  min-height: 50vh;
 }
 
 section.home .intro {
@@ -3049,6 +3049,9 @@ body.dark footer.footer {
 }
 
 @media (min-width: 1200px) {
+  .scroll-down {
+    display: none;
+  }
   .container {
     max-width: 920px;
   }
