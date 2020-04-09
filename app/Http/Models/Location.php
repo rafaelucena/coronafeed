@@ -35,7 +35,7 @@ class Location implements UrlRoutable
     private $name;
 
     /**
-     * @ORM\Column(type="string", length=2, nullable=false)
+     * @ORM\Column(type="string", length=2, nullable=true)
      */
     private $code;
 
