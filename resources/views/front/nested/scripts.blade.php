@@ -34,7 +34,7 @@ $(document).ready(function() {
 <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <!-- world map-->
-<script type="text/javascript" src="{{ asset('../components/world-map/js/world-map.js') }}"></script>
+<!-- <script type="text/javascript" src="{{ asset('../components/world-map/js/world-map.js') }}"></script> -->
 
 
 
