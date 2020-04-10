@@ -7,7 +7,7 @@ use App\Http\Models\Location;
 class MapsService
 {
     /** @var array **/
-    private $list;
+    private $world;
 
     /** @var EntityManager */
     private $em;
@@ -18,14 +18,14 @@ class MapsService
     public function __construct(Location $location)
     {
         $this->em = app('em');
-        $this->setList($location);
+        $this->setWorld($location);
     }
 
     /**
      * @param Location $location
      * @return void
      */
-    public function setList(Location $location)
+    public function setWorld(Location $location)
     {
         $locationsList = $this->em->getRepository(Location::class)->findBy(
             ['locationType' => $location->getLocationType()],
@@ -45,8 +45,8 @@ class MapsService
         }
     }
 
-    public function getList()
+    public function getWorld()
     {
-        return $this->list;
+        return $this->world;
     }
 }
