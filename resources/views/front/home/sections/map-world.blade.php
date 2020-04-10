@@ -4,7 +4,9 @@
     <h2 class="section-title wow fadeIn">Mapa do Mundo</h2>
     <div class="spacer" data-height="60"></div>
     <div class="row" id='world-map-container'>
-        <div id="regions_div" style="width: 900px; height: 500px;"></div>
+        <div class="col-md-12">
+            <div id="map-world"></div>
+        </div>
     </div>
 </div>
 
@@ -36,7 +38,7 @@
             legend: 'none',
         };
 
-        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+        var chart = new google.visualization.GeoChart(document.getElementById('map-world'));
         chart.draw(data, options);
     }
 </script>
