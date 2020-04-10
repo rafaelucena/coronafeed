@@ -35,6 +35,11 @@ class Location implements UrlRoutable
     private $name;
 
     /**
+     * @ORM\Column(type="string", length=2, nullable=true)
+     */
+    private $code;
+
+    /**
      * @ORM\Column(type="boolean", options={"default":"0"})
      */
     private $isQuarantined;
@@ -111,6 +116,23 @@ class Location implements UrlRoutable
     public function setName(string $name): void
     {
         $this->name = $name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCode(): string
+    {
+        return $this->code;
+    }
+
+    /**
+     * @param string $code
+     * @return void
+     */
+    public function setCode(string $code): void
+    {
+        $this->code = $code;
     }
 
     /**
