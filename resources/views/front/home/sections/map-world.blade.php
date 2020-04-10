@@ -9,7 +9,7 @@
 </div>
 
 <script type="text/javascript">
-    var mapsData = {!! json_encode($form->maps->getList()) !!};
+    var mapsData = {!! json_encode($form->maps->getWorld()) !!};
 </script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript">
@@ -22,24 +22,21 @@
     google.charts.setOnLoadCallback(drawRegionsMap);
 
     function drawRegionsMap() {
-        var data = google.visualization.arrayToDataTable(mapsData);
+        // var data = google.visualization.arrayToDataTable(mapsData);
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Country'); // Implicit domain label col.
+        data.addColumn('number', 'Value'); // Implicit series 1 data col.
+        data.addColumn({type:'string', role:'tooltip'}); //
+        data.addRows(mapsData);
 
         var options = {
-
-            title: 'World Map of Coronavirus Spread',
-            colors: ['#ffd5d5', '#800000'],
+            title: 'Casos ativos do coronavirus no mundo',
+            colors: ['#dfbfbf', '#cf9f9f', '#c08080', 'b06060', '#a04040','#902020', '#800000'],
             backgroundColor: '#f9f9ff',
             legend: 'none',
-            // legend: 'left',
-            // title:'My Big Pie Chart',
-            // is3D: true
-            // width: 400,
-            // height: 300
-
         };
 
         var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
-
         chart.draw(data, options);
     }
 </script>
