@@ -5,7 +5,7 @@
     <div class="spacer" data-height="60"></div>
     <div class="row" id='world-map-container'>
         <div class="col-md-12">
-            <div id="map-world"></div>
+            <div id="regions_div"></div>
         </div>
     </div>
 </div>
@@ -38,7 +38,7 @@
             legend: 'none',
         };
 
-        var chart = new google.visualization.GeoChart(document.getElementById('map-world'));
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
         chart.draw(data, options);
     }
 </script>
