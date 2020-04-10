@@ -29,13 +29,21 @@
         data.addColumn('string', 'Country'); // Implicit domain label col.
         data.addColumn('number', 'Value'); // Implicit series 1 data col.
         data.addColumn({type:'string', role:'tooltip'}); //
-        data.addRows(mapsData);
+        data.addRows([
+            [{v:"br",f:"Olympia"},18313,"Casos ativos: 18313"],
+            [{v:"us",f:"Seattle"},5000,"5000"],
+            ]);
 
         var options = {
             title: 'Casos ativos do coronavirus no mundo',
-            colors: ['#dfbfbf', '#cf9f9f', '#c08080', 'b06060', '#a04040','#902020', '#800000'],
+            colorAxis: {
+                colors: ['#b46969','#af5f5f','#aa5555','#a54b4b','#a04141','#9b3737','#962d2d','#912323','#8c1919','#870f0f','#800000'],
+                minValue: 0,
+                maxValue: 10
+            },
+            
             backgroundColor: '#f9f9ff',
-            legend: 'none',
+           /* legend: 'none',*/
         };
 
         var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
