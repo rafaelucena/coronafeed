@@ -32,13 +32,9 @@ class MapsService
             ['name' => 'ASC']
         );
 
-        $this->list = [];
-        $this->list[] = [
-            'Country',
-            'Numero de casos',
-        ];
+        $this->world = [];
         foreach ($locationsList as $locationItem) {
-            $this->list[] = [
+            $this->world[] = [
                 $locationItem->getCode(),
                 $locationItem->getLocationNumbers()->getConfirmed(),
             ];
