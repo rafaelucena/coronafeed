@@ -123,7 +123,7 @@ class Location implements UrlRoutable
      */
     public function getCode(): string
     {
-        return $this->code;
+        return $this->code ?? '';
     }
 
     /**
