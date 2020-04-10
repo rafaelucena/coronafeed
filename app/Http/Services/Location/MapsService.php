@@ -34,6 +34,10 @@ class MapsService
 
         $this->world = [];
         foreach ($locationsList as $locationItem) {
+            if (empty($locationItem->getCode()) === true) {
+                continue;
+            }
+
             $activeCases = $locationItem->getLocationNumbers()->getConfirmed() - $locationItem->getLocationNumbers()->getDeaths() - $locationItem->getLocationNumbers()->getCured();
             $this->world[] = [
                 [
