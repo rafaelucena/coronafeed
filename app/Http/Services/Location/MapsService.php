@@ -74,7 +74,8 @@ class MapsService
                     'v' => $locationItem->getCode(),
                     'f' => $locationItem->getName(),
                 ],
-                $this->getLogScale($activeCases),
+                // $this->getLogScale($activeCases),
+                $activeCases,
                 'Casos ativos: ' . $activeCases,
             ];
         }
