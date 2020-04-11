@@ -37,11 +37,12 @@
 
         var options = {
             title: 'Casos ativos do coronavirus no mundo',
-            colorAxis: {
-                colors: ['#b46969','#af5f5f','#aa5555','#a54b4b','#a04141','#9b3737','#962d2d','#912323','#8c1919','#870f0f','#800000'],
-                minValue: 0,
-                maxValue: 10
-            },
+            colors: ['#e4c8c8', '#800000'],
+            // colorAxis: {
+                // colors: ['#b46969','#af5f5f','#aa5555','#a54b4b','#a04141','#9b3737','#962d2d','#912323','#8c1919','#870f0f','#800000'],
+                // minValue: 0,
+                // maxValue: 10
+            // },
             backgroundColor: '#f9f9ff',
             // legend: 'none',
         };
