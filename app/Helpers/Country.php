@@ -16,7 +16,7 @@ class Country
      * @param string $name
      * @return string
      */
-    public function getCountryCodeByName(string $name): string
+    public function getIsoByName(string $name): string
     {
         $name = strtolower($name);
         foreach ($this->countries as $countryInfo) {
