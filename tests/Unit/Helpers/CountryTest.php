@@ -15,9 +15,9 @@ class CountryTest extends TestCase
     public function testCountryCodeByNameIsValid()
     {
         $countries = new Country();
-        $this->assertEquals('br', $countries->getCountryCodeByName('brazil'));
-        $this->assertEquals('br', $countries->getCountryCodeByName('Brazil'));
-        $this->assertEquals('br', $countries->getCountryCodeByName('BRAZIL'));
-        $this->assertEquals('br', $countries->getCountryCodeByName('BrAzIl'));
+        $this->assertEquals('br', $countries->getIsoByName('brazil'));
+        $this->assertEquals('br', $countries->getIsoByName('Brazil'));
+        $this->assertEquals('br', $countries->getIsoByName('BRAZIL'));
+        $this->assertEquals('br', $countries->getIsoByName('BrAzIl'));
     }
 }
