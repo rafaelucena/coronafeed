@@ -7,7 +7,7 @@
     },
     "ae": {
         "name": "united arab emirates",
-        "worldometer_name": "abcdefg",
+        "worldometer_name": "uae",
         "iso": "ae",
         "dial": "971"
     },
@@ -162,7 +162,7 @@
         "dial": "1441"
     },
     "bn": {
-        "name": "brunei darussalam",
+        "name": "brunei",
         "worldometer_name": "abcdefg",
         "iso": "bn",
         "dial": "673"
@@ -246,7 +246,7 @@
         "dial": "41"
     },
     "ci": {
-        "name": "cote d ivoire",
+        "name": "ivory coast",
         "worldometer_name": "abcdefg",
         "iso": "ci",
         "dial": "225"
@@ -313,7 +313,7 @@
     },
     "cz": {
         "name": "czech republic",
-        "worldometer_name": "abcdefg",
+        "worldometer_name": "czechia",
         "iso": "cz",
         "dial": "420"
     },
@@ -433,7 +433,7 @@
     },
     "gb": {
         "name": "united kingdom",
-        "worldometer_name": "abcdefg",
+        "worldometer_name": "uk",
         "iso": "gb",
         "dial": "44"
     },
@@ -582,7 +582,7 @@
         "dial": "964"
     },
     "ir": {
-        "name": "iran, islamic republic of",
+        "name": "iran",
         "worldometer_name": "abcdefg",
         "iso": "ir",
         "dial": "98"
@@ -654,14 +654,14 @@
         "dial": "1869"
     },
     "kp": {
-        "name": "korea democratic peoples republic of",
+        "name": "north korea",
         "worldometer_name": "abcdefg",
         "iso": "kp",
         "dial": "850"
     },
     "kr": {
-        "name": "korea republic of",
-        "worldometer_name": "abcdefg",
+        "name": "south korea",
+        "worldometer_name": "s. korea",
         "iso": "kr",
         "dial": "82"
     },
@@ -678,7 +678,7 @@
         "dial": "1345"
     },
     "kz": {
-        "name": "kazakstan",
+        "name": "kazakhstan",
         "worldometer_name": "abcdefg",
         "iso": "kz",
         "dial": "7"
@@ -762,7 +762,7 @@
         "dial": "377"
     },
     "md": {
-        "name": "moldova, republic of",
+        "name": "moldova",
         "worldometer_name": "abcdefg",
         "iso": "md",
         "dial": "373"
@@ -792,7 +792,7 @@
         "dial": "692"
     },
     "mk": {
-        "name": "macedonia, the former yugoslav republic of",
+        "name": "north macedonia",
         "worldometer_name": "abcdefg",
         "iso": "mk",
         "dial": "389"
@@ -816,7 +816,7 @@
         "dial": "976"
     },
     "mo": {
-        "name": "macau",
+        "name": "macao",
         "worldometer_name": "abcdefg",
         "iso": "mo",
         "dial": "853"
@@ -1013,6 +1013,12 @@
         "iso": "pr",
         "dial": "1"
     },
+    "ps": {
+        "name": "palestine",
+        "worldometer_name": "abcdefg",
+        "iso": "ps",
+        "dial": "275"
+    },
     "pt": {
         "name": "portugal",
         "worldometer_name": "abcdefg",
@@ -1050,7 +1056,7 @@
         "dial": "381"
     },
     "ru": {
-        "name": "russian federation",
+        "name": "russia",
         "worldometer_name": "abcdefg",
         "iso": "ru",
         "dial": "7"
@@ -1158,7 +1164,7 @@
         "dial": "503"
     },
     "sy": {
-        "name": "syrian arab republic",
+        "name": "syria",
         "worldometer_name": "abcdefg",
         "iso": "sy",
         "dial": "963"
@@ -1248,13 +1254,13 @@
         "dial": "688"
     },
     "tw": {
-        "name": "taiwan, province of china",
+        "name": "taiwan",
         "worldometer_name": "abcdefg",
         "iso": "tw",
         "dial": "886"
     },
     "tz": {
-        "name": "tanzania, united republic of",
+        "name": "tanzania",
         "worldometer_name": "abcdefg",
         "iso": "tz",
         "dial": "255"
@@ -1273,7 +1279,7 @@
     },
     "us": {
         "name": "united states",
-        "worldometer_name": "abcdefg",
+        "worldometer_name": "usa",
         "iso": "us",
         "dial": "1"
     },
@@ -1320,7 +1326,7 @@
         "dial": "1340"
     },
     "vn": {
-        "name": "viet nam",
+        "name": "vietnam",
         "worldometer_name": "abcdefg",
         "iso": "vn",
         "dial": "84"
