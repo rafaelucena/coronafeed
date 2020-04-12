@@ -27,4 +27,20 @@ class Country
 
         return '';
     }
+
+    /**
+     * @param string $name
+     * @return string
+     */
+    public function getIsoByWorldometerName(string $name): string
+    {
+        $name = strtolower($name);
+        foreach ($this->countries as $countryInfo) {
+            if ($countryInfo['worldometer_name'] === $name) {
+                return $countryInfo['iso'];
+            }
+        }
+
+        return '';
+    }
 }
