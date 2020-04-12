@@ -1,0 +1,1152 @@
+{
+    "ad": {
+        "name": "andorra",
+        "code": "376",
+        "worldometer_name": "abcdefg"
+    },
+    "ae": {
+        "name": "united arab emirates",
+        "code": "971",
+        "worldometer_name": "abcdefg"
+    },
+    "af": {
+        "name": "afghanistan",
+        "code": "93",
+        "worldometer_name": "abcdefg"
+    },
+    "ag": {
+        "name": "antigua and barbuda",
+        "code": "1268",
+        "worldometer_name": "abcdefg"
+    },
+    "ai": {
+        "name": "anguilla",
+        "code": "1264",
+        "worldometer_name": "abcdefg"
+    },
+    "al": {
+        "name": "albania",
+        "code": "355",
+        "worldometer_name": "abcdefg"
+    },
+    "am": {
+        "name": "armenia",
+        "code": "374",
+        "worldometer_name": "abcdefg"
+    },
+    "an": {
+        "name": "netherlands antilles",
+        "code": "599",
+        "worldometer_name": "abcdefg"
+    },
+    "ao": {
+        "name": "angola",
+        "code": "244",
+        "worldometer_name": "abcdefg"
+    },
+    "aq": {
+        "name": "antarctica",
+        "code": "672",
+        "worldometer_name": "abcdefg"
+    },
+    "ar": {
+        "name": "argentina",
+        "code": "54",
+        "worldometer_name": "abcdefg"
+    },
+    "as": {
+        "name": "american samoa",
+        "code": "1684",
+        "worldometer_name": "abcdefg"
+    },
+    "at": {
+        "name": "austria",
+        "code": "43",
+        "worldometer_name": "abcdefg"
+    },
+    "au": {
+        "name": "australia",
+        "code": "61",
+        "worldometer_name": "abcdefg"
+    },
+    "aw": {
+        "name": "aruba",
+        "code": "297",
+        "worldometer_name": "abcdefg"
+    },
+    "az": {
+        "name": "azerbaijan",
+        "code": "994",
+        "worldometer_name": "abcdefg"
+    },
+    "ba": {
+        "name": "bosnia and herzegovina",
+        "code": "387",
+        "worldometer_name": "abcdefg"
+    },
+    "bb": {
+        "name": "barbados",
+        "code": "1246",
+        "worldometer_name": "abcdefg"
+    },
+    "bd": {
+        "name": "bangladesh",
+        "code": "880",
+        "worldometer_name": "abcdefg"
+    },
+    "be": {
+        "name": "belgium",
+        "code": "32",
+        "worldometer_name": "abcdefg"
+    },
+    "bf": {
+        "name": "burkina faso",
+        "code": "226",
+        "worldometer_name": "abcdefg"
+    },
+    "bg": {
+        "name": "bulgaria",
+        "code": "359",
+        "worldometer_name": "abcdefg"
+    },
+    "bh": {
+        "name": "bahrain",
+        "code": "973",
+        "worldometer_name": "abcdefg"
+    },
+    "bi": {
+        "name": "burundi",
+        "code": "257",
+        "worldometer_name": "abcdefg"
+    },
+    "bj": {
+        "name": "benin",
+        "code": "229",
+        "worldometer_name": "abcdefg"
+    },
+    "bl": {
+        "name": "saint barthelemy",
+        "code": "590",
+        "worldometer_name": "abcdefg"
+    },
+    "bm": {
+        "name": "bermuda",
+        "code": "1441",
+        "worldometer_name": "abcdefg"
+    },
+    "bn": {
+        "name": "brunei darussalam",
+        "code": "673",
+        "worldometer_name": "abcdefg"
+    },
+    "bo": {
+        "name": "bolivia",
+        "code": "591",
+        "worldometer_name": "abcdefg"
+    },
+    "br": {
+        "name": "brazil",
+        "code": "55",
+        "worldometer_name": "abcdefg"
+    },
+    "bs": {
+        "name": "bahamas",
+        "code": "1242",
+        "worldometer_name": "abcdefg"
+    },
+    "bt": {
+        "name": "bhutan",
+        "code": "975",
+        "worldometer_name": "abcdefg"
+    },
+    "bw": {
+        "name": "botswana",
+        "code": "267",
+        "worldometer_name": "abcdefg"
+    },
+    "by": {
+        "name": "belarus",
+        "code": "375",
+        "worldometer_name": "abcdefg"
+    },
+    "bz": {
+        "name": "belize",
+        "code": "501",
+        "worldometer_name": "abcdefg"
+    },
+    "ca": {
+        "name": "canada",
+        "code": "1",
+        "worldometer_name": "abcdefg"
+    },
+    "cc": {
+        "name": "cocos (keeling] islands",
+        "code": "61",
+        "worldometer_name": "abcdefg"
+    },
+    "cd": {
+        "name": "congo, the democratic republic of the",
+        "code": "243",
+        "worldometer_name": "abcdefg"
+    },
+    "cf": {
+        "name": "central african republic",
+        "code": "236",
+        "worldometer_name": "abcdefg"
+    },
+    "cg": {
+        "name": "congo",
+        "code": "242",
+        "worldometer_name": "abcdefg"
+    },
+    "ch": {
+        "name": "switzerland",
+        "code": "41",
+        "worldometer_name": "abcdefg"
+    },
+    "ci": {
+        "name": "cote d ivoire",
+        "code": "225",
+        "worldometer_name": "abcdefg"
+    },
+    "ck": {
+        "name": "cook islands",
+        "code": "682",
+        "worldometer_name": "abcdefg"
+    },
+    "cl": {
+        "name": "chile",
+        "code": "56",
+        "worldometer_name": "abcdefg"
+    },
+    "cm": {
+        "name": "cameroon",
+        "code": "237",
+        "worldometer_name": "abcdefg"
+    },
+    "cn": {
+        "name": "china",
+        "code": "86",
+        "worldometer_name": "abcdefg"
+    },
+    "co": {
+        "name": "colombia",
+        "code": "57",
+        "worldometer_name": "abcdefg"
+    },
+    "cr": {
+        "name": "costa rica",
+        "code": "506",
+        "worldometer_name": "abcdefg"
+    },
+    "cu": {
+        "name": "cuba",
+        "code": "53",
+        "worldometer_name": "abcdefg"
+    },
+    "cv": {
+        "name": "cape verde",
+        "code": "238",
+        "worldometer_name": "abcdefg"
+    },
+    "cx": {
+        "name": "christmas island",
+        "code": "61",
+        "worldometer_name": "abcdefg"
+    },
+    "cy": {
+        "name": "cyprus",
+        "code": "357",
+        "worldometer_name": "abcdefg"
+    },
+    "cz": {
+        "name": "czech republic",
+        "code": "420",
+        "worldometer_name": "abcdefg"
+    },
+    "de": {
+        "name": "germany",
+        "code": "49",
+        "worldometer_name": "abcdefg"
+    },
+    "dj": {
+        "name": "djibouti",
+        "code": "253",
+        "worldometer_name": "abcdefg"
+    },
+    "dk": {
+        "name": "denmark",
+        "code": "45",
+        "worldometer_name": "abcdefg"
+    },
+    "dm": {
+        "name": "dominica",
+        "code": "1767",
+        "worldometer_name": "abcdefg"
+    },
+    "do": {
+        "name": "dominican republic",
+        "code": "1809",
+        "worldometer_name": "abcdefg"
+    },
+    "dz": {
+        "name": "algeria",
+        "code": "213",
+        "worldometer_name": "abcdefg"
+    },
+    "ec": {
+        "name": "ecuador",
+        "code": "593",
+        "worldometer_name": "abcdefg"
+    },
+    "ee": {
+        "name": "estonia",
+        "code": "372",
+        "worldometer_name": "abcdefg"
+    },
+    "eg": {
+        "name": "egypt",
+        "code": "20",
+        "worldometer_name": "abcdefg"
+    },
+    "er": {
+        "name": "eritrea",
+        "code": "291",
+        "worldometer_name": "abcdefg"
+    },
+    "es": {
+        "name": "spain",
+        "code": "34",
+        "worldometer_name": "abcdefg"
+    },
+    "et": {
+        "name": "ethiopia",
+        "code": "251",
+        "worldometer_name": "abcdefg"
+    },
+    "fi": {
+        "name": "finland",
+        "code": "358",
+        "worldometer_name": "abcdefg"
+    },
+    "fj": {
+        "name": "fiji",
+        "code": "679",
+        "worldometer_name": "abcdefg"
+    },
+    "fk": {
+        "name": "falkland islands (malvinas]",
+        "code": "500",
+        "worldometer_name": "abcdefg"
+    },
+    "fm": {
+        "name": "micronesia, federated states of",
+        "code": "691",
+        "worldometer_name": "abcdefg"
+    },
+    "fo": {
+        "name": "faroe islands",
+        "code": "298",
+        "worldometer_name": "abcdefg"
+    },
+    "fr": {
+        "name": "france",
+        "code": "33",
+        "worldometer_name": "abcdefg"
+    },
+    "ga": {
+        "name": "gabon",
+        "code": "241",
+        "worldometer_name": "abcdefg"
+    },
+    "gb": {
+        "name": "united kingdom",
+        "code": "44",
+        "worldometer_name": "abcdefg"
+    },
+    "gd": {
+        "name": "grenada",
+        "code": "1473",
+        "worldometer_name": "abcdefg"
+    },
+    "ge": {
+        "name": "georgia",
+        "code": "995",
+        "worldometer_name": "abcdefg"
+    },
+    "gh": {
+        "name": "ghana",
+        "code": "233",
+        "worldometer_name": "abcdefg"
+    },
+    "gi": {
+        "name": "gibraltar",
+        "code": "350",
+        "worldometer_name": "abcdefg"
+    },
+    "gl": {
+        "name": "greenland",
+        "code": "299",
+        "worldometer_name": "abcdefg"
+    },
+    "gm": {
+        "name": "gambia",
+        "code": "220",
+        "worldometer_name": "abcdefg"
+    },
+    "gn": {
+        "name": "guinea",
+        "code": "224",
+        "worldometer_name": "abcdefg"
+    },
+    "gq": {
+        "name": "equatorial guinea",
+        "code": "240",
+        "worldometer_name": "abcdefg"
+    },
+    "gr": {
+        "name": "greece",
+        "code": "30",
+        "worldometer_name": "abcdefg"
+    },
+    "gt": {
+        "name": "guatemala",
+        "code": "502",
+        "worldometer_name": "abcdefg"
+    },
+    "gu": {
+        "name": "guam",
+        "code": "1671",
+        "worldometer_name": "abcdefg"
+    },
+    "gw": {
+        "name": "guinea-bissau",
+        "code": "245",
+        "worldometer_name": "abcdefg"
+    },
+    "gy": {
+        "name": "guyana",
+        "code": "592",
+        "worldometer_name": "abcdefg"
+    },
+    "hk": {
+        "name": "hong kong",
+        "code": "852",
+        "worldometer_name": "abcdefg"
+    },
+    "hn": {
+        "name": "honduras",
+        "code": "504",
+        "worldometer_name": "abcdefg"
+    },
+    "hr": {
+        "name": "croatia",
+        "code": "385",
+        "worldometer_name": "abcdefg"
+    },
+    "ht": {
+        "name": "haiti",
+        "code": "509",
+        "worldometer_name": "abcdefg"
+    },
+    "hu": {
+        "name": "hungary",
+        "code": "36",
+        "worldometer_name": "abcdefg"
+    },
+    "id": {
+        "name": "indonesia",
+        "code": "62",
+        "worldometer_name": "abcdefg"
+    },
+    "ie": {
+        "name": "ireland",
+        "code": "353",
+        "worldometer_name": "abcdefg"
+    },
+    "il": {
+        "name": "israel",
+        "code": "972",
+        "worldometer_name": "abcdefg"
+    },
+    "im": {
+        "name": "isle of man",
+        "code": "44",
+        "worldometer_name": "abcdefg"
+    },
+    "in": {
+        "name": "india",
+        "code": "91",
+        "worldometer_name": "abcdefg"
+    },
+    "iq": {
+        "name": "iraq",
+        "code": "964",
+        "worldometer_name": "abcdefg"
+    },
+    "ir": {
+        "name": "iran, islamic republic of",
+        "code": "98",
+        "worldometer_name": "abcdefg"
+    },
+    "is": {
+        "name": "iceland",
+        "code": "354",
+        "worldometer_name": "abcdefg"
+    },
+    "it": {
+        "name": "italy",
+        "code": "39",
+        "worldometer_name": "abcdefg"
+    },
+    "jm": {
+        "name": "jamaica",
+        "code": "1876",
+        "worldometer_name": "abcdefg"
+    },
+    "jo": {
+        "name": "jordan",
+        "code": "962",
+        "worldometer_name": "abcdefg"
+    },
+    "jp": {
+        "name": "japan",
+        "code": "81",
+        "worldometer_name": "abcdefg"
+    },
+    "ke": {
+        "name": "kenya",
+        "code": "254",
+        "worldometer_name": "abcdefg"
+    },
+    "kg": {
+        "name": "kyrgyzstan",
+        "code": "996",
+        "worldometer_name": "abcdefg"
+    },
+    "kh": {
+        "name": "cambodia",
+        "code": "855",
+        "worldometer_name": "abcdefg"
+    },
+    "ki": {
+        "name": "kiribati",
+        "code": "686",
+        "worldometer_name": "abcdefg"
+    },
+    "km": {
+        "name": "comoros",
+        "code": "269",
+        "worldometer_name": "abcdefg"
+    },
+    "kn": {
+        "name": "saint kitts and nevis",
+        "code": "1869",
+        "worldometer_name": "abcdefg"
+    },
+    "kp": {
+        "name": "korea democratic peoples republic of",
+        "code": "850",
+        "worldometer_name": "abcdefg"
+    },
+    "kr": {
+        "name": "korea republic of",
+        "code": "82",
+        "worldometer_name": "abcdefg"
+    },
+    "kw": {
+        "name": "kuwait",
+        "code": "965",
+        "worldometer_name": "abcdefg"
+    },
+    "ky": {
+        "name": "cayman islands",
+        "code": "1345",
+        "worldometer_name": "abcdefg"
+    },
+    "kz": {
+        "name": "kazakstan",
+        "code": "7",
+        "worldometer_name": "abcdefg"
+    },
+    "la": {
+        "name": "lao peoples democratic republic",
+        "code": "856",
+        "worldometer_name": "abcdefg"
+    },
+    "lb": {
+        "name": "lebanon",
+        "code": "961",
+        "worldometer_name": "abcdefg"
+    },
+    "lc": {
+        "name": "saint lucia",
+        "code": "1758",
+        "worldometer_name": "abcdefg"
+    },
+    "li": {
+        "name": "liechtenstein",
+        "code": "423",
+        "worldometer_name": "abcdefg"
+    },
+    "lk": {
+        "name": "sri lanka",
+        "code": "94",
+        "worldometer_name": "abcdefg"
+    },
+    "lr": {
+        "name": "liberia",
+        "code": "231",
+        "worldometer_name": "abcdefg"
+    },
+    "ls": {
+        "name": "lesotho",
+        "code": "266",
+        "worldometer_name": "abcdefg"
+    },
+    "lt": {
+        "name": "lithuania",
+        "code": "370",
+        "worldometer_name": "abcdefg"
+    },
+    "lu": {
+        "name": "luxembourg",
+        "code": "352",
+        "worldometer_name": "abcdefg"
+    },
+    "lv": {
+        "name": "latvia",
+        "code": "371",
+        "worldometer_name": "abcdefg"
+    },
+    "ly": {
+        "name": "libyan arab jamahiriya",
+        "code": "218",
+        "worldometer_name": "abcdefg"
+    },
+    "ma": {
+        "name": "morocco",
+        "code": "212",
+        "worldometer_name": "abcdefg"
+    },
+    "mc": {
+        "name": "monaco",
+        "code": "377",
+        "worldometer_name": "abcdefg"
+    },
+    "md": {
+        "name": "moldova, republic of",
+        "code": "373",
+        "worldometer_name": "abcdefg"
+    },
+    "me": {
+        "name": "montenegro",
+        "code": "382",
+        "worldometer_name": "abcdefg"
+    },
+    "mf": {
+        "name": "saint martin",
+        "code": "1599",
+        "worldometer_name": "abcdefg"
+    },
+    "mg": {
+        "name": "madagascar",
+        "code": "261",
+        "worldometer_name": "abcdefg"
+    },
+    "mh": {
+        "name": "marshall islands",
+        "code": "692",
+        "worldometer_name": "abcdefg"
+    },
+    "mk": {
+        "name": "macedonia, the former yugoslav republic of",
+        "code": "389",
+        "worldometer_name": "abcdefg"
+    },
+    "ml": {
+        "name": "mali",
+        "code": "223",
+        "worldometer_name": "abcdefg"
+    },
+    "mm": {
+        "name": "myanmar",
+        "code": "95",
+        "worldometer_name": "abcdefg"
+    },
+    "mn": {
+        "name": "mongolia",
+        "code": "976",
+        "worldometer_name": "abcdefg"
+    },
+    "mo": {
+        "name": "macau",
+        "code": "853",
+        "worldometer_name": "abcdefg"
+    },
+    "mp": {
+        "name": "northern mariana islands",
+        "code": "1670",
+        "worldometer_name": "abcdefg"
+    },
+    "mr": {
+        "name": "mauritania",
+        "code": "222",
+        "worldometer_name": "abcdefg"
+    },
+    "ms": {
+        "name": "montserrat",
+        "code": "1664",
+        "worldometer_name": "abcdefg"
+    },
+    "mt": {
+        "name": "malta",
+        "code": "356",
+        "worldometer_name": "abcdefg"
+    },
+    "mu": {
+        "name": "mauritius",
+        "code": "230",
+        "worldometer_name": "abcdefg"
+    },
+    "mv": {
+        "name": "maldives",
+        "code": "960",
+        "worldometer_name": "abcdefg"
+    },
+    "mw": {
+        "name": "malawi",
+        "code": "265",
+        "worldometer_name": "abcdefg"
+    },
+    "mx": {
+        "name": "mexico",
+        "code": "52",
+        "worldometer_name": "abcdefg"
+    },
+    "my": {
+        "name": "malaysia",
+        "code": "60",
+        "worldometer_name": "abcdefg"
+    },
+    "mz": {
+        "name": "mozambique",
+        "code": "258",
+        "worldometer_name": "abcdefg"
+    },
+    "na": {
+        "name": "namibia",
+        "code": "264",
+        "worldometer_name": "abcdefg"
+    },
+    "nc": {
+        "name": "new caledonia",
+        "code": "687",
+        "worldometer_name": "abcdefg"
+    },
+    "ne": {
+        "name": "niger",
+        "code": "227",
+        "worldometer_name": "abcdefg"
+    },
+    "ng": {
+        "name": "nigeria",
+        "code": "234",
+        "worldometer_name": "abcdefg"
+    },
+    "ni": {
+        "name": "nicaragua",
+        "code": "505",
+        "worldometer_name": "abcdefg"
+    },
+    "nl": {
+        "name": "netherlands",
+        "code": "31",
+        "worldometer_name": "abcdefg"
+    },
+    "no": {
+        "name": "norway",
+        "code": "47",
+        "worldometer_name": "abcdefg"
+    },
+    "np": {
+        "name": "nepal",
+        "code": "977",
+        "worldometer_name": "abcdefg"
+    },
+    "nr": {
+        "name": "nauru",
+        "code": "674",
+        "worldometer_name": "abcdefg"
+    },
+    "nu": {
+        "name": "niue",
+        "code": "683",
+        "worldometer_name": "abcdefg"
+    },
+    "nz": {
+        "name": "new zealand",
+        "code": "64",
+        "worldometer_name": "abcdefg"
+    },
+    "om": {
+        "name": "oman",
+        "code": "968",
+        "worldometer_name": "abcdefg"
+    },
+    "pa": {
+        "name": "panama",
+        "code": "507",
+        "worldometer_name": "abcdefg"
+    },
+    "pe": {
+        "name": "peru",
+        "code": "51",
+        "worldometer_name": "abcdefg"
+    },
+    "pf": {
+        "name": "french polynesia",
+        "code": "689",
+        "worldometer_name": "abcdefg"
+    },
+    "pg": {
+        "name": "papua new guinea",
+        "code": "675",
+        "worldometer_name": "abcdefg"
+    },
+    "ph": {
+        "name": "philippines",
+        "code": "63",
+        "worldometer_name": "abcdefg"
+    },
+    "pk": {
+        "name": "pakistan",
+        "code": "92",
+        "worldometer_name": "abcdefg"
+    },
+    "pl": {
+        "name": "poland",
+        "code": "48",
+        "worldometer_name": "abcdefg"
+    },
+    "pm": {
+        "name": "saint pierre and miquelon",
+        "code": "508",
+        "worldometer_name": "abcdefg"
+    },
+    "pn": {
+        "name": "pitcairn",
+        "code": "870",
+        "worldometer_name": "abcdefg"
+    },
+    "pr": {
+        "name": "puerto rico",
+        "code": "1",
+        "worldometer_name": "abcdefg"
+    },
+    "pt": {
+        "name": "portugal",
+        "code": "351",
+        "worldometer_name": "abcdefg"
+    },
+    "pw": {
+        "name": "palau",
+        "code": "680",
+        "worldometer_name": "abcdefg"
+    },
+    "py": {
+        "name": "paraguay",
+        "code": "595",
+        "worldometer_name": "abcdefg"
+    },
+    "qa": {
+        "name": "qatar",
+        "code": "974",
+        "worldometer_name": "abcdefg"
+    },
+    "ro": {
+        "name": "romania",
+        "code": "40",
+        "worldometer_name": "abcdefg"
+    },
+    "rs": {
+        "name": "serbia",
+        "code": "381",
+        "worldometer_name": "abcdefg"
+    },
+    "ru": {
+        "name": "russian federation",
+        "code": "7",
+        "worldometer_name": "abcdefg"
+    },
+    "rw": {
+        "name": "rwanda",
+        "code": "250",
+        "worldometer_name": "abcdefg"
+    },
+    "sa": {
+        "name": "saudi arabia",
+        "code": "966",
+        "worldometer_name": "abcdefg"
+    },
+    "sb": {
+        "name": "solomon islands",
+        "code": "677",
+        "worldometer_name": "abcdefg"
+    },
+    "sc": {
+        "name": "seychelles",
+        "code": "248",
+        "worldometer_name": "abcdefg"
+    },
+    "sd": {
+        "name": "sudan",
+        "code": "249",
+        "worldometer_name": "abcdefg"
+    },
+    "se": {
+        "name": "sweden",
+        "code": "46",
+        "worldometer_name": "abcdefg"
+    },
+    "sg": {
+        "name": "singapore",
+        "code": "65",
+        "worldometer_name": "abcdefg"
+    },
+    "sh": {
+        "name": "saint helena",
+        "code": "290",
+        "worldometer_name": "abcdefg"
+    },
+    "si": {
+        "name": "slovenia",
+        "code": "386",
+        "worldometer_name": "abcdefg"
+    },
+    "sk": {
+        "name": "slovakia",
+        "code": "421",
+        "worldometer_name": "abcdefg"
+    },
+    "sl": {
+        "name": "sierra leone",
+        "code": "232",
+        "worldometer_name": "abcdefg"
+    },
+    "sm": {
+        "name": "san marino",
+        "code": "378",
+        "worldometer_name": "abcdefg"
+    },
+    "sn": {
+        "name": "senegal",
+        "code": "221",
+        "worldometer_name": "abcdefg"
+    },
+    "so": {
+        "name": "somalia",
+        "code": "252",
+        "worldometer_name": "abcdefg"
+    },
+    "sr": {
+        "name": "suriname",
+        "code": "597",
+        "worldometer_name": "abcdefg"
+    },
+    "st": {
+        "name": "sao tome and principe",
+        "code": "239",
+        "worldometer_name": "abcdefg"
+    },
+    "sv": {
+        "name": "el salvador",
+        "code": "503",
+        "worldometer_name": "abcdefg"
+    },
+    "sy": {
+        "name": "syrian arab republic",
+        "code": "963",
+        "worldometer_name": "abcdefg"
+    },
+    "sz": {
+        "name": "swaziland",
+        "code": "268",
+        "worldometer_name": "abcdefg"
+    },
+    "tc": {
+        "name": "turks and caicos islands",
+        "code": "1649",
+        "worldometer_name": "abcdefg"
+    },
+    "td": {
+        "name": "chad",
+        "code": "235",
+        "worldometer_name": "abcdefg"
+    },
+    "tg": {
+        "name": "togo",
+        "code": "228",
+        "worldometer_name": "abcdefg"
+    },
+    "th": {
+        "name": "thailand",
+        "code": "66",
+        "worldometer_name": "abcdefg"
+    },
+    "tj": {
+        "name": "tajikistan",
+        "code": "992",
+        "worldometer_name": "abcdefg"
+    },
+    "tk": {
+        "name": "tokelau",
+        "code": "690",
+        "worldometer_name": "abcdefg"
+    },
+    "tl": {
+        "name": "timor-leste",
+        "code": "670",
+        "worldometer_name": "abcdefg"
+    },
+    "tm": {
+        "name": "turkmenistan",
+        "code": "993",
+        "worldometer_name": "abcdefg"
+    },
+    "tn": {
+        "name": "tunisia",
+        "code": "216",
+        "worldometer_name": "abcdefg"
+    },
+    "to": {
+        "name": "tonga",
+        "code": "676",
+        "worldometer_name": "abcdefg"
+    },
+    "tr": {
+        "name": "turkey",
+        "code": "90",
+        "worldometer_name": "abcdefg"
+    },
+    "tt": {
+        "name": "trinidad and tobago",
+        "code": "1868",
+        "worldometer_name": "abcdefg"
+    },
+    "tv": {
+        "name": "tuvalu",
+        "code": "688",
+        "worldometer_name": "abcdefg"
+    },
+    "tw": {
+        "name": "taiwan, province of china",
+        "code": "886",
+        "worldometer_name": "abcdefg"
+    },
+    "tz": {
+        "name": "tanzania, united republic of",
+        "code": "255",
+        "worldometer_name": "abcdefg"
+    },
+    "ua": {
+        "name": "ukraine",
+        "code": "380",
+        "worldometer_name": "abcdefg"
+    },
+    "ug": {
+        "name": "uganda",
+        "code": "256",
+        "worldometer_name": "abcdefg"
+    },
+    "us": {
+        "name": "united states",
+        "code": "1",
+        "worldometer_name": "abcdefg"
+    },
+    "uy": {
+        "name": "uruguay",
+        "code": "598",
+        "worldometer_name": "abcdefg"
+    },
+    "uz": {
+        "name": "uzbekistan",
+        "code": "998",
+        "worldometer_name": "abcdefg"
+    },
+    "va": {
+        "name": "holy see (vatican city state]",
+        "code": "39",
+        "worldometer_name": "abcdefg"
+    },
+    "vc": {
+        "name": "saint vincent and the grenadines",
+        "code": "1784",
+        "worldometer_name": "abcdefg"
+    },
+    "ve": {
+        "name": "venezuela",
+        "code": "58",
+        "worldometer_name": "abcdefg"
+    },
+    "vg": {
+        "name": "virgin islands, british",
+        "code": "1284",
+        "worldometer_name": "abcdefg"
+    },
+    "vi": {
+        "name": "virgin islands, u.s.",
+        "code": "1340",
+        "worldometer_name": "abcdefg"
+    },
+    "vn": {
+        "name": "viet nam",
+        "code": "84",
+        "worldometer_name": "abcdefg"
+    },
+    "vu": {
+        "name": "vanuatu",
+        "code": "678",
+        "worldometer_name": "abcdefg"
+    },
+    "wf": {
+        "name": "wallis and futuna",
+        "code": "681",
+        "worldometer_name": "abcdefg"
+    },
+    "ws": {
+        "name": "samoa",
+        "code": "685",
+        "worldometer_name": "abcdefg"
+    },
+    "xk": {
+        "name": "kosovo",
+        "code": "381",
+        "worldometer_name": "abcdefg"
+    },
+    "ye": {
+        "name": "yemen",
+        "code": "967",
+        "worldometer_name": "abcdefg"
+    },
+    "yt": {
+        "name": "mayotte",
+        "code": "262",
+        "worldometer_name": "abcdefg"
+    },
+    "za": {
+        "name": "south africa",
+        "code": "27",
+        "worldometer_name": "abcdefg"
+    },
+    "zm": {
+        "name": "zambia",
+        "code": "260",
+        "worldometer_name": "abcdefg"
+    },
+    "zw": {
+        "name": "zimbabwe",
+        "code": "263",
+        "worldometer_name": "abcdefg"
+    }
+}
