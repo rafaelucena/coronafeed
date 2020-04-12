@@ -1,1152 +1,1382 @@
 {
     "ad": {
         "name": "andorra",
-        "code": "376",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ad",
+        "dial": "376"
     },
     "ae": {
         "name": "united arab emirates",
-        "code": "971",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ae",
+        "dial": "971"
     },
     "af": {
         "name": "afghanistan",
-        "code": "93",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "af",
+        "dial": "93"
     },
     "ag": {
         "name": "antigua and barbuda",
-        "code": "1268",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ag",
+        "dial": "1268"
     },
     "ai": {
         "name": "anguilla",
-        "code": "1264",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ai",
+        "dial": "1264"
     },
     "al": {
         "name": "albania",
-        "code": "355",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "al",
+        "dial": "355"
     },
     "am": {
         "name": "armenia",
-        "code": "374",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "am",
+        "dial": "374"
     },
     "an": {
         "name": "netherlands antilles",
-        "code": "599",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "an",
+        "dial": "599"
     },
     "ao": {
         "name": "angola",
-        "code": "244",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ao",
+        "dial": "244"
     },
     "aq": {
         "name": "antarctica",
-        "code": "672",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "aq",
+        "dial": "672"
     },
     "ar": {
         "name": "argentina",
-        "code": "54",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ar",
+        "dial": "54"
     },
     "as": {
         "name": "american samoa",
-        "code": "1684",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "as",
+        "dial": "1684"
     },
     "at": {
         "name": "austria",
-        "code": "43",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "at",
+        "dial": "43"
     },
     "au": {
         "name": "australia",
-        "code": "61",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "au",
+        "dial": "61"
     },
     "aw": {
         "name": "aruba",
-        "code": "297",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "aw",
+        "dial": "297"
     },
     "az": {
         "name": "azerbaijan",
-        "code": "994",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "az",
+        "dial": "994"
     },
     "ba": {
         "name": "bosnia and herzegovina",
-        "code": "387",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ba",
+        "dial": "387"
     },
     "bb": {
         "name": "barbados",
-        "code": "1246",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "bb",
+        "dial": "1246"
     },
     "bd": {
         "name": "bangladesh",
-        "code": "880",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "bd",
+        "dial": "880"
     },
     "be": {
         "name": "belgium",
-        "code": "32",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "be",
+        "dial": "32"
     },
     "bf": {
         "name": "burkina faso",
-        "code": "226",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "bf",
+        "dial": "226"
     },
     "bg": {
         "name": "bulgaria",
-        "code": "359",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "bg",
+        "dial": "359"
     },
     "bh": {
         "name": "bahrain",
-        "code": "973",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "bh",
+        "dial": "973"
     },
     "bi": {
         "name": "burundi",
-        "code": "257",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "bi",
+        "dial": "257"
     },
     "bj": {
         "name": "benin",
-        "code": "229",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "bj",
+        "dial": "229"
     },
     "bl": {
         "name": "saint barthelemy",
-        "code": "590",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "bl",
+        "dial": "590"
     },
     "bm": {
         "name": "bermuda",
-        "code": "1441",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "bm",
+        "dial": "1441"
     },
     "bn": {
         "name": "brunei darussalam",
-        "code": "673",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "bn",
+        "dial": "673"
     },
     "bo": {
         "name": "bolivia",
-        "code": "591",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "bo",
+        "dial": "591"
     },
     "br": {
         "name": "brazil",
-        "code": "55",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "br",
+        "dial": "55"
     },
     "bs": {
         "name": "bahamas",
-        "code": "1242",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "bs",
+        "dial": "1242"
     },
     "bt": {
         "name": "bhutan",
-        "code": "975",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "bt",
+        "dial": "975"
     },
     "bw": {
         "name": "botswana",
-        "code": "267",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "bw",
+        "dial": "267"
     },
     "by": {
         "name": "belarus",
-        "code": "375",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "by",
+        "dial": "375"
     },
     "bz": {
         "name": "belize",
-        "code": "501",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "bz",
+        "dial": "501"
     },
     "ca": {
         "name": "canada",
-        "code": "1",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ca",
+        "dial": "1"
     },
     "cc": {
         "name": "cocos (keeling] islands",
-        "code": "61",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "cc",
+        "dial": "61"
     },
     "cd": {
         "name": "congo, the democratic republic of the",
-        "code": "243",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "cd",
+        "dial": "243"
     },
     "cf": {
         "name": "central african republic",
-        "code": "236",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "cf",
+        "dial": "236"
     },
     "cg": {
         "name": "congo",
-        "code": "242",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "cg",
+        "dial": "242"
     },
     "ch": {
         "name": "switzerland",
-        "code": "41",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ch",
+        "dial": "41"
     },
     "ci": {
         "name": "cote d ivoire",
-        "code": "225",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ci",
+        "dial": "225"
     },
     "ck": {
         "name": "cook islands",
-        "code": "682",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ck",
+        "dial": "682"
     },
     "cl": {
         "name": "chile",
-        "code": "56",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "cl",
+        "dial": "56"
     },
     "cm": {
         "name": "cameroon",
-        "code": "237",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "cm",
+        "dial": "237"
     },
     "cn": {
         "name": "china",
-        "code": "86",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "cn",
+        "dial": "86"
     },
     "co": {
         "name": "colombia",
-        "code": "57",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "co",
+        "dial": "57"
     },
     "cr": {
         "name": "costa rica",
-        "code": "506",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "cr",
+        "dial": "506"
     },
     "cu": {
         "name": "cuba",
-        "code": "53",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "cu",
+        "dial": "53"
     },
     "cv": {
         "name": "cape verde",
-        "code": "238",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "cv",
+        "dial": "238"
     },
     "cx": {
         "name": "christmas island",
-        "code": "61",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "cx",
+        "dial": "61"
     },
     "cy": {
         "name": "cyprus",
-        "code": "357",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "cy",
+        "dial": "357"
     },
     "cz": {
         "name": "czech republic",
-        "code": "420",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "cz",
+        "dial": "420"
     },
     "de": {
         "name": "germany",
-        "code": "49",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "de",
+        "dial": "49"
     },
     "dj": {
         "name": "djibouti",
-        "code": "253",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "dj",
+        "dial": "253"
     },
     "dk": {
         "name": "denmark",
-        "code": "45",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "dk",
+        "dial": "45"
     },
     "dm": {
         "name": "dominica",
-        "code": "1767",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "dm",
+        "dial": "1767"
     },
     "do": {
         "name": "dominican republic",
-        "code": "1809",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "do",
+        "dial": "1809"
     },
     "dz": {
         "name": "algeria",
-        "code": "213",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "dz",
+        "dial": "213"
     },
     "ec": {
         "name": "ecuador",
-        "code": "593",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ec",
+        "dial": "593"
     },
     "ee": {
         "name": "estonia",
-        "code": "372",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ee",
+        "dial": "372"
     },
     "eg": {
         "name": "egypt",
-        "code": "20",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "eg",
+        "dial": "20"
     },
     "er": {
         "name": "eritrea",
-        "code": "291",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "er",
+        "dial": "291"
     },
     "es": {
         "name": "spain",
-        "code": "34",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "es",
+        "dial": "34"
     },
     "et": {
         "name": "ethiopia",
-        "code": "251",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "et",
+        "dial": "251"
     },
     "fi": {
         "name": "finland",
-        "code": "358",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "fi",
+        "dial": "358"
     },
     "fj": {
         "name": "fiji",
-        "code": "679",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "fj",
+        "dial": "679"
     },
     "fk": {
         "name": "falkland islands (malvinas]",
-        "code": "500",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "fk",
+        "dial": "500"
     },
     "fm": {
         "name": "micronesia, federated states of",
-        "code": "691",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "fm",
+        "dial": "691"
     },
     "fo": {
         "name": "faroe islands",
-        "code": "298",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "fo",
+        "dial": "298"
     },
     "fr": {
         "name": "france",
-        "code": "33",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "fr",
+        "dial": "33"
     },
     "ga": {
         "name": "gabon",
-        "code": "241",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ga",
+        "dial": "241"
     },
     "gb": {
         "name": "united kingdom",
-        "code": "44",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "gb",
+        "dial": "44"
     },
     "gd": {
         "name": "grenada",
-        "code": "1473",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "gd",
+        "dial": "1473"
     },
     "ge": {
         "name": "georgia",
-        "code": "995",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ge",
+        "dial": "995"
     },
     "gh": {
         "name": "ghana",
-        "code": "233",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "gh",
+        "dial": "233"
     },
     "gi": {
         "name": "gibraltar",
-        "code": "350",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "gi",
+        "dial": "350"
     },
     "gl": {
         "name": "greenland",
-        "code": "299",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "gl",
+        "dial": "299"
     },
     "gm": {
         "name": "gambia",
-        "code": "220",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "gm",
+        "dial": "220"
     },
     "gn": {
         "name": "guinea",
-        "code": "224",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "gn",
+        "dial": "224"
     },
     "gq": {
         "name": "equatorial guinea",
-        "code": "240",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "gq",
+        "dial": "240"
     },
     "gr": {
         "name": "greece",
-        "code": "30",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "gr",
+        "dial": "30"
     },
     "gt": {
         "name": "guatemala",
-        "code": "502",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "gt",
+        "dial": "502"
     },
     "gu": {
         "name": "guam",
-        "code": "1671",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "gu",
+        "dial": "1671"
     },
     "gw": {
         "name": "guinea-bissau",
-        "code": "245",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "gw",
+        "dial": "245"
     },
     "gy": {
         "name": "guyana",
-        "code": "592",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "gy",
+        "dial": "592"
     },
     "hk": {
         "name": "hong kong",
-        "code": "852",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "hk",
+        "dial": "852"
     },
     "hn": {
         "name": "honduras",
-        "code": "504",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "hn",
+        "dial": "504"
     },
     "hr": {
         "name": "croatia",
-        "code": "385",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "hr",
+        "dial": "385"
     },
     "ht": {
         "name": "haiti",
-        "code": "509",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ht",
+        "dial": "509"
     },
     "hu": {
         "name": "hungary",
-        "code": "36",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "hu",
+        "dial": "36"
     },
     "id": {
         "name": "indonesia",
-        "code": "62",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "id",
+        "dial": "62"
     },
     "ie": {
         "name": "ireland",
-        "code": "353",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ie",
+        "dial": "353"
     },
     "il": {
         "name": "israel",
-        "code": "972",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "il",
+        "dial": "972"
     },
     "im": {
         "name": "isle of man",
-        "code": "44",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "im",
+        "dial": "44"
     },
     "in": {
         "name": "india",
-        "code": "91",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "in",
+        "dial": "91"
     },
     "iq": {
         "name": "iraq",
-        "code": "964",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "iq",
+        "dial": "964"
     },
     "ir": {
         "name": "iran, islamic republic of",
-        "code": "98",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ir",
+        "dial": "98"
     },
     "is": {
         "name": "iceland",
-        "code": "354",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "is",
+        "dial": "354"
     },
     "it": {
         "name": "italy",
-        "code": "39",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "it",
+        "dial": "39"
     },
     "jm": {
         "name": "jamaica",
-        "code": "1876",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "jm",
+        "dial": "1876"
     },
     "jo": {
         "name": "jordan",
-        "code": "962",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "jo",
+        "dial": "962"
     },
     "jp": {
         "name": "japan",
-        "code": "81",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "jp",
+        "dial": "81"
     },
     "ke": {
         "name": "kenya",
-        "code": "254",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ke",
+        "dial": "254"
     },
     "kg": {
         "name": "kyrgyzstan",
-        "code": "996",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "kg",
+        "dial": "996"
     },
     "kh": {
         "name": "cambodia",
-        "code": "855",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "kh",
+        "dial": "855"
     },
     "ki": {
         "name": "kiribati",
-        "code": "686",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ki",
+        "dial": "686"
     },
     "km": {
         "name": "comoros",
-        "code": "269",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "km",
+        "dial": "269"
     },
     "kn": {
         "name": "saint kitts and nevis",
-        "code": "1869",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "kn",
+        "dial": "1869"
     },
     "kp": {
         "name": "korea democratic peoples republic of",
-        "code": "850",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "kp",
+        "dial": "850"
     },
     "kr": {
         "name": "korea republic of",
-        "code": "82",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "kr",
+        "dial": "82"
     },
     "kw": {
         "name": "kuwait",
-        "code": "965",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "kw",
+        "dial": "965"
     },
     "ky": {
         "name": "cayman islands",
-        "code": "1345",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ky",
+        "dial": "1345"
     },
     "kz": {
         "name": "kazakstan",
-        "code": "7",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "kz",
+        "dial": "7"
     },
     "la": {
         "name": "lao peoples democratic republic",
-        "code": "856",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "la",
+        "dial": "856"
     },
     "lb": {
         "name": "lebanon",
-        "code": "961",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "lb",
+        "dial": "961"
     },
     "lc": {
         "name": "saint lucia",
-        "code": "1758",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "lc",
+        "dial": "1758"
     },
     "li": {
         "name": "liechtenstein",
-        "code": "423",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "li",
+        "dial": "423"
     },
     "lk": {
         "name": "sri lanka",
-        "code": "94",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "lk",
+        "dial": "94"
     },
     "lr": {
         "name": "liberia",
-        "code": "231",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "lr",
+        "dial": "231"
     },
     "ls": {
         "name": "lesotho",
-        "code": "266",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ls",
+        "dial": "266"
     },
     "lt": {
         "name": "lithuania",
-        "code": "370",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "lt",
+        "dial": "370"
     },
     "lu": {
         "name": "luxembourg",
-        "code": "352",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "lu",
+        "dial": "352"
     },
     "lv": {
         "name": "latvia",
-        "code": "371",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "lv",
+        "dial": "371"
     },
     "ly": {
         "name": "libyan arab jamahiriya",
-        "code": "218",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ly",
+        "dial": "218"
     },
     "ma": {
         "name": "morocco",
-        "code": "212",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ma",
+        "dial": "212"
     },
     "mc": {
         "name": "monaco",
-        "code": "377",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "mc",
+        "dial": "377"
     },
     "md": {
         "name": "moldova, republic of",
-        "code": "373",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "md",
+        "dial": "373"
     },
     "me": {
         "name": "montenegro",
-        "code": "382",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "me",
+        "dial": "382"
     },
     "mf": {
         "name": "saint martin",
-        "code": "1599",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "mf",
+        "dial": "1599"
     },
     "mg": {
         "name": "madagascar",
-        "code": "261",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "mg",
+        "dial": "261"
     },
     "mh": {
         "name": "marshall islands",
-        "code": "692",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "mh",
+        "dial": "692"
     },
     "mk": {
         "name": "macedonia, the former yugoslav republic of",
-        "code": "389",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "mk",
+        "dial": "389"
     },
     "ml": {
         "name": "mali",
-        "code": "223",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ml",
+        "dial": "223"
     },
     "mm": {
         "name": "myanmar",
-        "code": "95",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "mm",
+        "dial": "95"
     },
     "mn": {
         "name": "mongolia",
-        "code": "976",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "mn",
+        "dial": "976"
     },
     "mo": {
         "name": "macau",
-        "code": "853",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "mo",
+        "dial": "853"
     },
     "mp": {
         "name": "northern mariana islands",
-        "code": "1670",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "mp",
+        "dial": "1670"
     },
     "mr": {
         "name": "mauritania",
-        "code": "222",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "mr",
+        "dial": "222"
     },
     "ms": {
         "name": "montserrat",
-        "code": "1664",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ms",
+        "dial": "1664"
     },
     "mt": {
         "name": "malta",
-        "code": "356",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "mt",
+        "dial": "356"
     },
     "mu": {
         "name": "mauritius",
-        "code": "230",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "mu",
+        "dial": "230"
     },
     "mv": {
         "name": "maldives",
-        "code": "960",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "mv",
+        "dial": "960"
     },
     "mw": {
         "name": "malawi",
-        "code": "265",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "mw",
+        "dial": "265"
     },
     "mx": {
         "name": "mexico",
-        "code": "52",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "mx",
+        "dial": "52"
     },
     "my": {
         "name": "malaysia",
-        "code": "60",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "my",
+        "dial": "60"
     },
     "mz": {
         "name": "mozambique",
-        "code": "258",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "mz",
+        "dial": "258"
     },
     "na": {
         "name": "namibia",
-        "code": "264",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "na",
+        "dial": "264"
     },
     "nc": {
         "name": "new caledonia",
-        "code": "687",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "nc",
+        "dial": "687"
     },
     "ne": {
         "name": "niger",
-        "code": "227",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ne",
+        "dial": "227"
     },
     "ng": {
         "name": "nigeria",
-        "code": "234",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ng",
+        "dial": "234"
     },
     "ni": {
         "name": "nicaragua",
-        "code": "505",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ni",
+        "dial": "505"
     },
     "nl": {
         "name": "netherlands",
-        "code": "31",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "nl",
+        "dial": "31"
     },
     "no": {
         "name": "norway",
-        "code": "47",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "no",
+        "dial": "47"
     },
     "np": {
         "name": "nepal",
-        "code": "977",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "np",
+        "dial": "977"
     },
     "nr": {
         "name": "nauru",
-        "code": "674",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "nr",
+        "dial": "674"
     },
     "nu": {
         "name": "niue",
-        "code": "683",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "nu",
+        "dial": "683"
     },
     "nz": {
         "name": "new zealand",
-        "code": "64",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "nz",
+        "dial": "64"
     },
     "om": {
         "name": "oman",
-        "code": "968",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "om",
+        "dial": "968"
     },
     "pa": {
         "name": "panama",
-        "code": "507",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "pa",
+        "dial": "507"
     },
     "pe": {
         "name": "peru",
-        "code": "51",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "pe",
+        "dial": "51"
     },
     "pf": {
         "name": "french polynesia",
-        "code": "689",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "pf",
+        "dial": "689"
     },
     "pg": {
         "name": "papua new guinea",
-        "code": "675",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "pg",
+        "dial": "675"
     },
     "ph": {
         "name": "philippines",
-        "code": "63",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ph",
+        "dial": "63"
     },
     "pk": {
         "name": "pakistan",
-        "code": "92",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "pk",
+        "dial": "92"
     },
     "pl": {
         "name": "poland",
-        "code": "48",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "pl",
+        "dial": "48"
     },
     "pm": {
         "name": "saint pierre and miquelon",
-        "code": "508",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "pm",
+        "dial": "508"
     },
     "pn": {
         "name": "pitcairn",
-        "code": "870",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "pn",
+        "dial": "870"
     },
     "pr": {
         "name": "puerto rico",
-        "code": "1",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "pr",
+        "dial": "1"
     },
     "pt": {
         "name": "portugal",
-        "code": "351",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "pt",
+        "dial": "351"
     },
     "pw": {
         "name": "palau",
-        "code": "680",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "pw",
+        "dial": "680"
     },
     "py": {
         "name": "paraguay",
-        "code": "595",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "py",
+        "dial": "595"
     },
     "qa": {
         "name": "qatar",
-        "code": "974",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "qa",
+        "dial": "974"
     },
     "ro": {
         "name": "romania",
-        "code": "40",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ro",
+        "dial": "40"
     },
     "rs": {
         "name": "serbia",
-        "code": "381",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "rs",
+        "dial": "381"
     },
     "ru": {
         "name": "russian federation",
-        "code": "7",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ru",
+        "dial": "7"
     },
     "rw": {
         "name": "rwanda",
-        "code": "250",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "rw",
+        "dial": "250"
     },
     "sa": {
         "name": "saudi arabia",
-        "code": "966",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "sa",
+        "dial": "966"
     },
     "sb": {
         "name": "solomon islands",
-        "code": "677",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "sb",
+        "dial": "677"
     },
     "sc": {
         "name": "seychelles",
-        "code": "248",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "sc",
+        "dial": "248"
     },
     "sd": {
         "name": "sudan",
-        "code": "249",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "sd",
+        "dial": "249"
     },
     "se": {
         "name": "sweden",
-        "code": "46",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "se",
+        "dial": "46"
     },
     "sg": {
         "name": "singapore",
-        "code": "65",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "sg",
+        "dial": "65"
     },
     "sh": {
         "name": "saint helena",
-        "code": "290",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "sh",
+        "dial": "290"
     },
     "si": {
         "name": "slovenia",
-        "code": "386",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "si",
+        "dial": "386"
     },
     "sk": {
         "name": "slovakia",
-        "code": "421",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "sk",
+        "dial": "421"
     },
     "sl": {
         "name": "sierra leone",
-        "code": "232",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "sl",
+        "dial": "232"
     },
     "sm": {
         "name": "san marino",
-        "code": "378",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "sm",
+        "dial": "378"
     },
     "sn": {
         "name": "senegal",
-        "code": "221",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "sn",
+        "dial": "221"
     },
     "so": {
         "name": "somalia",
-        "code": "252",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "so",
+        "dial": "252"
     },
     "sr": {
         "name": "suriname",
-        "code": "597",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "sr",
+        "dial": "597"
     },
     "st": {
         "name": "sao tome and principe",
-        "code": "239",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "st",
+        "dial": "239"
     },
     "sv": {
         "name": "el salvador",
-        "code": "503",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "sv",
+        "dial": "503"
     },
     "sy": {
         "name": "syrian arab republic",
-        "code": "963",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "sy",
+        "dial": "963"
     },
     "sz": {
         "name": "swaziland",
-        "code": "268",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "sz",
+        "dial": "268"
     },
     "tc": {
         "name": "turks and caicos islands",
-        "code": "1649",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "tc",
+        "dial": "1649"
     },
     "td": {
         "name": "chad",
-        "code": "235",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "td",
+        "dial": "235"
     },
     "tg": {
         "name": "togo",
-        "code": "228",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "tg",
+        "dial": "228"
     },
     "th": {
         "name": "thailand",
-        "code": "66",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "th",
+        "dial": "66"
     },
     "tj": {
         "name": "tajikistan",
-        "code": "992",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "tj",
+        "dial": "992"
     },
     "tk": {
         "name": "tokelau",
-        "code": "690",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "tk",
+        "dial": "690"
     },
     "tl": {
         "name": "timor-leste",
-        "code": "670",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "tl",
+        "dial": "670"
     },
     "tm": {
         "name": "turkmenistan",
-        "code": "993",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "tm",
+        "dial": "993"
     },
     "tn": {
         "name": "tunisia",
-        "code": "216",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "tn",
+        "dial": "216"
     },
     "to": {
         "name": "tonga",
-        "code": "676",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "to",
+        "dial": "676"
     },
     "tr": {
         "name": "turkey",
-        "code": "90",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "tr",
+        "dial": "90"
     },
     "tt": {
         "name": "trinidad and tobago",
-        "code": "1868",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "tt",
+        "dial": "1868"
     },
     "tv": {
         "name": "tuvalu",
-        "code": "688",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "tv",
+        "dial": "688"
     },
     "tw": {
         "name": "taiwan, province of china",
-        "code": "886",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "tw",
+        "dial": "886"
     },
     "tz": {
         "name": "tanzania, united republic of",
-        "code": "255",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "tz",
+        "dial": "255"
     },
     "ua": {
         "name": "ukraine",
-        "code": "380",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ua",
+        "dial": "380"
     },
     "ug": {
         "name": "uganda",
-        "code": "256",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ug",
+        "dial": "256"
     },
     "us": {
         "name": "united states",
-        "code": "1",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "us",
+        "dial": "1"
     },
     "uy": {
         "name": "uruguay",
-        "code": "598",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "uy",
+        "dial": "598"
     },
     "uz": {
         "name": "uzbekistan",
-        "code": "998",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "uz",
+        "dial": "998"
     },
     "va": {
         "name": "holy see (vatican city state]",
-        "code": "39",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "va",
+        "dial": "39"
     },
     "vc": {
         "name": "saint vincent and the grenadines",
-        "code": "1784",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "vc",
+        "dial": "1784"
     },
     "ve": {
         "name": "venezuela",
-        "code": "58",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ve",
+        "dial": "58"
     },
     "vg": {
         "name": "virgin islands, british",
-        "code": "1284",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "vg",
+        "dial": "1284"
     },
     "vi": {
         "name": "virgin islands, u.s.",
-        "code": "1340",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "vi",
+        "dial": "1340"
     },
     "vn": {
         "name": "viet nam",
-        "code": "84",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "vn",
+        "dial": "84"
     },
     "vu": {
         "name": "vanuatu",
-        "code": "678",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "vu",
+        "dial": "678"
     },
     "wf": {
         "name": "wallis and futuna",
-        "code": "681",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "wf",
+        "dial": "681"
     },
     "ws": {
         "name": "samoa",
-        "code": "685",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ws",
+        "dial": "685"
     },
     "xk": {
         "name": "kosovo",
-        "code": "381",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "xk",
+        "dial": "381"
     },
     "ye": {
         "name": "yemen",
-        "code": "967",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "ye",
+        "dial": "967"
     },
     "yt": {
         "name": "mayotte",
-        "code": "262",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "yt",
+        "dial": "262"
     },
     "za": {
         "name": "south africa",
-        "code": "27",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "za",
+        "dial": "27"
     },
     "zm": {
         "name": "zambia",
-        "code": "260",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "zm",
+        "dial": "260"
     },
     "zw": {
         "name": "zimbabwe",
-        "code": "263",
-        "worldometer_name": "abcdefg"
+        "worldometer_name": "abcdefg",
+        "iso": "zw",
+        "dial": "263"
     }
 }
