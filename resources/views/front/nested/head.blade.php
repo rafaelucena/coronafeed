@@ -20,3 +20,12 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
+
+<!-- LINK PREVIEW TAGS-->
+
+<meta property="og:title" content="CORONA-FEED">
+<meta property="og:description" content="Todos os dados e informacoes sobre o Coronavirus">
+<meta property="og:url" content="http://corona-feed.com">
+<meta property="og:image" content="{{ asset('front/images/snippet.png') }}">
+<meta property=”og:image:width” content=”600″ />
+<meta property=”og:image:height” content=”350″ />
