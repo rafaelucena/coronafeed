@@ -4,44 +4,83 @@ namespace App\Console\Services;
 
 use App\Http\Models\LocationImport;
 use App\Helpers\Country;
+use LaravelDoctrine\ORM\Facades\EntityManager;
 
 class ScrapeWorldOMetersService
 {
+    /** @var EntityManager */
     private $em;
 
+    /** @var bool */
+    private $isTest = false;
+
+    /** @var string */
     private $webBaseUrl = 'https://www.worldometers.info/coronavirus/';
 
+    /** @var string */
     private $webContent;
 
+    /** @var array */
     private $webContentTableItems;
 
+    /** @var array */
     private $mappedLocations = [];
 
-    public function __construct()
+    /**
+     * @param boolean $isTest
+     * @return void
+     */
+    public function setIsTest(bool $isTest = true): void
     {
-        $this->em = app('em');
-        $this->setContent($this->webBaseUrl);
+        $this->isTest = $isTest;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsTest(): bool
+    {
+        return $this->isTest;
+    }
+
+    /**
+     * @return void
+     */
+    public function rock(): void
+    {
+        $this->setContent();
         $this->setContentTables();
         $this->mapLocations();
     }
 
-    private function setContent(string $url)
+    /**
+     * @return void
+     */
+    private function setContent(): void
     {
-        // $this->webContent = file_get_contents(base_path('storage/mocks/worldometers-coronavirus-20200412.html'));
+        if ($this->isTest === true) {
+            $this->webContent = file_get_contents(base_path('storage/mocks/worldometers-coronavirus-20200412.html'));
+            return;
+        }
+
         $curlObj = curl_init();
-        curl_setopt($curlObj, CURLOPT_URL, $url);
-        // // $User_Agent = 'Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31';
-        // // curl_setopt($curlObj, CURLOPT_USERAGENT, $User_Agent);
+        curl_setopt($curlObj, CURLOPT_URL, $this->webBaseUrl);
         curl_setopt($curlObj, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curlObj, CURLOPT_HEADER, true);
-        $this->webContent = curl_exec($curlObj);
 
+        $this->webContent = curl_exec($curlObj);
         curl_close($curlObj);
     }
 
-    private function setContentTables()
+    /**
+     * @return void
+     */
+    private function setContentTables(): void
     {
-        $tablesToFind = ['today' => '<table id="main_table_countries_today', 'yesterday' => '<table id="main_table_countries_yesterday'];
+        $tablesToFind = [
+            'today' => '<table id="main_table_countries_today',
+            'yesterday' => '<table id="main_table_countries_yesterday',
+        ];
 
         foreach ($tablesToFind as $tableName => $tableOpenTag) {
             $tableOpenTagPos = strpos($this->webContent, $tableOpenTag);
@@ -49,23 +88,35 @@ class ScrapeWorldOMetersService
             $tableCloseTagPos = strpos($this->webContent, $tableCloseTag, $tableOpenTagPos);
             $tableContent = substr($this->webContent, ($tableOpenTagPos), ($tableCloseTagPos - $tableOpenTagPos));
 
-            $this->setContentTableItems($tableName, $tableContent);
+            $this->setContentTableItems($tableName, $tableContent, 'world');
+            $this->setContentTableItems($tableName, $tableContent, 'countries');
         }
     }
 
-    private function setContentTableItems(string $tableName, string $tableContent)
+    /**
+     * @param string $tableName
+     * @param string $tableContent
+     * @param string $type
+     * @return void
+     */
+    private function setContentTableItems(string $tableName, string $tableContent, string $type): void
     {
         $offset = 0;
         $count = 0;
+
         $itemOpenTag = '<tr style="';
+        if ($type === 'world') {
+            $itemOpenTag = '<tr class="total_row_world';
+        }
         $itemCloseTag = '</tr>';
         $itemOpenTagPos = strpos($tableContent, $itemOpenTag);
         while ($itemOpenTagPos == true) {
+            //preventing infinite loop
             if ($count > 250) {
                 break;
             }
-            $itemOpenTagPos = strpos($tableContent, $itemOpenTag, $offset);
 
+            $itemOpenTagPos = strpos($tableContent, $itemOpenTag, $offset);
             $offset = $itemCloseTagPos = strpos($tableContent, $itemCloseTag, $itemOpenTagPos);
             $itemResult = substr($tableContent, $itemOpenTagPos, ($itemCloseTagPos - $itemOpenTagPos));
             // $itemResult = preg_replace('/\r|\n/', '', $itemResult);
@@ -79,7 +130,10 @@ class ScrapeWorldOMetersService
         }
     }
 
-    private function mapLocations()
+    /**
+     * @return void
+     */
+    private function mapLocations(): void
     {
         foreach ($this->webContentTableItems as $tableName => $tableItems) {
             foreach ($tableItems as $content) {
@@ -89,19 +143,19 @@ class ScrapeWorldOMetersService
         }
     }
 
-    private function getContentArray(string $content)
+    /**
+     * @param string $content
+     * @return array
+     */
+    private function getContentArray(string $content): array
     {
         preg_match_all('/>(.+)?</', $content, $matches);
 
         $countryName = $matches[1][0];
         preg_match('/>(.+)</', $countryName, $nameMatch);
-        if (isset($nameMatch[1]) === false) {
-            return [
-                'country' => 'error',
-                'continent' => $countryName,
-            ];
+        if (isset($nameMatch[1]) === true) {
+            $countryName = ($nameMatch[1]);
         }
-        $countryName = ($nameMatch[1]);
 
         $result = [
             'country' => $countryName,
@@ -122,23 +176,39 @@ class ScrapeWorldOMetersService
         return $result;
     }
 
-    private function removeTrashString($string)
+    /**
+     * @param string $input
+     * @return string
+     */
+    private function removeTrashString(string $input): string
     {
-        return str_replace([',', '+'], ['', ''], $string);
+        return str_replace([',', '+'], ['', ''], $input);
     }
 
-    public function getMappedLocation(string $location)
+    /**
+     * @param string $location
+     * @return array
+     */
+    public function getMappedLocation(string $location): array
     {
         return $this->mappedLocations[$location];
     }
 
-    public function getLocationsList()
+    /**
+     * @return array
+     */
+    public function getLocationsList(): array
     {
         return array_keys($this->mappedLocations);
     }
 
-    public function roll()
+    /**
+     * @return void
+     */
+    public function roll(): void
     {
+        $this->em = app('em');
+
         $country = new Country();
         foreach ($this->mappedLocations as $location => $mappedLocation) {
             foreach ($mappedLocation as $type => $mapped) {
