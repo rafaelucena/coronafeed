@@ -68,6 +68,7 @@ class RobotRefreshNumbers extends Command
                     'code' => $location->getCode(),
                     'type' => 'yesterday',
                 ]);
+                $locationNumbers->setConfirmed($locationImport->getTotalCases());
                 $locationNumbers->setCured($locationImport->getTotalRecovered());
                 $locationNumbers->setNewCases($locationImportOld->getNewCases());
                 $locationNumbers->setDeaths($locationImport->getTotalDeaths());
