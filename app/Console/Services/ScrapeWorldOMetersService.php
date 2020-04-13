@@ -27,7 +27,7 @@ class ScrapeWorldOMetersService
 
     private function setContent(string $url)
     {
-        // $this->webContent = file_get_contents(base_path('public/mock/worldometers-data.html'));
+        // $this->webContent = file_get_contents(base_path('storage/mocks/worldometers-coronavirus-20200412.html'));
         $curlObj = curl_init();
         curl_setopt($curlObj, CURLOPT_URL, $url);
         // // $User_Agent = 'Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31';
