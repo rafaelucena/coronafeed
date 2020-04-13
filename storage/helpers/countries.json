@@ -1384,5 +1384,11 @@
         "worldometer_name": "abcdefg",
         "iso": "zw",
         "dial": "263"
+    },
+    "ww": {
+        "name": "world",
+        "worldometer_name": "world",
+        "iso": "ww",
+        "dial": "000"
     }
 }

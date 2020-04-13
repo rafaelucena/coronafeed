@@ -48,6 +48,7 @@ class RobotScrapeWorld extends Command
     {
         $this->info('Downloading: HTML');
         $scrapeWorld = new ScrapeWorldOMetersService();
+        $scrapeWorld->rock();
         $this->info('Mapped: ' . '250' . ' rows');
 
         $cmd = $this->em->getClassMetadata(LocationImport::class);

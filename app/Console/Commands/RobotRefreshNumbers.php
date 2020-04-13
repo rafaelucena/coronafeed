@@ -48,6 +48,8 @@ class RobotRefreshNumbers extends Command
             ['locationType' => $locationType],
             ['id' => 'ASC']
         );
+        $locationWorld = $this->em->getRepository(Location::class)->find(1);
+        $locations[] = $locationWorld;
 
         /** @var Location $location */
         foreach ($locations as $location) {
