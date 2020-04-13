@@ -68,15 +68,14 @@ class MapsService
                 continue;
             }
 
-            $activeCases = $locationItem->getLocationNumbers()->getConfirmed() - $locationItem->getLocationNumbers()->getDeaths() - $locationItem->getLocationNumbers()->getCured();
             $this->world[] = [
                 [
                     'v' => $locationItem->getCode(),
                     'f' => $locationItem->getName(),
                 ],
                 // $this->getLogScale($activeCases),
-                $activeCases,
-                'Casos ativos: ' . $activeCases,
+                $locationItem->getLocationNumbers()->getConfirmed(),
+                'Casos confirmados: ' . $locationItem->getLocationNumbers()->getConfirmed(),
             ];
         }
     }
