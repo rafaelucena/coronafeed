@@ -23,16 +23,16 @@ class LocationType
 
     /**
      * @ORM\Column(type="string", length=127, nullable=false)
-     */    
+     */
     private $slug;
 
     /**
      * @ORM\Column(type="string", length=127, nullable=false)
-     */    
+     */
     private $name;
 
     /**
-     * @ORM\OneToMany(targetEntity="Location", mappedBy="LocationType")
+     * @ORM\OneToMany(targetEntity="Location", mappedBy="locationType")
      */
     private $locations;
 
