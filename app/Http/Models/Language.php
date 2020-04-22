@@ -37,6 +37,11 @@ class Language
     private $name;
 
     /**
+     * @ORM\OneToMany(targetEntity="LocationSlug", mappedBy="language")
+     */
+    private $locationSlugs;
+
+    /**
      * @param string $code
      * @return void
      */
