@@ -8,6 +8,7 @@ use App\Http\Services\Location\AboutService;
 use App\Http\Services\Location\ChartsService;
 use App\Http\Services\Location\MapsService;
 use App\Http\Services\Location\MenuService;
+use App\Http\Services\Location\ViewService;
 
 class LocationService
 {
@@ -21,6 +22,7 @@ class LocationService
 
     public function __construct(Location $location, Language $language = null)
     {
+        $this->view = new ViewService($language);
         $this->menu = new MenuService($location);
         $this->about = new AboutService($location);
         $this->charts = new ChartsService($location);
