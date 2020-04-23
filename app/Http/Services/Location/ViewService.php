@@ -7,11 +7,14 @@ use LaravelDoctrine\ORM\Facades\EntityManager;
 
 class ViewService
 {
+    /** @var EntityManager */
+    private $em;
+
     /** @var array **/
     private $menu;
 
-    /** @var EntityManager */
-    private $em;
+    /** @var array **/
+    private $numbers;
 
     /**
      * @param Language $language
@@ -30,15 +33,19 @@ class ViewService
     {
         $constants = $language->getLocationLanguageViews();
 
-        // \Debugbar::info($language->getName());
         $this->menu = [];
+        $this->numbers = [];
         foreach ($constants as $constant) {
-            $this->menu[$constant->getConstant()] = [
-                'id' => $constant->getConstant(),
-                'label' => $constant->getValue(),
-            ];
+            $key = $constant->getConstant();
+            switch ($key) {
+                case (preg_match('/^LOCATION_MENU/', $key) ? true : false):
+                    $this->menu[$constant->getConstant()] = $constant->getValue();
+                    break;
+                case (preg_match('/^LOCATION_NUMBERS/', $key) ? true : false):
+                    $this->numbers[$constant->getConstant()] = $constant->getValue();
+                    break;
+            }
         }
-        // \Debugbar::info($this->menu);
     }
 
     /**
@@ -47,5 +54,13 @@ class ViewService
     public function getMenu(): array
     {
         return $this->menu;
+    }
+
+    /**
+     * @return array
+     */
+    public function getNumbers(): array
+    {
+        return $this->numbers;
     }
 }
