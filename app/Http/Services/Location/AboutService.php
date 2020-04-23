@@ -4,6 +4,7 @@ namespace App\Http\Services\Location;
 
 use App\Http\Models\Location;
 use App\Http\Models\LocationNumbers;
+use App\Http\Models\LocationSlug;
 
 class AboutService
 {
@@ -25,9 +26,12 @@ class AboutService
     /** @var string **/
     private $updated;
 
-    public function __construct(Location $location)
+    public function __construct(LocationSlug $locationSlug)
     {
-        $this->setTitle($location->getName());
+        /** @var Location */
+        $location = $locationSlug->getLocation();
+
+        $this->setTitle($locationSlug->getName());
         $this->setCounters($location->getLocationNumbers());
         $this->setEstimations($location->getLocationNumbers());
         $this->setUpdated($location->getLocationNumbers()->getUpdated());

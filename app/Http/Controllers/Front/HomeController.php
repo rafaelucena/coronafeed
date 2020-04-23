@@ -10,6 +10,7 @@ use App\Http\Services\HomeService;
 use App\Http\Services\LocationService;
 use Doctrine\ORM\EntityManager;
 use Illuminate\Support\Facades\DB;
+use Illuminate\View\View;
 
 class HomeController extends Controller
 {
@@ -19,19 +20,38 @@ class HomeController extends Controller
         return view('front.home.index', ['form' => $form]);
     }
 
-    public function location(Location $location)
+    /**
+     * @param Language $language
+     * @param string $slug
+     * @return View
+     */
+    public function location(Language $language, string $slug): View
     {
-        $language = app('em')->getRepository(Language::class)->findOneBy(['slug' => 'portugues']);
-        $form = new LocationService($location, $language);
+        $locationSlug = $this->getLocationSlug($language, $slug);
+        $form = new LocationService($locationSlug);
         return view('front.home.index', ['form' => $form]);
     }
 
-    public function locationTest(LocationSlug $locationSlug)
+    /**
+     * @param Language $language
+     * @param string $slug
+     * @return LocationSlug
+     */
+    private function getLocationSlug(Language $language, string $slug): LocationSlug
     {
-        $location = $locationSlug->getLocation();
-        $language = $locationSlug->getLanguage();
+        $qry = app('em')->createQueryBuilder();
+        $qry->select('losl')
+            ->from(LocationSlug::class, 'losl')
+            ->join(Language::class, 'la', 'WITH', 'la = losl.language AND la = :language')
+            ->where('losl.slug = :slug');
 
-        $form = new LocationService($location, $language);
-        return view('front.home.index', ['form' => $form]);
+        $qry->setParameters(array(
+            'language' => $language,
+            'slug' => $slug,
+        ));
+
+        $locationSlugs = $qry->getQuery()->getResult();
+
+        return current($locationSlugs);
     }
 }

@@ -7,13 +7,14 @@ use Doctrine\Common\Collections\Criteria;
 use Doctrine\ORM\Mapping AS ORM;
 use Doctrine\ORM\Event\PreUpdateEventArgs;
 use Doctrine\ORM\PersistentCollection;
+use LaravelDoctrine\ORM\Contracts\UrlRoutable;
 
 /**
  * @ORM\Entity()
  * @ORM\Table(name="languages")
  * @ORM\HasLifecycleCallbacks()
  */
-class Language
+class Language implements UrlRoutable
 {
     /**
      * @ORM\Id()
@@ -46,6 +47,22 @@ class Language
      * @ORM\OneToMany(targetEntity="LocationLanguageView", mappedBy="language")
      */
     private $locationLanguageViews;
+
+    /**
+     * @return string
+     */
+    public static function getRouteKeyName(): string
+    {
+        return 'code';
+    }
+
+    /**
+     * @return integer
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
 
     /**
      * @param string $code
@@ -99,10 +116,13 @@ class Language
     }
 
     /**
+     * @param array $parameters
      * @return PersistentCollection
      */
-    public function getLocationLanguageViews(): PersistentCollection
+    public function getLocationLanguageViews(array $parameters = []): PersistentCollection
     {
+        // $criteria = custom_criteria($parameters);
+        // return $this->locationLanguageViews->matching($criteria);
         return $this->locationLanguageViews;
     }
 }
