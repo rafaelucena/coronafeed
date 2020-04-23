@@ -18,9 +18,11 @@
 
 <script>
 $(document).ready(function() {
+    var placeholder = $('#location-search-bar option:nth-child(1)');
+    console.log(placeholder.text());
     $('#location-search-bar').select2({
         width: '160px',
-        placeholder: "Buscar",
+        placeholder: placeholder.text(),
         theme: "material"
     });
 
