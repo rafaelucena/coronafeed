@@ -47,7 +47,7 @@ class MenuService
         $this->list = [];
         foreach ($locationsList as $locationItem) {
             $this->list[] = [
-                'id' => $locationItem->getSlug(),
+                'id' => $this->language->getCode() . '/' . $locationItem->getSlug(),
                 'label' => $locationItem->getName(),
             ];
         }
