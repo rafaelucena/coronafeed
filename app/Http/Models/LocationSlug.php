@@ -6,13 +6,14 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Criteria;
 use Doctrine\ORM\Mapping AS ORM;
 use Doctrine\ORM\Event\PreUpdateEventArgs;
+use LaravelDoctrine\ORM\Contracts\UrlRoutable;
 
 /**
  * @ORM\Entity()
  * @ORM\Table(name="location_slug")
  * @ORM\HasLifecycleCallbacks()
  */
-class LocationSlug
+class LocationSlug implements UrlRoutable
 {
     /**
      * @ORM\Id()
@@ -42,6 +43,14 @@ class LocationSlug
      * @ORM\JoinColumn(name="location_id", referencedColumnName="id")
      */
     private $location;
+
+    /**
+     * @return string
+     */
+    public static function getRouteKeyName(): string
+    {
+        return 'slug';
+    }
 
     /**
      * @param string $slug

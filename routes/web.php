@@ -21,6 +21,8 @@ Route::get('/', function() {
 
 Route::get('/{location}', 'Front\HomeController@location');
 
+Route::get('/test/{locationSlug}', 'Front\HomeController@locationTest');
+
 // Route::get('admin', 'Back\DashboardController@index');
 
 // Route::get('admin/countries', 'Back\CountriesController@index');
