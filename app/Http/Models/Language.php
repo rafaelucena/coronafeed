@@ -6,6 +6,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Criteria;
 use Doctrine\ORM\Mapping AS ORM;
 use Doctrine\ORM\Event\PreUpdateEventArgs;
+use Doctrine\ORM\PersistentCollection;
 
 /**
  * @ORM\Entity()
@@ -97,7 +98,10 @@ class Language
         return $this->name;
     }
 
-    public function getLocationLanguageViews()
+    /**
+     * @return PersistentCollection
+     */
+    public function getLocationLanguageViews(): PersistentCollection
     {
         return $this->locationLanguageViews;
     }
