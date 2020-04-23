@@ -42,6 +42,11 @@ class Language
     private $locationSlugs;
 
     /**
+     * @ORM\OneToMany(targetEntity="LocationLanguageView", mappedBy="language")
+     */
+    private $locationLanguageViews;
+
+    /**
      * @param string $code
      * @return void
      */
@@ -90,5 +95,10 @@ class Language
     public function getName(): string
     {
         return $this->name;
+    }
+
+    public function getLocationLanguageViews()
+    {
+        return $this->locationLanguageViews;
     }
 }
