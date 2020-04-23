@@ -16,12 +16,10 @@ use Illuminate\Support\Facades\Route;
 
 // Route::get('/', 'Front\HomeController@index');
 Route::get('/', function() {
-    return Redirect::to('/brasil', 302);
+    return Redirect::to('/pt/brasil', 302);
 });
 
-Route::get('/{location}', 'Front\HomeController@location');
-
-Route::get('/test/{locationSlug}', 'Front\HomeController@locationTest');
+Route::get('/{language}/{slug}', 'Front\HomeController@location');
 
 // Route::get('admin', 'Back\DashboardController@index');
 
