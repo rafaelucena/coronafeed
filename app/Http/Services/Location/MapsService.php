@@ -7,8 +7,54 @@ use App\Http\Models\LocationType;
 
 class MapsService
 {
-    /** @var float */
-    private $logMultiplier;
+    private const SCALE = [
+        [
+            'min' => 1,
+            'max' => 500,
+            'assign' => 0,
+        ],
+        [
+            'min' => 501,
+            'max' => 1000,
+            'assign' => 1,
+        ],
+        [
+            'min' => 1001,
+            'max' => 5000,
+            'assign' => 2
+        ],
+        [
+            'min' => 5001,
+            'max' => 10000,
+            'assign' => 3,
+        ],
+        [
+            'min' => 10001,
+            'max' => 50000,
+            'assign' => 4,
+        ],
+        [
+            'min' => 50001,
+            'max' => 100000,
+            'assign' => 5,
+        ],
+        [
+            'min' => 100001,
+            'max' => 250000,
+            'assign' => 6,
+        ],
+        [
+            'min' => 250001,
+            'max' => 500000,
+            'assign' => 7,
+        ],
+        [
+            'min' => 500001,
+            'max' => 1000000,
+            'assign' => 8,
+        ],
+
+    ];
 
     /** @var array **/
     private $world;
@@ -26,31 +72,6 @@ class MapsService
     }
 
     /**
-     * @param PersistentCollection $locationsList
-     * @return void
-     */
-    private function setLogMultiplier(array $locationsList): void
-    {
-        $highestValue = 0;
-        foreach ($locationsList as $locationItem) {
-            if (empty($locationItem->getCode()) === true) {
-                continue;
-            }
-
-            if ($highestValue === 0) {
-                $highestValue = $locationItem->getLocationNumbers()->getConfirmed() - $locationItem->getLocationNumbers()->getDeaths() - $locationItem->getLocationNumbers()->getCured();
-                continue;
-            }
-            $currentValue = $locationItem->getLocationNumbers()->getConfirmed() - $locationItem->getLocationNumbers()->getDeaths() - $locationItem->getLocationNumbers()->getCured();
-            if ($highestValue < $currentValue) {
-                $highestValue = $currentValue;
-            }
-        }
-
-        $this->logMultiplier = 100 / log($highestValue);
-    }
-
-    /**
      * @param Location $location
      * @return void
      */
@@ -64,8 +85,6 @@ class MapsService
             ['name' => 'ASC']
         );
 
-        $this->setLogMultiplier($locationsList);
-
         $this->world = [];
         foreach ($locationsList as $locationItem) {
             if (empty($locationItem->getCode()) === true) {
@@ -77,8 +96,8 @@ class MapsService
                     'v' => $locationItem->getCode(),
                     'f' => $locationItem->getName(),
                 ],
-                // $this->getLogScale($activeCases),
-                $locationItem->getLocationNumbers()->getConfirmed(),
+                $this->getScale($locationItem->getLocationNumbers()->getConfirmed()),
+                // $locationItem->getLocationNumbers()->getConfirmed(),
                 'Casos confirmados: ' . $locationItem->getLocationNumbers()->getConfirmed(),
             ];
         }
@@ -88,9 +107,15 @@ class MapsService
      * @param integer $value
      * @return integer
      */
-    private function getLogScale(int $value): int
+    private function getScale(int $value): int
     {
-	    return round((($this->logMultiplier * log($value)) / 10), 0);
+        foreach (self::SCALE as $scale) {
+            if ($value >= $scale['min'] && $value <= $scale['max']) {
+                return $scale['assign'];
+            }
+        }
+
+        return $scale['assign'];
     }
 
     /**
