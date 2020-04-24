@@ -24,25 +24,26 @@
     google.charts.setOnLoadCallback(drawRegionsMap);
 
     function drawRegionsMap() {
-        // var data = google.visualization.arrayToDataTable(mapsData);
+    //    var data = google.visualization.arrayToDataTable(mapsData);
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Country'); // Implicit domain label col.
         data.addColumn('number', 'Value'); // Implicit series 1 data col.
         data.addColumn({type:'string', role:'tooltip'}); //
-        // data.addRows([
-        //     [{v:"br",f:"Olympia"},18313,"Casos ativos: 18313"],
-        //     [{v:"us",f:"Seattle"},5000,"5000"],
-        // ]);
-        data.addRows(mapsData);
+    /*     data.addRows([
+             [{v:"br",f:"Olympia"},1,"Casos ativos: 18313"],
+             [{v:"ua",f:"Seattle"},8,"5000"]
+         ]);*/
+
+       data.addRows(mapsData);
 
         var options = {
             title: 'Casos ativos do coronavirus no mundo',
-            colors: ['#e4c8c8', '#800000'],
-            // colorAxis: {
-                // colors: ['#b46969','#af5f5f','#aa5555','#a54b4b','#a04141','#9b3737','#962d2d','#912323','#8c1919','#870f0f','#800000'],
-                // minValue: 0,
-                // maxValue: 10
-            // },
+        //    colors: ['#e4c8c8', '#800000'],
+             colorAxis: {
+                 colors: ['#b46969','#aa5555','#a04141','#9b3737','#962d2d','#912323','#8c1919','#870f0f','#800000'],
+                 minValue: 0,
+                 maxValue: 8
+             },
             backgroundColor: '#f9f9ff',
             // legend: 'none',
         };
