@@ -8,7 +8,7 @@
     <!-- logo image -->
     <div class="site-logo">
         <a href="/">
-            <img src="{{ asset('front/images/logo_.png') }}" alt="COVID-19" />
+            <img src="{{ asset('front/images/logo_2.png') }}" alt="CORONA FEED" />
         </a>
     </div>
 </div>

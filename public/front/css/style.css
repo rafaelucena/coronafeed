@@ -194,7 +194,7 @@ pre {
   width: 16px;
   height: 16px;
   display: block;
-  background: #FF4C60;
+  background: #800000;
   box-shadow: 2px 2px 8px rgba(255, 76, 96, 0.09);
   border-radius: 50%;
   transform: rotate(90deg);
@@ -248,7 +248,7 @@ pre {
   position: absolute;
   width: 16px;
   height: 16px;
-  background: #FF4C60;
+  background: #800000;
   box-shadow: 2px 2px 8px rgba(255, 76, 96, 0.09);
   border-radius: 50%;
   animation: moveSvg 6.9s linear infinite;
@@ -293,7 +293,7 @@ pre {
     offset-distance: 0%;
   }
   25% {
-    background: #6C6CE5;
+    background: #800000;
   }
   75% {
     background: #800000;
@@ -321,7 +321,7 @@ pre {
     background: #800000;
   }
   75% {
-    background: #6C6CE5;
+    background: #800000;
   }
   50.0001%, 100% {
     left: auto;

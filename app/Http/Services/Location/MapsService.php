@@ -3,6 +3,7 @@
 namespace App\Http\Services\Location;
 
 use App\Http\Models\Location;
+use App\Http\Models\LocationType;
 
 class MapsService
 {
@@ -18,10 +19,10 @@ class MapsService
     /**
      * @param Location $location
      */
-    public function __construct(Location $location)
+    public function __construct()
     {
         $this->em = app('em');
-        $this->setWorld($location);
+        $this->setWorld();
     }
 
     /**
@@ -53,10 +54,13 @@ class MapsService
      * @param Location $location
      * @return void
      */
-    private function setWorld(Location $location): void
+    private function setWorld(): void
     {
+        $locationType = $this->em->getRepository(LocationType::class)->findOneBy([
+            'slug' => 'pais',
+        ]);
         $locationsList = $this->em->getRepository(Location::class)->findBy(
-            ['locationType' => $location->getLocationType()],
+            ['locationType' => $locationType],
             ['name' => 'ASC']
         );
 
@@ -68,15 +72,14 @@ class MapsService
                 continue;
             }
 
-            $activeCases = $locationItem->getLocationNumbers()->getConfirmed() - $locationItem->getLocationNumbers()->getDeaths() - $locationItem->getLocationNumbers()->getCured();
             $this->world[] = [
                 [
                     'v' => $locationItem->getCode(),
                     'f' => $locationItem->getName(),
                 ],
                 // $this->getLogScale($activeCases),
-                $activeCases,
-                'Casos ativos: ' . $activeCases,
+                $locationItem->getLocationNumbers()->getConfirmed(),
+                'Casos confirmados: ' . $locationItem->getLocationNumbers()->getConfirmed(),
             ];
         }
     }
