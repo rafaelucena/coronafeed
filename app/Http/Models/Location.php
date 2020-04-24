@@ -77,6 +77,11 @@ class Location implements UrlRoutable
     private $parent;
 
     /**
+     * @ORM\OneToMany(targetEntity="LocationSlug", mappedBy="location")
+     */
+    private $locationSlugs;
+
+    /**
      * @return string
      */
     public static function getRouteKeyName(): string

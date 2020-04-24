@@ -2,6 +2,7 @@
 <html lang="en-US">
 	<head>
 		@if (env('APP_ENV') === 'production')
+		<meta name="google-site-verification" content="BltIJzn5oFpFIgrE5xKagoGVODsGq90YRc4bTRB9Fwc" />
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-4S6FGBPHVH"></script>
 		<script>

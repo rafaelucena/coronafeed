@@ -120,7 +120,6 @@ return [
     */
 
     'providers' => [
-
         /*
          * Laravel Framework Service Providers...
          */
@@ -164,6 +163,11 @@ return [
          * Doctrine Service Providers
          */
         LaravelDoctrine\ORM\DoctrineServiceProvider::class,
+
+        /**
+         * Others
+         */
+        Barryvdh\Debugbar\ServiceProvider::class,
     ],
 
     /*
@@ -217,5 +221,8 @@ return [
         'EntityManager' => LaravelDoctrine\ORM\Facades\EntityManager::class,
         'Registry'      => LaravelDoctrine\ORM\Facades\Registry::class,
         'Doctrine'      => LaravelDoctrine\ORM\Facades\Doctrine::class,
+
+        //Others
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
     ],
 ];

@@ -24,8 +24,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')
-        //          ->hourly();
+        $schedule->command('robot:import:world')->twiceDaily(10, 22);
+        $schedule->command('robot:refresh:numbers')->twiceDaily(11, 23);
     }
 
     /**
