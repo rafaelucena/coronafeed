@@ -3,6 +3,7 @@
 namespace App\Http\Services\Location;
 
 use App\Http\Models\Location;
+use App\Http\Models\LocationNumbers;
 use App\Http\Models\LocationType;
 
 class MapsService
@@ -11,47 +12,52 @@ class MapsService
         [
             'min' => 1,
             'max' => 500,
-            'assign' => 0,
+            'assign' => 1,
         ],
         [
             'min' => 501,
             'max' => 1000,
-            'assign' => 1,
+            'assign' => 2,
         ],
         [
             'min' => 1001,
             'max' => 5000,
-            'assign' => 2
+            'assign' => 3
         ],
         [
             'min' => 5001,
             'max' => 10000,
-            'assign' => 3,
+            'assign' => 4,
         ],
         [
             'min' => 10001,
             'max' => 50000,
-            'assign' => 4,
+            'assign' => 5,
         ],
         [
             'min' => 50001,
             'max' => 100000,
-            'assign' => 5,
+            'assign' => 6,
         ],
         [
             'min' => 100001,
             'max' => 250000,
-            'assign' => 6,
+            'assign' => 7,
         ],
         [
             'min' => 250001,
             'max' => 500000,
-            'assign' => 7,
+            'assign' => 8,
         ],
         [
             'min' => 500001,
             'max' => 1000000,
-            'assign' => 8,
+            'assign' => 9,
+        ],
+        [
+            'min' => 1000001,
+            'max' => null,
+            'assign' => 10,
         ],
 
     ];
@@ -91,15 +97,27 @@ class MapsService
                 continue;
             }
 
-            $this->world[] = [
-                [
+            /** @var LocationNumbers */
+            $locationNumbers = $locationItem->getLocationNumbers();
+            $item = [
+                'location' => [
                     'v' => $locationItem->getCode(),
                     'f' => $locationItem->getName(),
                 ],
-                $this->getScale($locationItem->getLocationNumbers()->getConfirmed()),
-                // $locationItem->getLocationNumbers()->getConfirmed(),
-                'Casos confirmados: ' . $locationItem->getLocationNumbers()->getConfirmed(),
+                'confirmed' => [
+                    'scale' => $this->getScale($locationNumbers->getConfirmed()),
+                    'value' => $locationNumbers->getConfirmed(),
+                ],
+                'cured' => [
+                    'scale' => $this->getScale($locationNumbers->getCured()),
+                    'value' => $locationNumbers->getCured(),
+                ],
+                'deaths' => [
+                    'scale' => $this->getScale($locationNumbers->getDeaths()),
+                    'value' => $locationNumbers->getDeaths(),
+                ],
             ];
+            $this->world[] = $item;
         }
     }
 
@@ -110,7 +128,7 @@ class MapsService
     private function getScale(int $value): int
     {
         foreach (self::SCALE as $scale) {
-            if ($value >= $scale['min'] && $value <= $scale['max']) {
+            if ($value >= $scale['min'] && (empty($scale['max']) || $value <= $scale['max'])) {
                 return $scale['assign'];
             }
         }
@@ -123,6 +141,7 @@ class MapsService
      */
     public function getWorld(): array
     {
+        \Debugbar::info(json_encode($this->world));
         return $this->world;
     }
 }

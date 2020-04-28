@@ -1,4 +1,3 @@
-<script type="text/javascript" src="{{ asset('front/js/jquery-1.12.3.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('front/js/jquery.easing.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('front/js/jquery.waypoints.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('front/js/jquery.counterup.min.js') }}"></script>
