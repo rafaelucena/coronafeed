@@ -65,36 +65,11 @@
                 <label class="btn btn-light btn-all btn-scale-group active" id="scale0">
                     <input type="radio" name="options"checked="">All
                 </label>
-                <label class="btn btn-light btn-scale" id="scale1">
-                    <input type="radio" name="options">1-500
+                @foreach($form->maps->getScales() as $option => $estimation)
+                <label class="btn btn-light btn-scale" data="{{ $option + 1 }}" id="scale{{ $option + 1 }}">
+                    <input type="radio" name="options">{{ $estimation['label'] }}
                 </label>
-                <label class="btn btn-light btn-scale" id="scale2">
-                    <input type="radio" name="options">501 - 1k
-                </label>
-                <label class="btn btn-light btn-scale" id="scale3">
-                    <input type="radio" name="options">501 - 1k
-                </label>
-                <label class="btn btn-light btn-scale" id="scale4">
-                    <input type="radio" name="options">5k - 10k
-                </label>
-                <label class="btn btn-light btn-scale" id="scale5">
-                    <input type="radio" name="options">10k - 50k
-                </label>
-                <label class="btn btn-light btn-scale" id="scale6">
-                    <input type="radio" name="options">50k - 100k
-                </label>
-                <label class="btn btn-light btn-scale" id="scale7">
-                    <input type="radio" name="options">100k - 250k
-                </label>
-                <label class="btn btn-light btn-scale" id="scale8">
-                    <input type="radio" name="options">250k - 500k
-                </label>
-                <label class="btn btn-light btn-scale" id="scale9">
-                    <input type="radio" name="options">500k - 1m
-                </label>
-                <label class="btn btn-light btn-scale" id="scale10">
-                    <input type="radio" name="options">1m+
-                </label>
+                @endforeach
             </div>
         </div>
     </div>
@@ -247,49 +222,14 @@
             changeMapsData('deaths');
         });
 
-//On button click, load new data
+        //On button click, load new data
         $("#scale0").click(function() {
             useScale.scale = 0;
             resetMapsData(useScale);
         });
-        $("#scale1").click(function() {
-            useScale.scale = 1;
-            resetMapsData(useScale);
-        });
-        $("#scale2").click(function() {
-            useScale.scale = 2;
-            resetMapsData(useScale);
-        });
-        $("#scale3").click(function() {
-            useScale.scale = 3;
-            resetMapsData(useScale);
-        });
-        $("#scale4").click(function() {
-            useScale.scale = 4;
-            resetMapsData(useScale);
-        });
-        $("#scale5").click(function() {
-            useScale.scale = 5;
-            resetMapsData(useScale);
-        });
-        $("#scale6").click(function() {
-            useScale.scale = 6;
-            resetMapsData(useScale);
-        });
-        $("#scale7").click(function() {
-            useScale.scale = 7;
-            resetMapsData(useScale);
-        });
-        $("#scale8").click(function() {
-            useScale.scale = 8;
-            resetMapsData(useScale);
-        });
-        $("#scale9").click(function() {
-            useScale.scale = 9;
-            resetMapsData(useScale);
-        });
-        $("#scale10").click(function() {
-            useScale.scale = 10;
+        $(".btn-scale").click(function() {
+            let element = $(this);
+            useScale.scale = parseInt(element.attr('data'));
             resetMapsData(useScale);
         });
     });
