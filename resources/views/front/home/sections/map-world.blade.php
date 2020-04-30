@@ -23,7 +23,7 @@
             font-size: 14px;
             color: #EEEEEE;
             font-weight: 500;
-            
+
         }
 
         .btn-group > .btn-set#scale-confirmed {
@@ -45,19 +45,19 @@
             color:#555
         }
     </style>
-    <h2 class="section-title wow fadeIn">Mapa do Mundo</h2>
+    <h2 class="section-title wow fadeIn">{{ $form->view->getMenu()['LOCATION_MENU_WORLD']  }}</h2>
     <div class="spacer" data-height="60"></div>
     <div class="row" id='world-map-container'>
         <div class="col-md-12">
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
                 <label class="btn btn-light btn-scale-group btn-set active" id="scale-confirmed">
-                    <input type="radio" name="options" checked>Confirmados
+                    <input type="radio" name="options" checked>{{ $form->view->getMaps()['LOCATION_MAPS_CONFIRMED']  }}
                 </label>
                 <label class="btn btn-light btn-scale-group btn-set" id="scale-cured">
-                    <input type="radio" name="options">Curados
+                    <input type="radio" name="options">{{ $form->view->getMaps()['LOCATION_MAPS_CURED']  }}
                 </label>
                 <label class="btn btn-light btn-scale-group btn-set" id="scale-deaths">
-                    <input type="radio" name="options">Mortes
+                    <input type="radio" name="options">{{ $form->view->getMaps()['LOCATION_MAPS_DEATHS']  }}
                 </label>
             </div>
             <div id="regions_div"></div>
@@ -138,7 +138,7 @@
         if (type === 'cured') {
             useScale.scale = 0;
             useScale.type = 'cured';
-            useScale.label = 'Curados';
+            useScale.label = "{{ $form->view->getMaps()['LOCATION_MAPS_CURED']  }}";
             useScale.colors = [
                 '#EEEEEE','#D6E5D6','#BEDBBE',
                 '#A7D2A7','#8FC88F','#77BF77',
@@ -152,7 +152,7 @@
         } else if (type === 'deaths') {
             useScale.scale = 0;
             useScale.type = 'deaths';
-            useScale.label = 'Mortos';
+            useScale.label = "{{ $form->view->getMaps()['LOCATION_MAPS_DEATHS']  }}";
             useScale.colors = [
                 '#EEEEEE','#DDDDDD','#CBCBCB',
                 '#BABABA','#A9A9A9','#989898',
@@ -166,7 +166,7 @@
         } else {
             useScale.scale = 0;
             useScale.type = 'confirmed';
-            useScale.label = 'Confirmados';
+            useScale.label = "{{ $form->view->getMaps()['LOCATION_MAPS_CONFIRMED']  }}";
             useScale.colors = [
                 '#EEEEEE','#E4C8C8','#D9B2B2',
                 '#CE9C9C','#C38585','#B86F6F',
@@ -184,7 +184,7 @@
     var useScale = {
         scale: 0,
         type: "confirmed",
-        label: "Casos confirmados",
+        label: "{{ $form->view->getMaps()['LOCATION_MAPS_CONFIRMED']  }}",
         colors: [
             '#EEEEEE','#E4C8C8','#D9B2B2',
             '#CE9C9C','#C38585','#B86F6F',
