@@ -32,6 +32,6 @@ class LocationService
         $this->menu = new MenuService($language);
         $this->about = new AboutService($locationSlug);
         $this->charts = new ChartsService($location);
-        $this->maps = new MapsService();
+        $this->maps = new MapsService($language);
     }
 }
