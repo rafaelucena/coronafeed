@@ -65,36 +65,11 @@
                 <label class="btn btn-light btn-all btn-scale-group active" id="scale0">
                     <input type="radio" name="options"checked="">All
                 </label>
-                <label class="btn btn-light btn-scale" id="scale1">
-                    <input type="radio" name="options">1-500
+                @foreach($form->maps->getScales('common') as $option => $estimation)
+                <label class="btn btn-light btn-scale" data="{{ $option + 1 }}" id="scale{{ $option + 1 }}">
+                    <input type="radio" name="options"><span>{{ $estimation['label'] }}</span>
                 </label>
-                <label class="btn btn-light btn-scale" id="scale2">
-                    <input type="radio" name="options">501 - 1k
-                </label>
-                <label class="btn btn-light btn-scale" id="scale3">
-                    <input type="radio" name="options">501 - 1k
-                </label>
-                <label class="btn btn-light btn-scale" id="scale4">
-                    <input type="radio" name="options">5k - 10k
-                </label>
-                <label class="btn btn-light btn-scale" id="scale5">
-                    <input type="radio" name="options">10k - 50k
-                </label>
-                <label class="btn btn-light btn-scale" id="scale6">
-                    <input type="radio" name="options">50k - 100k
-                </label>
-                <label class="btn btn-light btn-scale" id="scale7">
-                    <input type="radio" name="options">100k - 250k
-                </label>
-                <label class="btn btn-light btn-scale" id="scale8">
-                    <input type="radio" name="options">250k - 500k
-                </label>
-                <label class="btn btn-light btn-scale" id="scale9">
-                    <input type="radio" name="options">500k - 1m
-                </label>
-                <label class="btn btn-light btn-scale" id="scale10">
-                    <input type="radio" name="options">1m+
-                </label>
+                @endforeach
             </div>
         </div>
     </div>
@@ -145,9 +120,11 @@
                 '#5FB65F','#47AC47','#30A330',
                 '#189918','#009000'
             ];
-            for(let i = 0; i < document.querySelectorAll('.btn-scale').length; i += 1){
-                document.querySelectorAll('.btn-scale')[i].style.backgroundColor = useScale.colors[i+1];
-            }
+            $(".btn-scale").each(function() {
+                var scaleIndex = parseInt($(this).attr('data'));
+                $('span', this).text(scaleLabels.common[scaleIndex - 1]);
+                $(this).css('backgroundColor', useScale.colors[scaleIndex]);
+            });
             resetMapsData(useScale);
         } else if (type === 'deaths') {
             useScale.scale = 0;
@@ -159,9 +136,11 @@
                 '#868686','#757575','#646464',
                 '#525252','#414141'
             ];
-            for(let i = 0; i < document.querySelectorAll('.btn-scale').length; i += 1){
-                document.querySelectorAll('.btn-scale')[i].style.backgroundColor = useScale.colors[i+1];
-            }
+            $(".btn-scale").each(function() {
+                var scaleIndex = parseInt($(this).attr('data'));
+                $('span', this).text(scaleLabels.deaths[scaleIndex - 1]);
+                $(this).css('backgroundColor', useScale.colors[scaleIndex]);
+            });
             resetMapsData(useScale);
         } else {
             useScale.scale = 0;
@@ -173,14 +152,41 @@
                 '#AC5959','#A14343','#962C2C',
                 '#8B1616','#800000'
             ];
-            for(let i = 0; i < document.querySelectorAll('.btn-scale').length; i += 1){
-                document.querySelectorAll('.btn-scale')[i].style.backgroundColor = useScale.colors[i+1];
-            }
+            $(".btn-scale").each(function() {
+                var scaleIndex = parseInt($(this).attr('data'));
+                $('span', this).text(scaleLabels.common[scaleIndex - 1]);
+                $(this).css('backgroundColor', useScale.colors[scaleIndex]);
+            });
             resetMapsData(useScale);
         }
     }
-
     var worldData = {!! json_encode($form->maps->getWorld()) !!};
+    var scaleLabels = {
+        common: [
+            '1 - 500',
+            '501 - 1k',
+            '1k - 5k',
+            '5k - 10k',
+            '10k - 50k',
+            '50k - 100k',
+            '100k - 250k',
+            '250k - 500k',
+            '500k - 1m',
+            '1m+',
+        ],
+        deaths: [
+            '1 - 50',
+            '51 - 100',
+            '101 - 500',
+            '501 - 1k',
+            '1k - 5k',
+            '5k - 10k',
+            '10k - 25k',
+            '25k - 50k',
+            '50k - 100k',
+            '100k+',
+        ]
+    };
     var useScale = {
         scale: 0,
         type: "confirmed",
@@ -247,49 +253,14 @@
             changeMapsData('deaths');
         });
 
-//On button click, load new data
+        //On button click, load new data
         $("#scale0").click(function() {
             useScale.scale = 0;
             resetMapsData(useScale);
         });
-        $("#scale1").click(function() {
-            useScale.scale = 1;
-            resetMapsData(useScale);
-        });
-        $("#scale2").click(function() {
-            useScale.scale = 2;
-            resetMapsData(useScale);
-        });
-        $("#scale3").click(function() {
-            useScale.scale = 3;
-            resetMapsData(useScale);
-        });
-        $("#scale4").click(function() {
-            useScale.scale = 4;
-            resetMapsData(useScale);
-        });
-        $("#scale5").click(function() {
-            useScale.scale = 5;
-            resetMapsData(useScale);
-        });
-        $("#scale6").click(function() {
-            useScale.scale = 6;
-            resetMapsData(useScale);
-        });
-        $("#scale7").click(function() {
-            useScale.scale = 7;
-            resetMapsData(useScale);
-        });
-        $("#scale8").click(function() {
-            useScale.scale = 8;
-            resetMapsData(useScale);
-        });
-        $("#scale9").click(function() {
-            useScale.scale = 9;
-            resetMapsData(useScale);
-        });
-        $("#scale10").click(function() {
-            useScale.scale = 10;
+        $(".btn-scale").click(function() {
+            let element = $(this);
+            useScale.scale = parseInt(element.attr('data'));
             resetMapsData(useScale);
         });
     });
