@@ -15,51 +15,61 @@ class MapsService
             'min' => 1,
             'max' => 500,
             'assign' => 1,
+            'label' => '1 - 500',
         ],
         [
             'min' => 501,
             'max' => 1000,
             'assign' => 2,
+            'label' => '501 - 1k',
         ],
         [
             'min' => 1001,
             'max' => 5000,
-            'assign' => 3
+            'assign' => 3,
+            'label' => '1k - 5k',
         ],
         [
             'min' => 5001,
             'max' => 10000,
             'assign' => 4,
+            'label' => '5k - 10k',
         ],
         [
             'min' => 10001,
             'max' => 50000,
             'assign' => 5,
+            'label' => '10k - 50k',
         ],
         [
             'min' => 50001,
             'max' => 100000,
             'assign' => 6,
+            'label' => '50k - 100k',
         ],
         [
             'min' => 100001,
             'max' => 250000,
             'assign' => 7,
+            'label' => '100k - 250k',
         ],
         [
             'min' => 250001,
             'max' => 500000,
             'assign' => 8,
+            'label' => '250k - 500k',
         ],
         [
             'min' => 500001,
             'max' => 1000000,
             'assign' => 9,
+            'label' => '500k - 1m',
         ],
         [
             'min' => 1000001,
             'max' => null,
             'assign' => 10,
+            'label' => '1m+',
         ],
 
     ];
@@ -151,6 +161,14 @@ class MapsService
         }
 
         return $scale['assign'];
+    }
+
+    /**
+     * @return array
+     */
+    public function getScales(): array
+    {
+        return self::SCALE;
     }
 
     /**
