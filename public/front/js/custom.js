@@ -32,7 +32,7 @@ $(window).on('load', function() {
       2000
     ];
     var fallbackValue = "200ms";
-  
+
     $(".blog-item.wow").each(function(index) {
       $(this).attr("data-wow-delay", typeof dynamicDelay[index] === 'undefined' ? fallbackValue : dynamicDelay[index] + "ms");
     });
@@ -96,7 +96,7 @@ $(window).on('load', function() {
             markup: '<div class="mfp-iframe-scaler">'+
                       '<div class="mfp-close"></div>'+
                       '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
-                    '</div>', 
+                    '</div>',
 
             patterns: {
               youtube: {
@@ -167,7 +167,7 @@ $(window).on('load', function() {
     function( newElements ) {
 
       var $newElems = $( newElements );
-      $newElems.imagesLoaded(function(){  
+      $newElems.imagesLoaded(function(){
         $newElems.animate({ opacity: 1 });
         $container.isotope( 'appended', $newElems );
       });
@@ -283,9 +283,9 @@ $(function(){
     /*=========================================================================
      Parallax layers
      =========================================================================*/
-     if ($('.parallax').length > 0) { 
+     if ($('.parallax').length > 0) {
       var scene = $('.parallax').get(0);
-      var parallax = new Parallax(scene, { 
+      var parallax = new Parallax(scene, {
         relativeInput: true,
       });
     }
@@ -326,19 +326,19 @@ $(function(){
     /*=========================================================================
      Progress bar animation with Waypoint JS
      =========================================================================*/
-    if ($('.skill-item').length > 0) { 
+    if ($('.skill-item').length > 0) {
       var waypoint = new Waypoint({
         element: document.getElementsByClassName('skill-item'),
         handler: function(direction) {
-          
-          $('.progress-bar').each(function() {
-            var bar_value = $(this).attr('aria-valuenow') + '%';                
+
+          $('.progress-bar').delay(2000).each(function() {
+            var bar_value = $(this).attr('aria-valuenow') + '%';
             $(this).animate({ width: bar_value }, { easing: 'linear' });
           });
 
           this.destroy()
         },
-        offset: '50%'
+        offset: '100%'
       });
     }
 
