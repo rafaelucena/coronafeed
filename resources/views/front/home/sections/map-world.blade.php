@@ -2,6 +2,7 @@
 <div class="container">
 <!-- section title -->
     <style>
+
         #regions_div {
             padding-top:20px;
             padding-bottom:20px;
@@ -12,9 +13,14 @@
             text-align: center;
             font-size: 0;
         }
+
         .btn-group {
-            width: 100%
+            width: 100%;
+            display:flex !important;
+            flex-wrap:wrap;
+
         }
+
         .btn-group > .btn-scale, .btn-group > .btn-scale-group {
             border-radius: 5px;
             display: inline-block;
@@ -32,18 +38,81 @@
             font-weight: 700;
             color:#800000
         }
+
         .btn-group > .btn-set#scale-cured {
             background: #eee;
             font-size: 20px;
             font-weight: 700;
             color: #009900
         }
+
         .btn-group > .btn-set#scale-deaths {
             background: #eee;
             font-size: 20px;
             font-weight: 700;
             color:#555
         }
+        .world-map-buttons nav {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .world-map-buttons button {
+            flex:1;
+
+            border-radius: 4px;
+            display: inline-block;
+            border: none;
+            padding: 0.2rem;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            background: #eee;
+            cursor: pointer;
+            text-align: center;
+            transition: background 250ms ease-in-out,
+                        transform 150ms ease;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+
+        .world-map-buttons  button:hover,
+        button:focus {
+            background: #d5d5d5;
+            outline: 0;
+        }
+
+        .world-map-buttons button:focus {
+            background: #d8d8d8;
+            outline: 0;
+           /* box-shadow:1px 1px 4px 1px rgba(200,200,200,0.75);*/
+        }
+
+        .world-map-buttons button:active {
+            background: #fff;
+            outline: 0;
+        }
+
+        #scale-confirmed {
+            color:#800000;
+        }
+
+        #scale-cured {
+            color: #4aaf4c;
+            margin-left: 1em;
+            margin-right: 1em;
+        }
+
+        #scale-deaths {
+            color:#555
+        }
+
+       #scale0 {
+           background:#bbb;
+       }
+
+
+
     </style>
     <h2 class="section-title wow fadeIn">{{ $form->view->getMenu()['LOCATION_MENU_WORLD']  }}</h2>
     <div class="spacer" data-height="60"></div>
@@ -60,7 +129,9 @@
                     <input type="radio" name="options">{{ $form->view->getMaps()['LOCATION_MAPS_DEATHS']  }}
                 </label>
             </div>
+
             <div id="regions_div"></div>
+
             <div class="btn-group btn-group-toggle btn-group-confirmed" data-toggle="buttons">
                 <label class="btn btn-light btn-all btn-scale-group active" id="scale0">
                     <input type="radio" name="options"checked="">All
