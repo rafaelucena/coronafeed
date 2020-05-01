@@ -16,6 +16,9 @@ class ViewService
     /** @var array **/
     private $numbers;
 
+    /** @var array **/
+    private $maps;
+
     /**
      * @param Language $language
      */
@@ -35,6 +38,7 @@ class ViewService
 
         $this->menu = [];
         $this->numbers = [];
+        $this->maps = [];
         foreach ($constants as $constant) {
             $key = $constant->getConstant();
             switch ($key) {
@@ -43,6 +47,9 @@ class ViewService
                     break;
                 case (preg_match('/^LOCATION_NUMBERS/', $key) ? true : false):
                     $this->numbers[$constant->getConstant()] = $constant->getValue();
+                    break;
+                case (preg_match('/^LOCATION_MAPS/', $key) ? true : false):
+                    $this->maps[$constant->getConstant()] = $constant->getValue();
                     break;
             }
         }
@@ -62,5 +69,13 @@ class ViewService
     public function getNumbers(): array
     {
         return $this->numbers;
+    }
+
+    /**
+     * @return array
+     */
+    public function getMaps(): array
+    {
+        return $this->maps;
     }
 }

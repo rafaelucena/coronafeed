@@ -2,8 +2,10 @@
 
 namespace App\Http\Services\Location;
 
+use App\Http\Models\Language;
 use App\Http\Models\Location;
 use App\Http\Models\LocationNumbers;
+use App\Http\Models\LocationSlug;
 use App\Http\Models\LocationType;
 
 class MapsService
@@ -68,17 +70,20 @@ class MapsService
     /** @var EntityManager */
     private $em;
 
+    /** @var Language */
+    private $language;
+
     /**
-     * @param Location $location
+     * @param Language $language
      */
-    public function __construct()
+    public function __construct(Language $language)
     {
         $this->em = app('em');
+        $this->language = $language;
         $this->setWorld();
     }
 
     /**
-     * @param Location $location
      * @return void
      */
     private function setWorld(): void
@@ -86,13 +91,25 @@ class MapsService
         $locationType = $this->em->getRepository(LocationType::class)->findOneBy([
             'slug' => 'pais',
         ]);
-        $locationsList = $this->em->getRepository(Location::class)->findBy(
-            ['locationType' => $locationType],
-            ['name' => 'ASC']
-        );
+
+        $qry = app('em')->createQueryBuilder();
+        $qry->select('losl')
+            ->from(LocationSlug::class, 'losl')
+            ->join(Language::class, 'la', 'WITH', 'la = losl.language AND la = :language')
+            ->join(Location::class, 'lo', 'WITH', 'lo = losl.location')
+            ->where('lo.locationType = :type');
+
+        $qry->setParameters(array(
+            'language' => $this->language,
+            'type' => $locationType,
+        ));
+
+        $locationSlugs = $qry->getQuery()->getResult();
 
         $this->world = [];
-        foreach ($locationsList as $locationItem) {
+        /** @var LocationSlug */
+        foreach ($locationSlugs as $locationSlug) {
+            $locationItem = $locationSlug->getLocation();
             if (empty($locationItem->getCode()) === true) {
                 continue;
             }
@@ -102,7 +119,7 @@ class MapsService
             $item = [
                 'location' => [
                     'v' => $locationItem->getCode(),
-                    'f' => $locationItem->getName(),
+                    'f' => $locationSlug->getName(),
                 ],
                 'confirmed' => [
                     'scale' => $this->getScale($locationNumbers->getConfirmed()),
