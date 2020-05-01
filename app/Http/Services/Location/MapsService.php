@@ -11,67 +11,130 @@ use App\Http\Models\LocationType;
 class MapsService
 {
     private const SCALE = [
-        [
-            'min' => 1,
-            'max' => 500,
-            'assign' => 1,
-            'label' => '1 - 500',
+        'common' => [
+            [
+                'min' => 1,
+                'max' => 500,
+                'assign' => 1,
+                'label' => '1 - 500',
+            ],
+            [
+                'min' => 501,
+                'max' => 1000,
+                'assign' => 2,
+                'label' => '501 - 1k',
+            ],
+            [
+                'min' => 1001,
+                'max' => 5000,
+                'assign' => 3,
+                'label' => '1k - 5k',
+            ],
+            [
+                'min' => 5001,
+                'max' => 10000,
+                'assign' => 4,
+                'label' => '5k - 10k',
+            ],
+            [
+                'min' => 10001,
+                'max' => 50000,
+                'assign' => 5,
+                'label' => '10k - 50k',
+            ],
+            [
+                'min' => 50001,
+                'max' => 100000,
+                'assign' => 6,
+                'label' => '50k - 100k',
+            ],
+            [
+                'min' => 100001,
+                'max' => 250000,
+                'assign' => 7,
+                'label' => '100k - 250k',
+            ],
+            [
+                'min' => 250001,
+                'max' => 500000,
+                'assign' => 8,
+                'label' => '250k - 500k',
+            ],
+            [
+                'min' => 500001,
+                'max' => 1000000,
+                'assign' => 9,
+                'label' => '500k - 1m',
+            ],
+            [
+                'min' => 1000001,
+                'max' => null,
+                'assign' => 10,
+                'label' => '1m+',
+            ],
         ],
-        [
-            'min' => 501,
-            'max' => 1000,
-            'assign' => 2,
-            'label' => '501 - 1k',
+        'deaths' => [
+            [
+                'min' => 1,
+                'max' => 50,
+                'assign' => 1,
+                'label' => '1 - 50',
+            ],
+            [
+                'min' => 51,
+                'max' => 100,
+                'assign' => 2,
+                'label' => '51 - 100',
+            ],
+            [
+                'min' => 101,
+                'max' => 500,
+                'assign' => 3,
+                'label' => '101 - 500',
+            ],
+            [
+                'min' => 501,
+                'max' => 1000,
+                'assign' => 4,
+                'label' => '500 - 1k',
+            ],
+            [
+                'min' => 1001,
+                'max' => 5000,
+                'assign' => 5,
+                'label' => '1k - 5k',
+            ],
+            [
+                'min' => 5001,
+                'max' => 10000,
+                'assign' => 6,
+                'label' => '5k - 10k',
+            ],
+            [
+                'min' => 10001,
+                'max' => 25000,
+                'assign' => 7,
+                'label' => '10k - 25k',
+            ],
+            [
+                'min' => 25001,
+                'max' => 50000,
+                'assign' => 8,
+                'label' => '25k - 50k',
+            ],
+            [
+                'min' => 50001,
+                'max' => 100000,
+                'assign' => 9,
+                'label' => '50k - 100k',
+            ],
+            [
+                'min' => 100001,
+                'max' => null,
+                'assign' => 10,
+                'label' => '100k+',
+            ],
         ],
-        [
-            'min' => 1001,
-            'max' => 5000,
-            'assign' => 3,
-            'label' => '1k - 5k',
-        ],
-        [
-            'min' => 5001,
-            'max' => 10000,
-            'assign' => 4,
-            'label' => '5k - 10k',
-        ],
-        [
-            'min' => 10001,
-            'max' => 50000,
-            'assign' => 5,
-            'label' => '10k - 50k',
-        ],
-        [
-            'min' => 50001,
-            'max' => 100000,
-            'assign' => 6,
-            'label' => '50k - 100k',
-        ],
-        [
-            'min' => 100001,
-            'max' => 250000,
-            'assign' => 7,
-            'label' => '100k - 250k',
-        ],
-        [
-            'min' => 250001,
-            'max' => 500000,
-            'assign' => 8,
-            'label' => '250k - 500k',
-        ],
-        [
-            'min' => 500001,
-            'max' => 1000000,
-            'assign' => 9,
-            'label' => '500k - 1m',
-        ],
-        [
-            'min' => 1000001,
-            'max' => null,
-            'assign' => 10,
-            'label' => '1m+',
-        ],
-
     ];
 
     /** @var array **/
@@ -140,7 +203,7 @@ class MapsService
                     'value' => $locationNumbers->getCured(),
                 ],
                 'deaths' => [
-                    'scale' => $this->getScale($locationNumbers->getDeaths()),
+                    'scale' => $this->getScale($locationNumbers->getDeaths(), 'deaths'),
                     'value' => $locationNumbers->getDeaths(),
                 ],
             ];
@@ -152,9 +215,16 @@ class MapsService
      * @param integer $value
      * @return integer
      */
-    private function getScale(int $value): int
+    private function getScale(int $value, string $type = ''): int
     {
-        foreach (self::SCALE as $scale) {
+        $scales = [];
+        if (empty(self::SCALE[$type])) {
+            $scales = self::SCALE['common'];
+        } else {
+            $scales = self::SCALE[$type];
+        }
+
+        foreach ($scales as $scale) {
             if ($value >= $scale['min'] && (empty($scale['max']) || $value <= $scale['max'])) {
                 return $scale['assign'];
             }
@@ -166,9 +236,17 @@ class MapsService
     /**
      * @return array
      */
-    public function getScales(): array
+    public function getScales(string $type = ''): array
     {
-        return self::SCALE;
+        if (empty($type)) {
+            return self::SCALE;
+        }
+
+        if (empty(self::SCALE[$type]) === false) {
+            return self::SCALE[$type];
+        }
+
+        return [];
     }
 
     /**

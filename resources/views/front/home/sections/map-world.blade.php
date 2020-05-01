@@ -65,9 +65,9 @@
                 <label class="btn btn-light btn-all btn-scale-group active" id="scale0">
                     <input type="radio" name="options"checked="">All
                 </label>
-                @foreach($form->maps->getScales() as $option => $estimation)
+                @foreach($form->maps->getScales('common') as $option => $estimation)
                 <label class="btn btn-light btn-scale" data="{{ $option + 1 }}" id="scale{{ $option + 1 }}">
-                    <input type="radio" name="options">{{ $estimation['label'] }}
+                    <input type="radio" name="options"><span>{{ $estimation['label'] }}</span>
                 </label>
                 @endforeach
             </div>
@@ -120,9 +120,11 @@
                 '#5FB65F','#47AC47','#30A330',
                 '#189918','#009000'
             ];
-            for(let i = 0; i < document.querySelectorAll('.btn-scale').length; i += 1){
-                document.querySelectorAll('.btn-scale')[i].style.backgroundColor = useScale.colors[i+1];
-            }
+            $(".btn-scale").each(function() {
+                var scaleIndex = parseInt($(this).attr('data'));
+                $('span', this).text(scaleLabels.common[scaleIndex - 1]);
+                $(this).css('backgroundColor', useScale.colors[scaleIndex]);
+            });
             resetMapsData(useScale);
         } else if (type === 'deaths') {
             useScale.scale = 0;
@@ -134,9 +136,11 @@
                 '#868686','#757575','#646464',
                 '#525252','#414141'
             ];
-            for(let i = 0; i < document.querySelectorAll('.btn-scale').length; i += 1){
-                document.querySelectorAll('.btn-scale')[i].style.backgroundColor = useScale.colors[i+1];
-            }
+            $(".btn-scale").each(function() {
+                var scaleIndex = parseInt($(this).attr('data'));
+                $('span', this).text(scaleLabels.deaths[scaleIndex - 1]);
+                $(this).css('backgroundColor', useScale.colors[scaleIndex]);
+            });
             resetMapsData(useScale);
         } else {
             useScale.scale = 0;
@@ -148,14 +152,41 @@
                 '#AC5959','#A14343','#962C2C',
                 '#8B1616','#800000'
             ];
-            for(let i = 0; i < document.querySelectorAll('.btn-scale').length; i += 1){
-                document.querySelectorAll('.btn-scale')[i].style.backgroundColor = useScale.colors[i+1];
-            }
+            $(".btn-scale").each(function() {
+                var scaleIndex = parseInt($(this).attr('data'));
+                $('span', this).text(scaleLabels.common[scaleIndex - 1]);
+                $(this).css('backgroundColor', useScale.colors[scaleIndex]);
+            });
             resetMapsData(useScale);
         }
     }
-
     var worldData = {!! json_encode($form->maps->getWorld()) !!};
+    var scaleLabels = {
+        common: [
+            '1 - 500',
+            '501 - 1k',
+            '1k - 5k',
+            '5k - 10k',
+            '10k - 50k',
+            '50k - 100k',
+            '100k - 250k',
+            '250k - 500k',
+            '500k - 1m',
+            '1m+',
+        ],
+        deaths: [
+            '1 - 50',
+            '51 - 100',
+            '101 - 500',
+            '501 - 1k',
+            '1k - 5k',
+            '5k - 10k',
+            '10k - 25k',
+            '25k - 50k',
+            '50k - 100k',
+            '100k+',
+        ]
+    };
     var useScale = {
         scale: 0,
         type: "confirmed",
