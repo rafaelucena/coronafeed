@@ -2,7 +2,7 @@
 
 namespace App\Console\Commands;
 
-use App\Console\Services\ScrapeWorldOMetersService;
+use App\Console\Services\Worldometer\ScrapeWorldService;
 use App\Http\Models\LocationImport;
 use Illuminate\Console\Command;
 use LaravelDoctrine\ORM\Facades\EntityManager;
@@ -47,7 +47,7 @@ class RobotScrapeWorld extends Command
     public function handle()
     {
         $this->info('Downloading: HTML');
-        $scrapeWorld = new ScrapeWorldOMetersService();
+        $scrapeWorld = new ScrapeWorldService();
         $scrapeWorld->rock();
         $this->info('Mapped: ' . '250' . ' rows');
 
