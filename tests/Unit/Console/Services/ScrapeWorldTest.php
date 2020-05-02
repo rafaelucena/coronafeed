@@ -2,12 +2,12 @@
 
 namespace Tests\Console\Services;
 
-use App\Console\Services\ScrapeWorldOMetersService;
+use App\Console\Services\Worldometer\ScrapeWorldService;
 use Tests\TestCase;
 
 class ScrapeWorldTest extends TestCase
 {
-    /** @var ScrapeWorldOMetersService */
+    /** @var ScrapeWorldService */
     private $service;
 
     /**
@@ -17,7 +17,7 @@ class ScrapeWorldTest extends TestCase
      */
     public function runMeFirst()
     {
-        $this->service = new ScrapeWorldOMetersService();
+        $this->service = new ScrapeWorldService();
         $this->service->setIsTest(true);
         $this->service->rock();
     }

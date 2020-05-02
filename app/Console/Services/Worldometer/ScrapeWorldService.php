@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Console\Services;
+namespace App\Console\Services\Worldometer;
 
 use App\Http\Models\LocationImport;
 use App\Helpers\Country;
 use LaravelDoctrine\ORM\Facades\EntityManager;
 
-class ScrapeWorldOMetersService
+class ScrapeWorldService
 {
     /** @var EntityManager */
     private $em;
@@ -15,7 +15,7 @@ class ScrapeWorldOMetersService
     private $isTest = false;
 
     /** @var string */
-    private $webBaseUrl = 'https://www.worldometers.info/coronavirus/';
+    private $webBaseUrl = 'https://www.worldometers.info/coronavirus/country/';
 
     /** @var string */
     private $webContent;
