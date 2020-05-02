@@ -15,7 +15,7 @@ class ScrapeWorldService
     private $isTest = false;
 
     /** @var string */
-    private $webBaseUrl = 'https://www.worldometers.info/coronavirus/country/';
+    private $webBaseUrl = 'https://www.worldometers.info/coronavirus/';
 
     /** @var string */
     private $webContent;
