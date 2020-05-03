@@ -2,6 +2,7 @@
 
 namespace App\Http\Models;
 
+use App\Http\Models\Traits\IdTrait;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Criteria;
 use Doctrine\ORM\Mapping AS ORM;
@@ -16,12 +17,7 @@ use LaravelDoctrine\ORM\Contracts\UrlRoutable;
  */
 class Language implements UrlRoutable
 {
-    /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer", nullable=false)
-     */
-    private $id;
+    use IdTrait;
 
     /**
      * @ORM\Column(type="string", length=5, nullable=false)
@@ -54,14 +50,6 @@ class Language implements UrlRoutable
     public static function getRouteKeyName(): string
     {
         return 'code';
-    }
-
-    /**
-     * @return integer
-     */
-    public function getId(): int
-    {
-        return $this->id;
     }
 
     /**
