@@ -2,6 +2,7 @@
 
 namespace App\Http\Models;
 
+use App\Http\Models\Traits\IdTrait;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Criteria;
 use Doctrine\ORM\Mapping AS ORM;
@@ -13,12 +14,7 @@ use Doctrine\ORM\Mapping AS ORM;
  */
 class LocationNumbers
 {
-    /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer", nullable=false)
-     */
-    private $id;
+    use IdTrait;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
