@@ -150,6 +150,9 @@ class Location implements UrlRoutable
      */
     public function getLocationHistory(int $limit = 15): ArrayCollection
     {
+        if ($limit === 0) {
+            $limit = null;
+        }
         $criteria = Criteria::create()
             ->orderBy(['date' => 'DESC'])
             ->setMaxResults($limit);

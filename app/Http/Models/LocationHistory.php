@@ -44,11 +44,29 @@ class LocationHistory
     private $location;
 
     /**
+     * @param Location $location
+     * @return void
+     */
+    public function setLocation(Location $location): void
+    {
+        $this->location = $location;
+    }
+
+    /**
      * @return int
      */
     public function getConfirmed(): int
     {
         return $this->confirmed;
+    }
+
+    /**
+     * @param integer $confirmed
+     * @return void
+     */
+    public function setConfirmed(int $confirmed): void
+    {
+        $this->confirmed = $confirmed;
     }
 
     /**
@@ -60,6 +78,15 @@ class LocationHistory
     }
 
     /**
+     * @param integer $deaths
+     * @return void
+     */
+    public function setDeaths(int $deaths): void
+    {
+        $this->deaths = $deaths;
+    }
+
+    /**
      * @return int
      */
     public function getCured(): int
@@ -68,10 +95,28 @@ class LocationHistory
     }
 
     /**
+     * @param integer $cured
+     * @return void
+     */
+    public function setCured(int $cured): void
+    {
+        $this->cured = $cured;
+    }
+
+    /**
      * @return \DateTime
      */
     public function getDate(): \DateTime
     {
         return $this->date;
+    }
+
+    /**
+     * @param \DateTime $date
+     * @return void
+     */
+    public function setDate(\DateTime $date): void
+    {
+        $this->date = $date;
     }
 }
