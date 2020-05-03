@@ -81,6 +81,11 @@ class LocationImportHistory
         $this->date = $date;
     }
 
+    public function getDate()
+    {
+        return $this->date;
+    }
+
     public function setTotalCases(int $totalCases)
     {
         $this->totalCases = $totalCases;
