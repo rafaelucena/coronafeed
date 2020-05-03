@@ -43,4 +43,24 @@ class Country
 
         return '';
     }
+
+    /**
+     * @param string $code
+     * @return string
+     */
+    public function getNameByIso(string $code): string
+    {
+        $code = strtolower($code);
+
+        if (empty($this->countries[$code]) === false) {
+            $country = $this->countries[$code];
+
+            if (empty($country['worldometer_name']) === false) {
+                return $country['worldometer_name'];
+            }
+            return $country['name'];
+        }
+
+        return '';
+    }
 }
