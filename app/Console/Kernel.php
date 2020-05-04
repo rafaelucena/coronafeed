@@ -26,6 +26,22 @@ class Kernel extends ConsoleKernel
     {
         $schedule->command('robot:import:world')->twiceDaily(10, 22);
         $schedule->command('robot:refresh:numbers')->twiceDaily(11, 23);
+
+        $schedule->command('robot:import:country highest')->dailyAt('12:00');
+        $schedule->command('robot:import:country high')
+                 ->mondays()
+                 ->wednesdays()
+                 ->fridays()
+                 ->at('13:00');
+        $schedule->command('robot:import:country normal')
+                 ->mondays()
+                 ->fridays()
+                 ->at('14:00');
+        $schedule->command('robot:import:country low')
+                 ->weeklyOn(1, '15:00');
+        $schedule->command('robot:import:country lowest')
+                 ->monthlyOn(15, '16:00');
+        $schedule->command('robot:refresh:history')->dailyAt('17:00');
     }
 
     /**
