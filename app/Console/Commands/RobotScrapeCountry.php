@@ -6,6 +6,7 @@ use App\Console\Services\Worldometer\ScrapeCountryService;
 use App\Helpers\Country as CountryHelper;
 use App\Http\Models\Location;
 use App\Http\Models\LocationImport;
+use App\Http\Models\LocationPriority;
 use App\Http\Models\LocationType;
 use Illuminate\Console\Command;
 use LaravelDoctrine\ORM\Facades\EntityManager;
@@ -15,7 +16,7 @@ class RobotScrapeCountry extends Command
     /**
      * @var string
      */
-    protected $signature = 'robot:import:country';
+    protected $signature = 'robot:import:country {priority}';
 
     /**
      * The console command description.
@@ -36,22 +37,27 @@ class RobotScrapeCountry extends Command
      */
     public function __construct()
     {
-        $this->em = app('em');
         parent::__construct();
+        $this->em = app('em');
     }
 
     private function getCountriesToUpdate()
     {
         $locationType = $this->em->find(LocationType::class, 2);
 
+        $input = $this->argument('priority');
+        $locationPriority = $this->em->getRepository(LocationPriority::class)->findOneBy([
+            'slug' => $input,
+        ]);
+
         $qry = $this->em->createQueryBuilder();
         $qry->select('lo')
             ->from(Location::class, 'lo')
-            ->where('lo.locationType = :locationType')
-            ->setMaxResults(3);
+            ->where('lo.locationType = :locationType AND lo.locationPriority = :locationPriority');
 
         $qry->setParameters([
             'locationType' => $locationType,
+            'locationPriority' => $locationPriority,
         ]);
 
         return $qry->getQuery()->getResult();
@@ -76,6 +82,9 @@ class RobotScrapeCountry extends Command
             $this->info('Mapped: ' . '250' . ' rows');
             $scrapeCountry->roll();
             $this->info('Imported: ' . '123' . ' locations');
+
+            $seconds = random_int(15, 300);
+            sleep($seconds);
         }
     }
 }
