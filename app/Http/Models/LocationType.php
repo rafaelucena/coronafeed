@@ -3,6 +3,7 @@
 namespace App\Http\Models;
 
 use App\Http\Models\Traits\IdTrait;
+use App\Http\Models\Traits\SlugTrait;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Criteria;
 use Doctrine\ORM\Mapping AS ORM;
@@ -16,11 +17,7 @@ use Doctrine\ORM\Event\PreUpdateEventArgs;
 class LocationType
 {
     use IdTrait;
-
-    /**
-     * @ORM\Column(type="string", length=127, nullable=false)
-     */
-    private $slug;
+    use SlugTrait;
 
     /**
      * @ORM\Column(type="string", length=127, nullable=false)

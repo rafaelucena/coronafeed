@@ -3,6 +3,7 @@
 namespace App\Http\Models;
 
 use App\Http\Models\Traits\IdTrait;
+use App\Http\Models\Traits\SlugTrait;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Criteria;
 use Doctrine\ORM\Mapping AS ORM;
@@ -17,11 +18,7 @@ use LaravelDoctrine\ORM\Contracts\UrlRoutable;
 class LocationSlug implements UrlRoutable
 {
     use IdTrait;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=false)
-     */
-    private $slug;
+    use SlugTrait;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=false)
@@ -46,23 +43,6 @@ class LocationSlug implements UrlRoutable
     public static function getRouteKeyName(): string
     {
         return 'slug';
-    }
-
-    /**
-     * @param string $slug
-     * @return void
-     */
-    public function setSlug(string $slug): void
-    {
-        $this->slug = $slug;
-    }
-
-    /**
-     * @return string
-     */
-    public function getSlug(): string
-    {
-        return $this->slug;
     }
 
     /**
