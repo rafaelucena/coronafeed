@@ -49,6 +49,12 @@ class Location implements UrlRoutable
     private $locationType;
 
     /**
+     * @ORM\ManyToOne(targetEntity="LocationPriority", inversedBy="locations")
+     * @ORM\JoinColumn(name="location_priority_id", referencedColumnName="id")
+     */
+    private $locationPriority;
+
+    /**
      * @ORM\OneToOne(targetEntity="LocationNumbers", mappedBy="location")
      */
     private $locationNumbers;
