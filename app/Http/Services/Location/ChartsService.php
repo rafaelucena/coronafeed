@@ -51,7 +51,7 @@ class ChartsService
     public function __construct(Location $location)
     {
         $locationNumbers = $location->getLocationNumbers();
-        $locationHistoryArray = $location->getLocationHistory();
+        $locationHistoryArray = $location->getLocationHistory(0);
 
         $this->setLineChart($locationHistoryArray);
         $this->setPieChart($locationNumbers);
