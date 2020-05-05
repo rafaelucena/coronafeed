@@ -101,7 +101,7 @@ class ScrapeCountryService
     private function setContent(): void
     {
         if ($this->isTest === true) {
-            $this->webContent = file_get_contents(base_path('storage/mocks/worldometers-coronavirus-country-20200502.html'));
+            $this->webContent = file_get_contents(base_path('storage/mocks/worldometers-coronavirus-country-20200505.html'));
             return;
         }
 
@@ -256,10 +256,10 @@ class ScrapeCountryService
             $locationImportHistory->setDate($date);
             $locationImportHistory->setTotalCases($values[$labels['total-cases']]);
             $locationImportHistory->setNewCases($values[$labels['new-cases-daily']]);
-            $locationImportHistory->setActiveCases($values[$labels['active-cases']]);
+            $locationImportHistory->setActiveCases($values[$labels['active-cases']] ?? 0);
             $locationImportHistory->setTotalDeaths($values[$labels['total-deaths']]);
             $locationImportHistory->setNewDeaths($values[$labels['deaths-daily']]);
-            $locationImportHistory->setTotalRecovered($values[$labels['total-cases']] - $values[$labels['total-deaths']] - $values[$labels['active-cases']]);
+            $locationImportHistory->setTotalRecovered($values[$labels['total-cases']] - $values[$labels['total-deaths']] - ($values[$labels['active-cases']] ?? 0));
 
             $this->em->persist($locationImportHistory);
         }
