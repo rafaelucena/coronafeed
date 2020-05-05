@@ -39,7 +39,8 @@
 
 		<!-- Go to top button -->
 		<a href="javascript:" id="return-to-top"><i class="fas fa-arrow-up"></i></a>
-
+		<button id="show-footer" class="openbtn" onclick="openNav()"><i class="fas fa-shoe-prints"></i></button>
+	<!--	<a href="#footer" id="show-footer"><i class="fas fa-shoe-prints"></i></a>-->
 		<!-- SCRIPTS -->
 		@include('front.nested.scripts')
 
