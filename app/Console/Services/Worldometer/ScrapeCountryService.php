@@ -96,7 +96,6 @@ class ScrapeCountryService
         $this->setContent();
         $this->setContentCharts();
         $this->mapCharts();
-        $this->imported = 0;
     }
 
     /**
@@ -104,6 +103,9 @@ class ScrapeCountryService
      */
     private function setContent(): void
     {
+        $this->imported = 0;
+        $this->webContentCharts = [];
+        $this->mappedCharts = [];
         if ($this->isTest === true) {
             $this->webContent = file_get_contents(base_path('storage/mocks/worldometers-coronavirus-country-20200505.html'));
             return;

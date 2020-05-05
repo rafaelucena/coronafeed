@@ -8,6 +8,7 @@
     "ae": {
         "name": "united arab emirates",
         "worldometer_name": "uae",
+        "worldometer_route": "united arab emirates",
         "iso": "ae",
         "dial": "971"
     },
@@ -314,6 +315,7 @@
     "cz": {
         "name": "czech republic",
         "worldometer_name": "czechia",
+        "worldometer_route": "czech republic",
         "iso": "cz",
         "dial": "420"
     },
@@ -662,6 +664,7 @@
     "kr": {
         "name": "south korea",
         "worldometer_name": "s. korea",
+        "worldometer_route": "south korea",
         "iso": "kr",
         "dial": "82"
     },
@@ -1280,6 +1283,7 @@
     "us": {
         "name": "united states",
         "worldometer_name": "usa",
+        "worldometer_route": "us",
         "iso": "us",
         "dial": "1"
     },

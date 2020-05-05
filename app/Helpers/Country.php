@@ -54,8 +54,26 @@ class Country
 
         if (empty($this->countries[$code]) === false) {
             $country = $this->countries[$code];
+            return $country['name'];
+        }
 
-            if (empty($country['worldometer_name']) === false) {
+        return '';
+    }
+
+    /**
+     * @param string $code
+     * @return string
+     */
+    public function getHistoryNameByIso(string $code): string
+    {
+        $code = strtolower($code);
+
+        if (empty($this->countries[$code]) === false) {
+            $country = $this->countries[$code];
+
+            if (empty($country['worldometer_route']) === false) {
+                return $country['worldometer_route'];
+            } elseif (empty($country['worldometer_name']) === false) {
                 return $country['worldometer_name'];
             }
             return $country['name'];
