@@ -85,7 +85,7 @@ class RobotScrapeCountry extends Command
             $scrapeCountry->roll();
             $this->info('Imported: ' . $scrapeCountry->getImported() . ' dates');
 
-            $seconds = random_int(1, 3);
+            $seconds = random_int(15, 300);
             sleep($seconds);
         }
     }
