@@ -4,10 +4,6 @@ namespace App\Helpers;
 
 class Country
 {
-    private const RESTRICTED = [
-        's. korea',
-    ];
-
     /** @var array */
     private $countries;
 
@@ -49,15 +45,6 @@ class Country
     }
 
     /**
-     * @param string $name
-     * @return boolean
-     */
-    private function isRestrictedName(string $name): bool
-    {
-        return in_array($name, self::RESTRICTED);
-    }
-
-    /**
      * @param string $code
      * @return string
      */
@@ -67,8 +54,26 @@ class Country
 
         if (empty($this->countries[$code]) === false) {
             $country = $this->countries[$code];
+            return $country['name'];
+        }
 
-            if (empty($country['worldometer_name']) === false && $this->isRestrictedName($country['worldometer_name']) === false) {
+        return '';
+    }
+
+    /**
+     * @param string $code
+     * @return string
+     */
+    public function getHistoryNameByIso(string $code): string
+    {
+        $code = strtolower($code);
+
+        if (empty($this->countries[$code]) === false) {
+            $country = $this->countries[$code];
+
+            if (empty($country['worldometer_route']) === false) {
+                return $country['worldometer_route'];
+            } elseif (empty($country['worldometer_name']) === false) {
                 return $country['worldometer_name'];
             }
             return $country['name'];

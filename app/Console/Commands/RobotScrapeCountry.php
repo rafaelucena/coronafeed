@@ -78,14 +78,14 @@ class RobotScrapeCountry extends Command
         /** @var Location */
         foreach ($countries as $country) {
             $this->info('Downloading: HTML for ' . $countryHelper->getNameByIso($country->getCode()));
-            $scrapeCountry->rock($country->getCode(), $countryHelper->getNameByIso($country->getCode()));
+            $scrapeCountry->rock($country->getCode(), $countryHelper->getHistoryNameByIso($country->getCode()));
             $this->info('Mapped: ' . count($scrapeCountry->getMappedCharts()) . ' rows');
             // print_r(current($scrapeCountry->getMappedCharts()));die;
 
             $scrapeCountry->roll();
             $this->info('Imported: ' . $scrapeCountry->getImported() . ' dates');
 
-            $seconds = random_int(15, 300);
+            $seconds = random_int(1, 3);
             sleep($seconds);
         }
     }
