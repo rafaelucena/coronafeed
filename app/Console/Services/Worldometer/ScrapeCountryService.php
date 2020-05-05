@@ -33,6 +33,9 @@ class ScrapeCountryService
     /** @var array */
     private $mappedCharts = [];
 
+    /** @var int */
+    private $imported;
+
     /** @var string */
     private $code;
 
@@ -93,6 +96,7 @@ class ScrapeCountryService
         $this->setContent();
         $this->setContentCharts();
         $this->mapCharts();
+        $this->imported = 0;
     }
 
     /**
@@ -202,6 +206,14 @@ class ScrapeCountryService
     }
 
     /**
+     * @return integer
+     */
+    public function getImported(): int
+    {
+        return $this->imported;
+    }
+
+    /**
      * @param string $input
      * @return string
      */
@@ -249,6 +261,7 @@ class ScrapeCountryService
             if (empty($existingDates[$key]) === false) {
                 continue;
             }
+            $this->imported++;
 
             $locationImportHistory = new LocationImportHistory();
             $locationImportHistory->setCode($this->code);
