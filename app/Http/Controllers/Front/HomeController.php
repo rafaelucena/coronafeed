@@ -9,7 +9,9 @@ use App\Http\Models\LocationSlug;
 use App\Http\Services\HomeService;
 use App\Http\Services\LocationService;
 use Doctrine\ORM\EntityManager;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 
 class HomeController extends Controller
@@ -18,6 +20,17 @@ class HomeController extends Controller
     {
         $form = new HomeService();
         return view('front.home.index', ['form' => $form]);
+    }
+
+    /**
+     * @param LocationSlug $locationSlug
+     * @return void
+     */
+    public function redirect(LocationSlug $locationSlug): RedirectResponse
+    {
+        $language = $locationSlug->getLanguage();
+
+        return Redirect::to("/{$language->getCode()}/{$locationSlug->getSlug()}", 301);
     }
 
     /**
