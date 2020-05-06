@@ -19,6 +19,8 @@ Route::get('/', function() {
     return Redirect::to('/pt/brasil', 302);
 });
 
+Route::get('/{locationSlug}', 'Front\HomeController@redirect');
+
 Route::get('/{language}/{slug}', 'Front\HomeController@location');
 
 // Route::get('admin', 'Back\DashboardController@index');
