@@ -6,25 +6,28 @@
     <div class = "footer-container">
         <div class="footer-item footer-item-1">
             <h6>
-                Languages:
+                Languages
             </h6>
 
             <ul class="languages-list">
                 <li>
-                    <a href="http://corona-feed.com/pt/mundo">&#127463&#127479<span> Portuguese</span></a>
+                    <a href="http://corona-feed.com/pt/mundo">&#127463&#127479<span> Portugues</span></a>
                 </li>
                 <li>
                     <a href="http://corona-feed.com/en/world">&#127482&#127480<span> English</span></a>
                 </li>
                 <li>
-                    <a href="http://corona-feed.com/pl/swiat">&#127477&#127473<span> Polish</span></a>
+                    <a href="http://corona-feed.com/pl/swiat">&#127477&#127473<span> Polski</span></a>
+                </li>
+                <li>
+                    <a href="http://corona-feed.com/es/mondo">&#127466&#127480<span> Espanol</span></a>
                 </li>
 
             </ul>
         </div>
         <div class="footer-item footer-item-2">
             <h6>
-                Sources:
+                Sources
             </h6>
 
             <ul>
@@ -42,7 +45,7 @@
         </div>
         <div class="footer-item footer-item-3">
             <h6>
-                Contact Info:
+                Contact Info
             </h6>
 
             <ul>
