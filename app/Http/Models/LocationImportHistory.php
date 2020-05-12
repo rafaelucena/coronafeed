@@ -32,6 +32,11 @@ class LocationImportHistory
     private $date;
 
     /**
+     * @ORM\Column(type="string", length=128, nullable=false)
+     */
+    private $hash;
+
+    /**
      * @ORM\Column(type="integer", nullable=false)
      */
     private $totalCases;
@@ -84,6 +89,16 @@ class LocationImportHistory
     public function getDate()
     {
         return $this->date;
+    }
+
+    public function setHash(string $hash)
+    {
+        $this->hash = $hash;
+    }
+
+    public function getHash()
+    {
+        return $this->hash;
     }
 
     public function setTotalCases(int $totalCases)
