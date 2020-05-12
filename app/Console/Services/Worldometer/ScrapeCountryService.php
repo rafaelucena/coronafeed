@@ -103,6 +103,8 @@ class ScrapeCountryService
      */
     private function setContent(): void
     {
+        // echo str_replace(':route:', strslug($this->country), $this->webBaseUrl) . "\n";
+        // return;
         $this->imported = 0;
         $this->webContentCharts = [];
         $this->mappedCharts = [];
@@ -197,6 +199,22 @@ class ScrapeCountryService
                 $this->mappedCharts[$date][$key] = $value;
             }
         }
+
+        $labels = array_flip(self::LABELS);
+        foreach ($this->mappedCharts as $date => $mappedChart) {
+            foreach (self::LABELS as $label => $value) {
+                if (empty($mappedChart[$label]) === true) {
+                    $this->mappedCharts[$date][$label] = 0;
+                }
+            }
+            $this->mappedCharts[$date]['hash'] = md5(implode(';', [
+                $this->code,
+                $date,
+                $this->mappedCharts[$date][$labels['total-cases']],
+                $this->mappedCharts[$date][$labels['active-cases']],
+                $this->mappedCharts[$date][$labels['total-deaths']],
+            ]));
+        }
     }
 
     /**
@@ -269,6 +287,7 @@ class ScrapeCountryService
             $locationImportHistory->setCode($this->code);
             $locationImportHistory->setCountry($this->country);
             $locationImportHistory->setDate($date);
+            $locationImportHistory->setHash($values['hash']);
             $locationImportHistory->setTotalCases($values[$labels['total-cases']]);
             $locationImportHistory->setNewCases($values[$labels['new-cases-daily']]);
             $locationImportHistory->setActiveCases($values[$labels['active-cases']] ?? 0);
