@@ -59,7 +59,7 @@ class ScrapeWorldService
     private function setContent(): void
     {
         if ($this->isTest === true) {
-            $this->webContent = file_get_contents(base_path('storage/mocks/worldometers-coronavirus-20200412.html'));
+            $this->webContent = file_get_contents(base_path('storage/mocks/worldometers-coronavirus-20200601.html'));
             return;
         }
 
@@ -151,26 +151,34 @@ class ScrapeWorldService
     {
         preg_match_all('/>(.+)?</', $content, $matches);
 
-        $countryName = $matches[1][0];
+        $countryName = $matches[1][1];
         preg_match('/>(.+)</', $countryName, $nameMatch);
         if (isset($nameMatch[1]) === true) {
             $countryName = ($nameMatch[1]);
         }
 
+        $population = $matches[1][13];
+        preg_match('/>(.+)</', $population, $populationMatch);
+        if (isset($populationMatch[1]) === true) {
+            $population = ($populationMatch[1]);
+        }
+
         $result = [
+            'order' => (int) $this->removeTrashString($matches[1][0]),
             'country' => $countryName,
-            'total_cases' => (int) $this->removeTrashString($matches[1][1]),
-            'new_cases' => (int) $this->removeTrashString($matches[1][2]),
-            'total_deaths' => (int) $this->removeTrashString($matches[1][3]),
-            'new_deaths' => (int) $this->removeTrashString($matches[1][4]),
-            'total_recovered' => (int) $this->removeTrashString($matches[1][5]),
-            'active_cases' => (int) $this->removeTrashString($matches[1][6]),
-            'serious_critical' => (int) $this->removeTrashString($matches[1][7]),
-            'cases_by_1m_pop' => (float) $this->removeTrashString($matches[1][8]),
-            'deaths_by_1m_pop' => (float) $this->removeTrashString($matches[1][9]),
-            'total_tests' => (int) $this->removeTrashString($matches[1][10]),
-            'tests_by_1m_pop' => (float) $this->removeTrashString($matches[1][11]),
-            'continent' => $matches[1][12],
+            'total_cases' => (int) $this->removeTrashString($matches[1][2]),
+            'new_cases' => (int) $this->removeTrashString($matches[1][3]),
+            'total_deaths' => (int) $this->removeTrashString($matches[1][4]),
+            'new_deaths' => (int) $this->removeTrashString($matches[1][5]),
+            'total_recovered' => (int) $this->removeTrashString($matches[1][6]),
+            'active_cases' => (int) $this->removeTrashString($matches[1][7]),
+            'serious_critical' => (int) $this->removeTrashString($matches[1][8]),
+            'cases_by_1m_pop' => (float) $this->removeTrashString($matches[1][9]),
+            'deaths_by_1m_pop' => (float) $this->removeTrashString($matches[1][10]),
+            'total_tests' => (int) $this->removeTrashString($matches[1][11]),
+            'tests_by_1m_pop' => (float) $this->removeTrashString($matches[1][12]),
+            'population' => (int) str_replace(',', '', $population),
+            'continent' => $this->removeTrashString($matches[1][14]),
         ];
 
         return $result;
