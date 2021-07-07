@@ -2497,6 +2497,54 @@ body.dark footer.footer {
   background: #FF4C60;
 }
 
+/* === SHOW FOOTER === */
+
+#show-footer {
+  position: fixed;
+  border: 0;
+  margin: 0;
+  bottom: 25px;
+  right: 75px;
+  background: rgba(0, 0, 0, 0.2);
+  width: 40px;
+  height: 40px;
+  display: block;
+  text-decoration: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 100%;
+ /* display: none;*/
+  z-index: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#show-footer i {
+  color: #fff;
+  margin: 0;
+ /* position: relative;*/
+  left: 10px;
+  top: 8px;
+  font-size: 16px;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+#show-footer:hover {
+  background: #FF4C60;
+}
+
 
 /* === Helper === */
 
@@ -3148,4 +3196,87 @@ body.dark footer.footer {
 
 .update-time:hover {
   color: #800000;
+}
+
+
+/*--------------------------FOOTER--------------------*/
+
+.footer-container {
+  padding: 20px;
+  text-align: left;
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  transition: margin-bottom .5s;
+  overflow-y: auto;
+}
+
+.sidebar {
+  height: 0;
+  position: fixed;
+  z-index: 2;
+  bottom: 0;
+  background-color: #d5d5d5;
+  overflow-x: hidden;
+  transition: 0.5s;
+  display: inline-flex;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #800000;
+}
+
+.sidebar .closebtn {
+  position: fixed;
+  right: 25px;
+  font-size: 36px;
+}
+
+.footer-item h6 {
+  border-bottom: 2px solid #646464 ;
+  color: #646464;
+  line-height: 1.5;
+}
+
+.footer-item {
+  flex: 1;
+  width: 33vw;
+  min-width: 234px;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 0.9rem;
+}
+
+.footer-item-1 {
+  line-height: 1;
+}
+
+.footer-item-1 a {
+  font-size: 25px;
+}
+
+.footer-item span {
+  font-size: 0.9rem;
+}
+
+.sidebar li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-item a {
+  margin: 0;
+  padding: 0;
 }

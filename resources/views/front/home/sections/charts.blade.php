@@ -31,9 +31,6 @@
 
 </div>
 
-<div class="spacer" data-height="60"></div>
-
-
 <script type="text/javascript">
     // var confirmed = {!! json_encode($form->about) !!};
     var chartListData = {!! json_encode($form->charts->getLineChart()['dates']['list']) !!};

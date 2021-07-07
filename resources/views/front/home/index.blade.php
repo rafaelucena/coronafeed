@@ -21,5 +21,8 @@
 		@include('front.home.sections.charts')
 	</section>
 
-	<div class="spacer" data-height="96"></div>
+	<!-- section footer -->
+	<section id="footer">
+		@include('front.home.sections.footer')
+	</section>
 @endsection
